@@ -14,6 +14,9 @@
             <p>...</p>
         
         </div>
+
+        <!-- Cube -->
+        <?php include_once('modules/cube.php');?>
     
         <!-- Laptop -->
         <?php include_once('modules/laptop.php');?>
