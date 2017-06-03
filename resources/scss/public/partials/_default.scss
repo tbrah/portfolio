@@ -1,0 +1,15 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+a{
+    color:#fff;
+    
+    &:hover, &:active, &:focus{
+
+        text-decoration: none;
+        color:#fff;
+        border-bottom:2px solid #fff;
+    }
+
+}

@@ -1,0 +1,78 @@
+.laptop{
+    position:relative;
+    width:584px;
+    height:405px;
+    top:250px;
+    transform-origin:0 40px;
+    margin:0 auto;
+
+    .shadow{
+        position:absolute;
+        width:100%;
+        top:120px;
+        height:490px;
+        opacity:0.3;
+        background:#7692b3;
+        filter:blur(30px);
+    }
+
+    .lid{
+        position:absolute;
+        width:100%;
+        height:100%;
+        background:linear-gradient(45deg,#e5ebf2,#f3f8fb);
+        border-radius:20px;
+        box-shadow:inset 1px -4px 6px rgba(145,161,181,.3);
+    }
+
+    .camera{
+        //Add in later.
+    }
+
+    .screen{
+        position:absolute;
+        top:24px;
+        bottom:35px;
+        left:17px;
+        right:17px;
+        border-radius:4px;
+        box-shadow:-1px 1px 6px rgba(171,183,204,.2);
+        background:#f2f6fa;
+    }
+
+    .chassis{
+        position:absolute;
+        width:100%;
+        height:142px;
+        top:calc(100% - 11px);
+        border-radius:8px 8px 14px 14px;
+        transform: perspective(880px) rotateX(40deg);
+        transform-origin:50% 0;
+        background:linear-gradient(rgba(145,161,181,.2),rgba(145,161,181,0)),linear-gradient(45deg,#e5ebf2,#f3f8fb);
+        box-shadow:inset 0 -2px 3px rgba(145,161,181,.5), inset -1px -6px 4px rgba(253,255,255,.9);
+
+        .keyboard{
+            position:absolute;
+            left:28px;
+            right:28px;
+            top:8px;
+            height:66px;
+            border-radius:2px 2px 4px 4px;
+            opacity: 0.3;
+            background:linear-gradient(45deg,#b2bdcc,#c1ccd8);
+            box-shadow:1px 1px 1px hsla(0,0%,100%,.75);
+        }
+
+        .trackpad{
+            position:absolute;
+            left:165px;
+            right:165px;
+            top:76px;
+            height:52px;
+            border-radius:4px 4px 6px 6px;
+            opacity: 0.3;
+            background:linear-gradient(45deg,#b2bdcc,#c1ccd8);
+            box-shadow:1px 1px 1px hsla(0,0%,100%,.75);
+        }
+    }
+}
