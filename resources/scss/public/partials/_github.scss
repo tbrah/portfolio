@@ -1,0 +1,50 @@
+.github{
+    margin-bottom:300px;
+    .container-fluid{
+        width:105%;
+        margin-left:-2.5%;
+        padding:0;
+        .row{
+
+            .col-md-6{
+                height:500px;
+                transform:skewX(-9deg);
+                transition: all 500ms ease-out;
+            }
+            .part-github{
+                background-color:#6e5494 ;
+                overflow:hidden;
+
+                &::before{
+                    content: "\f09b";
+                    font-family: "FontAwesome";
+                    position:absolute;
+                    color:#fff;
+                    font-size:300px;
+                    left:-110px;
+                    top:36px;
+                    opacity:0.38;
+                    transform:skewX(9deg);
+                }
+            }
+            .part-treehouse{
+                background-color:#5fcf80;
+                overflow:hidden;
+
+                &::before{
+                    background-image:url('../img/treehouse-logo.svg');
+                    background-repeat:no-repeat;
+                    width:250px;
+                    height:266px;
+                    position:absolute;
+                    right:-80px;
+                    top:120px;
+                    opacity:0.38;
+                    transform:skewX(9deg);
+                    content:' ';
+                    color:#fff;
+                }
+            }
+        }
+    }
+}

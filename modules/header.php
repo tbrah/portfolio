@@ -7,16 +7,13 @@
         <!-- Nav-bar -->
         <?php include_once('modules/nav.php');?>
 
-        <div class="intro">
+        <div class="title-box">
         
             <h1>THOMAS MESSELL</h1>
             <h3>more than just a front end developer</h3>
             <p>...</p>
         
         </div>
-
-        <!-- Cube -->
-        <?php include_once('modules/cube.php');?>
     
         <!-- Laptop -->
         <?php include_once('modules/laptop.php');?>

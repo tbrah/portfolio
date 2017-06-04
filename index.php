@@ -13,6 +13,12 @@ $title = 'Portfolio';
 
         <!--Header / Includes Laptop.php, Nav.php -->
         <?php include_once('modules/header.php');?>
+
+        <!-- Intro -->
+        <?php include_once('modules/intro.php');?>
+
+        <!-- Github -->
+        <?php include_once('modules/github.php');?>
     
 </body>
 </html>

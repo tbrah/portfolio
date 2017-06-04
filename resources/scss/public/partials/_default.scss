@@ -1,5 +1,6 @@
 body{
     font-family: 'Montserrat', sans-serif;
+    overflow-x:hidden;
 }
 
 a{
@@ -12,4 +13,9 @@ a{
         border-bottom:2px solid #fff;
     }
 
+}
+
+h1, h2, h3, h4, h5, h6{
+
+    color:$text-color;
 }
