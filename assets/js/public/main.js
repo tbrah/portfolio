@@ -13857,7 +13857,7 @@ return Promise;
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-        value: true
+    value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -13873,45 +13873,71 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var $ = jQuery;
 
 var Controller = function (_Module) {
-        _inherits(Controller, _Module);
+    _inherits(Controller, _Module);
 
-        function Controller() {
-                _classCallCheck(this, Controller);
+    function Controller() {
+        _classCallCheck(this, Controller);
 
-                return _possibleConstructorReturn(this, (Controller.__proto__ || Object.getPrototypeOf(Controller)).apply(this, arguments));
+        return _possibleConstructorReturn(this, (Controller.__proto__ || Object.getPrototypeOf(Controller)).apply(this, arguments));
+    }
+
+    _createClass(Controller, [{
+        key: 'ready',
+        value: function ready(app) {
+
+            var app = angular.module('portApp', []);
+
+            //Reverse Filter
+            app.filter('reverse', function () {
+                return function (items) {
+                    return items.slice().reverse();
+                };
+            });
+
+            app.controller('githubCtrl', function ($scope, $http) {
+
+                $scope.gitRepos = [];
+
+                //Get all the repositories from GitHub
+                $http({
+                    method: 'GET',
+                    url: 'https://api.github.com/users/tbrah/repos'
+                }).then(function successCallback(response) {
+                    $scope.gitRepos = response.data;
+                    console.log($scope.gitRepos);
+                }, function errorCallback(response) {
+                    console.log("There was an error " + response);
+                });
+            });
+
+            app.controller('treehouseCtrl', function ($scope, $http) {
+
+                $scope.treehouseBadges = [];
+                $scope.treehouseGeneral = [];
+                $scope.treehousePoints = [];
+
+                $http({
+                    method: 'GET',
+                    url: 'https://teamtreehouse.com/ThomasMessell.json'
+                }).then(function (response) {
+                    $scope.treehouseBadges = response.data.badges;
+                    $scope.treehouseGeneral = response.data;
+                    $scope.treehousePoints = response.data.points;
+                    console.log($scope.treehouseBadges);
+                }), function errorCallback(response) {
+                    console.log("There was an error " + response);
+                };
+            });
         }
+    }]);
 
-        _createClass(Controller, [{
-                key: 'ready',
-                value: function ready(app) {
-
-                        var app = angular.module('portApp', []);
-
-                        app.controller('portCtrl', function ($scope, $http) {
-
-                                $scope.gitRepos = [];
-
-                                //Get all the repositories from GitHub
-                                $http({
-                                        method: 'GET',
-                                        url: 'https://api.github.com/users/tbrah/repos'
-                                }).then(function successCallback(response) {
-                                        $scope.gitRepos = response.data;
-                                        console.log($scope.gitRepos);
-                                }, function errorCallback(response) {
-                                        console.log("There was an error " + response);
-                                });
-                        });
-                }
-        }]);
-
-        return Controller;
+    return Controller;
 }(_wrapper.Module);
 
 exports.default = Controller;
 
 },{"wrapper6":62}],68:[function(require,module,exports){
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -13919,7 +13945,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _wrapper = require('wrapper6');
+var _wrapper = require("wrapper6");
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -13939,31 +13965,28 @@ var Github = function (_Module) {
     }
 
     _createClass(Github, [{
-        key: 'ready',
+        key: "ready",
         value: function ready(app) {
 
             $(document).ready(function () {
                 console.log('Loaded github.js');
 
-                $('.part-github').mouseenter(function () {
+                /*$('.part-github').mouseenter(function(){
                     $(this).css('width', '55%');
                     $('.part-treehouse').css('width', '45%');
                 });
-
-                $('.part-github').mouseleave(function () {
+                  $('.part-github').mouseleave(function(){
                     $(this).css('width', '50%');
                     $('.part-treehouse').css('width', '50%');
                 });
-
-                $('.part-treehouse').mouseenter(function () {
+                  $('.part-treehouse').mouseenter(function(){
                     $(this).css('width', '55%');
                     $('.part-github').css('width', '45%');
                 });
-
-                $('.part-treehouse').mouseleave(function () {
+                  $('.part-treehouse').mouseleave(function(){
                     $(this).css('width', '50%');
                     $('.part-github').css('width', '50%');
-                });
+                });*/
             });
         }
     }]);

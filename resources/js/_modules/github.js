@@ -6,7 +6,7 @@ export default class Github extends Module {
 		$(document).ready(function(){
 			console.log('Loaded github.js');
         
-            $('.part-github').mouseenter(function(){
+            /*$('.part-github').mouseenter(function(){
                 $(this).css('width', '55%');
                 $('.part-treehouse').css('width', '45%');
             });
@@ -24,7 +24,7 @@ export default class Github extends Module {
             $('.part-treehouse').mouseleave(function(){
                 $(this).css('width', '50%');
                 $('.part-github').css('width', '50%');
-            });
+            });*/
 
 		});
 

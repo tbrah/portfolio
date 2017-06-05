@@ -5,7 +5,14 @@ export default class Controller extends Module {
 
         var app = angular.module('portApp', []);
 
-        app.controller('portCtrl', function($scope, $http){
+        //Reverse Filter
+        app.filter('reverse', function() {
+        return function(items) {
+            return items.slice().reverse();
+        };
+        });
+
+        app.controller('githubCtrl', function($scope, $http){
 
             $scope.gitRepos = [];
 
@@ -22,6 +29,25 @@ export default class Controller extends Module {
 
 
         });
+
+        app.controller('treehouseCtrl', function($scope, $http){
+
+            $scope.treehouseBadges = [];
+            $scope.treehouseGeneral = [];
+            $scope.treehousePoints = [];
+
+            $http({
+            method: 'GET',
+            url: 'https://teamtreehouse.com/ThomasMessell.json'
+            }).then(function(response){
+                $scope.treehouseBadges = response.data.badges;
+                $scope.treehouseGeneral = response.data;
+                $scope.treehousePoints = response.data.points;
+                console.log($scope.treehouseBadges);
+            }), function errorCallback(response){
+                console.log("There was an error " + response);
+            }
+            });
 
 	}
 }

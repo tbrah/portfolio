@@ -59,8 +59,8 @@
 
                 .git-container-left{
                     position:relative;
-                    width:525px;
-                    margin-left:430px;
+                    width:555px;
+                    margin-left:auto;
                     transform:skewX(9deg);
                     margin-top:70px;
 
@@ -78,17 +78,25 @@
                         margin-top:80px;
                     }
 
-                    .tree-badge{
-                        width:50px;
-                        margin-top:10px;
-                        margin-right:10px;
+                    .badge-container{
+                        max-width:400px;
+
+                        figure{
+                        display:inline-block;
+
+                            .tree-badge{
+                            width:50px;
+                            margin-top:10px;
+                            margin-right:10px;
+                            }
+                        }
                     }
                 }
 
                 .git-container-right{
                     position:relative;
-                    width:525px;
-                    margin-right:400px;
+                    width:515px;
+                    margin-right:auto;
                     transform:skewX(9deg);
                     margin-top:70px;
 
