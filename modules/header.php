@@ -1,6 +1,6 @@
 <header>
 
-    <div class="background-color"></div>
+    <div class="background-color-thing"></div>
 
     <div class="container">
 

@@ -13885,7 +13885,7 @@ var Controller = function (_Module) {
         key: 'ready',
         value: function ready(app) {
 
-            var app = angular.module('portApp', []);
+            var app = angular.module('portApp', ['ngMaterial', 'ngAnimate']);
 
             //Reverse Filter
             app.filter('reverse', function () {

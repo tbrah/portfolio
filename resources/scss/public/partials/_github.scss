@@ -5,7 +5,7 @@
         .span-background{
         height:500px;
         position:absolute;
-        bottom:220px;
+        bottom:270px;
         z-index:-10;
         width:100%;
         overflow:hidden;
@@ -52,7 +52,7 @@
         .row{
 
             .col-md-6{
-                height:550px;
+                height:570px;
                 transform:skewX(-9deg);
                 transition: all 500ms ease-out;
                 //backface-visibility: hidden;
@@ -75,7 +75,7 @@
                     }
 
                     .badge-intro{
-                        margin-top:80px;
+                        margin-top:20px;
                     }
 
                     .badge-container{
@@ -88,7 +88,27 @@
                             width:50px;
                             margin-top:10px;
                             margin-right:10px;
+
+                            &:hover{
+                                transform: translateY(-1px);
                             }
+                            }
+                        }
+                    }
+                    ul{
+                        width:190px;
+                        margin-top:20px;
+
+                        li{
+                           text-transform:uppercase; 
+                           color:#fff;
+                           position:relative;
+                           
+                           span{
+                            display:inline-block;
+                            position:absolute;
+                            right:0;
+                           }
                         }
                     }
                 }

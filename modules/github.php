@@ -18,11 +18,15 @@
 
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut ligula et magna accumsan ultrices. Etiam tempus quam at maximus dignissim. Maecenas ut ligula et magna accumsan ultrices. Etiam tempus quam at maximus dignissim.</p>
                 
+                    <ul>
+                        <li ng-repeat="(key, value) in treehousePoints" ng-if="value > 0">{{key}} <span>{{value}}<span></li>
+                    </ul>
 
                     <p class="badge-intro">See what i have been learning recently:</p>
                     <div class="badge-container">
-                        <figure ng-repeat="item in treehouseBadges | reverse">
+                        <figure ng-repeat="item in treehouseBadges | reverse | limitTo:12">
                             <img class="tree-badge" ng-src="{{item.icon_url}}">
+                            <md-tooltip md-direction="bottom">{{item.name}} // {{item.courses[0].title}}</md-tooltip>
                         </figure>
                     </div>
                     

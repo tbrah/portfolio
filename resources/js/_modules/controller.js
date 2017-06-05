@@ -3,14 +3,15 @@ var $ = jQuery;
 export default class Controller extends Module {
 	ready(app) {
 
-        var app = angular.module('portApp', []);
+        var app = angular.module('portApp', ['ngMaterial', 'ngAnimate']);
 
         //Reverse Filter
         app.filter('reverse', function() {
-        return function(items) {
-            return items.slice().reverse();
-        };
+            return function(items) {
+                return items.slice().reverse();
+            };
         });
+
 
         app.controller('githubCtrl', function($scope, $http){
 

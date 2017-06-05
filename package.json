@@ -19,5 +19,11 @@
     "laravel-elixir-vueify": "^2.0.0",
     "selectize": "^0.12.4",
     "wrapper6": "^0.2.20"
+  },
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-animate": "^1.6.4",
+    "angular-aria": "^1.6.4",
+    "angular-material": "^1.1.4"
   }
 }
