@@ -14,10 +14,12 @@ var app = window.app = new Application(window.options || {});
  ----------------------------------------------------------*/
 import Main from "../_modules/main.js";
 import Github from "../_modules/github.js";
+import Controller from "../_modules/controller.js";
 /* Register modules
  ----------------------------------------------------------*/
 app.use(Main);
 app.use(Github);
+app.use(Controller);
 
 import $ from "jquery";
 window.jQuery = window.$ = $;
