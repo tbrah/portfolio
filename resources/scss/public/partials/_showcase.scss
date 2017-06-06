@@ -1,0 +1,91 @@
+.showcase{
+    position:relative;
+    margin-bottom:100px;
+
+    .showcase-intro-bg{
+        height:450px;
+        position:absolute;
+        z-index:-10;
+        width:100%;
+        overflow:hidden;
+        transform:skewY(-9deg);
+        transform-origin:0;
+        background:linear-gradient(0deg,#edf2f7,rgba(237,242,247,0));;
+
+    }
+    .container{
+        .row{
+            .col-md-6{¨
+
+                &:first-child{
+                    padding-top:65px;
+                }
+
+                h2{
+                    margin-bottom:20px;
+                    margin-top:65px;
+                }
+                
+                .showcase-preview{
+                    position:relative;
+                    width:500px;
+                    height:300px;
+                    box-shadow:$standard-shadow;
+                    border-radius:5px;
+                    background-color:#fff;
+                    margin-left:auto;
+                }
+
+            }
+        }
+        .showcase-wrapper{
+            margin-top:180px;
+
+                .col-md-6{
+
+                    .showcase-single{
+
+                        position:relative;
+                        width:100%;
+                        height:300px;
+                        box-shadow:$standard-shadow;
+                        border-radius:5px;
+                        background-color:#fff;
+                        margin-left:auto;
+                        margin-top:25px;
+                        overflow:hidden;
+                        transition: all 0.2s ease-in;
+                        background-size:cover;
+                        background-position-x:center;
+
+                        &:hover{
+                            transform:translateY(-1px);
+                        }
+
+                        &:hover .desc-tag{
+                            display:block;
+                        }
+
+                        .desc-tag{
+                            display:none;
+                            position:absolute;
+                            background-color:rgba(0, 0, 0, 0.66);
+                            width:100%;
+                            height:auto;
+                            bottom:0;
+                            padding-left:15px;
+                            transition: all 0.2s ease-in-out;
+                            
+                            h3{
+                                color:#fff;
+
+                            }
+                            p{
+                                color:#fff;
+                            }
+                        }
+                    }
+                }
+            }
+    }
+}

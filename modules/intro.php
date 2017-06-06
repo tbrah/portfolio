@@ -10,6 +10,8 @@
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut ligula et magna accumsan ultrices. Etiam tempus quam at maximus dignissim. Nulla vitae mauris ipsum. Etiam commodo, augue vitae viverra ullamcorper, metus sem lobortis purus, a tincidunt arcu nulla sit amet purus. Pellentesque vitae lorem eu lacus convallis convallis. Pellentesque at condimentum nunc. Phasellus at dictum augue, sed convallis turpis. In eget consectetur ante. Integer posuere viverra nulla. Nam sed egestas justo. Sed vitae efficitur dolor. Nullam nec sagittis quam. Maecenas viverra quis diam vitae convallis. Nulla ullamcorper varius dui, vitae tempus odio efficitur sit amet. Vivamus vel justo sodales, porttitor ante at, sodales magna.</p>
 
+                <p><a href="#">Already sold on me? Skip to my contact information <i class="fa fa-angle-right"></i></a></p>
+
             </div>
 
             <div class="col-md-6">

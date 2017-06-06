@@ -1,4 +1,4 @@
-<section class="github" ng-app="portApp">
+<section class="github">
 
     <div class="span-background">
         <span></span>

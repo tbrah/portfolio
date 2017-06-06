@@ -13904,7 +13904,6 @@ var Controller = function (_Module) {
                     url: 'https://api.github.com/users/tbrah/repos'
                 }).then(function successCallback(response) {
                     $scope.gitRepos = response.data;
-                    console.log($scope.gitRepos);
                 }, function errorCallback(response) {
                     console.log("There was an error " + response);
                 });
@@ -13923,11 +13922,12 @@ var Controller = function (_Module) {
                     $scope.treehouseBadges = response.data.badges;
                     $scope.treehouseGeneral = response.data;
                     $scope.treehousePoints = response.data.points;
-                    console.log($scope.treehouseBadges);
                 }), function errorCallback(response) {
                     console.log("There was an error " + response);
                 };
             });
+
+            app.controller('showcaseCtrl', function ($scope) {});
         }
     }]);
 

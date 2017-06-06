@@ -14,8 +14,19 @@
                 }
 
                 p{
+                    margin-bottom:15px;
+                    a{
+                        color:#6772E5;
 
+                        &:hover{
+
+                            text-decoration: none;
+                            color:#32325d;
+                            border:none;
+                        }
+                    }
                 }
+
             }
         }
     }
