@@ -16,6 +16,7 @@
 
             <div class="col-md-6">
  
+                <img src="assets/img/portfolio-img.png">
 
             </div>
 
