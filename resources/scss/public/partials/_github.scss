@@ -50,6 +50,7 @@
         padding:0;
         box-shadow:$standard-shadow;
         .row{
+            background:linear-gradient(150deg, #2657eb -95%, #de6161 209%);
 
             .col-md-6{
                 height:570px;
@@ -119,7 +120,7 @@
                     margin-right:auto;
                     transform:skewX(9deg);
                     margin-top:70px;
-
+                    
                     h2{
                         color:#fff;
                         text-align:right;
@@ -128,8 +129,8 @@
             }
             .part-github{
                 position:relative;
-                background-color:#6e5494 ;
                 overflow:hidden;
+                border-left:7px solid #fff;
 
                 &::before{
                     content: "\f09b";
@@ -203,7 +204,6 @@
                     }
             }
             .part-treehouse{
-                background-color:#5fcf80;
                 overflow:hidden;
 
                 &::before{
