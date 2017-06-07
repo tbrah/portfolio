@@ -12,7 +12,33 @@
 
                     <div class="speaker"></div>
 
-                    <div class="phone-screen"></div>
+                    <div class="phone-screen">
+
+                            <div class="envelope-wrapper">
+
+                                <div class="env-wrapper-body">
+
+                                    <div class="left-side"></div>
+
+                                    <div class="right-side"></div>
+
+                                </div>
+
+                                <div class="mail">
+
+                                    <span class="stamp"></span>
+                                    <span class="heading"></span>
+                                    <b class="paragraf"></b>
+                                    <b class="paragraf"></b>
+                                    <b class="paragraf"></b>
+
+                                </div>
+                            
+                            </div>
+
+                            <md-button class="md-raised">Launch Mail App</md-button>
+
+                    </div>
 
                     <div class="phone-home-button"></div>
 
@@ -30,8 +56,6 @@
 
                 <div class="phone-hori">
 
-                    <div class="phone-screen-hori">
-
                         <div class="camera-hori"></div>
 
                         <div class="speaker-hori"></div>
@@ -39,8 +63,6 @@
                         <div class="phone-screen-hori"></div>
 
                         <div class="phone-home-button-hori"></div>
-
-                    </div>
 
                 </div>
 

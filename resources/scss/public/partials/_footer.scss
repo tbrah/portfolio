@@ -23,6 +23,100 @@ footer{
             .col-md-6{
                 position:relative;
 
+                .envelope-wrapper{
+                    position:absolute;
+                    height:120px;
+                    width:80px;
+                    overflow:hidden;
+                    left:0;
+                    right:0;
+                    top:50px;
+                    margin:0 auto;
+
+                
+                    .env-wrapper-body{
+                        position:absolute;
+                        bottom:0;
+                        width:80px;
+                        height:60px;
+                        background-color:#3c89bd;
+                        overflow:hidden;
+
+                        .left-side{
+                            background-color:#3498db;
+                            position:absolute;
+                            left:-52px;
+                            bottom:0;
+                            width:91px;
+                            height:100%;
+                            transform:skewX(53deg);
+                            z-index:190;
+                        }
+
+                        .right-side{
+                            background-color:#54a8e0;
+                            position:absolute;
+                            right:-52px;
+                            bottom:0;
+                            width:91px;
+                            height:100%;
+                            transform:skewX(-53deg);
+                            z-index:200;
+                        }
+                    }
+
+                        .mail{
+                            width:70px;
+                            height:100px;
+                            background-color:#fff;
+                            position:absolute;
+                            bottom:-30px;
+                            left:0;
+                            right:0;
+                            margin:0 auto;
+                            z-index:150;
+                            transition:all 0.2s ease-in;
+
+                            .stamp{
+                                position:absolute;
+                                left:5px;
+                                top:5px;
+                                width:10px;
+                                height:10px;
+                                border-radius:50%;
+                                background-color:$graytone-background;
+                                z-index:300;
+                            }
+
+                            .heading{
+                                position:absolute;
+                                top:8px;
+                                left:20px;
+                                width:40px;
+                                height:3px;
+                                background-color:$graytone-background;
+                            }
+
+                            b{
+                                position:absolute;
+                                top:20px;
+                                left:5px;
+                                width:60px;
+                                height:10px;
+                                border-radius:3px;
+                                background-color:$graytone-background;
+
+                                &:nth-child(3){
+                                    top:40px;
+                                }
+
+                                &:nth-child(4){
+                                    top:60px;
+                                }
+                            }
+                        }
+                }
+
                 .phone{
                     position:relative;
                     height:553px;
@@ -56,11 +150,21 @@ footer{
                     }
 
                     .phone-screen{
+                        position:relative;
                         width:240px;
                         height:430px;
-                        background-color:#fff;
+                        background-color:#f7f7f7;
                         border:2px solid #f2f2f2;
                         border-radius:3px;
+
+                        .md-button{
+                           position:absolute;
+                           left:0;
+                           right:0;
+                           top:195px;
+                           width:160px;
+                           margin:0 auto; 
+                        }
                     }
 
                     .phone-home-button{
@@ -76,7 +180,7 @@ footer{
                 .phone-hori{
                     position:relative;
                     top:80px;
-                    left:-80px;
+                    left:-70px;
                     width: 553px;
                     height: 267px;
                     display: flex;
@@ -109,7 +213,7 @@ footer{
                     .phone-screen-hori{
                         width:430px;
                         height:240px;
-                        background-color:#fff;
+                        background-color:#f7f7f7;
                         border:1px solid #f2f2f2;
                         border-radius:3px;
                     }
