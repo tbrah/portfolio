@@ -42,7 +42,7 @@
                     <ul>
                         <h3>Solo projects:</h3>
                         
-                        <li ng-repeat="item in gitRepos | limitTo:4" class="btn">
+                        <li ng-repeat="item in gitRepos | limitTo:4">
                         <a href="{{item.html_url}}" target="_blank">
                         {{item.name}}
                         <p class="desc">{{item.description}}</p>
@@ -50,7 +50,7 @@
                         </li></a>
 
                         <h3>Team Projects:</h3>
-                        <li class="btn"><a href="https://github.com/selkominator/intellifinder" target="_blank">intellifinder</a>
+                        <li><a href="https://github.com/selkominator/intellifinder" target="_blank">intellifinder</a>
                             <p class="desc">Exam project</p>
                             <p>Javascript</p>
                         </li>

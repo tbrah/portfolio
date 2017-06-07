@@ -1,5 +1,141 @@
 footer{
     position:relative;
-    height:300px;
     width:100%;
+    overflow:hidden;
+    padding-top:50px;
+    padding-bottom:50px;
+
+    .container{
+
+        &::before{
+            content: "\f0ac";
+            font-family: "FontAwesome";
+            position:absolute;
+            color:#333;
+            font-size:700px;
+            left:0px;
+            top:-300px;
+            opacity:0.04;
+        }
+
+        .row{
+
+            .col-md-6{
+                position:relative;
+
+                .phone{
+                    position:relative;
+                    height:553px;
+                    width:267px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 38px;
+                    background: #fff;
+                    box-shadow: inset 0 4px 7px 1px #fff, inset 0 -5px 20px rgba(173,186,204,.25), 0 2px 6px rgba(0,21,64,.14), 0 10px 20px rgba(0,21,64,.05);
+                    margin-left:auto;
+
+                    .camera{
+                        position:absolute;
+                        top:30px;
+                        left:100px;
+                        height:7px;
+                        width:7px;
+                        border-radius:7px;
+                        background-color:#f2f2f2;
+                    }
+
+                    .speaker{
+                        position:absolute;
+                        top:31px;
+                        left:114px;
+                        height:4px;
+                        width:50px;
+                        border-radius:3px;
+                        background-color:#f2f2f2;
+                    }
+
+                    .phone-screen{
+                        width:240px;
+                        height:430px;
+                        background-color:#fff;
+                        border:2px solid #f2f2f2;
+                        border-radius:3px;
+                    }
+
+                    .phone-home-button{
+                        position:absolute;
+                        bottom:15px;
+                        width:35px;
+                        height:35px;
+                        border-radius:50%;
+                        background-color:#f2f2f2;
+                    }
+                }
+
+                .phone-hori{
+                    position:relative;
+                    top:80px;
+                    left:-80px;
+                    width: 553px;
+                    height: 267px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 38px;
+                    background: #fff;
+                    box-shadow: inset 0 4px 7px 1px #fff, inset 0 -5px 20px rgba(173,186,204,.25), 0 2px 6px rgba(0,21,64,.14), 0 10px 20px rgba(0,21,64,.05);
+
+                    .camera-hori{
+                        position:absolute;
+                        top:155px;
+                        left:30px;
+                        height:7px;
+                        width:7px;
+                        border-radius:7px;
+                        background-color:#f2f2f2;
+                    }
+
+                    .speaker-hori{
+                        position:absolute;
+                        top:94px;
+                        left:31px;
+                        height:50px;
+                        width:4px;
+                        border-radius:3px;
+                        background-color:#f2f2f2; 
+                    }
+
+                    .phone-screen-hori{
+                        width:430px;
+                        height:240px;
+                        background-color:#fff;
+                        border:1px solid #f2f2f2;
+                        border-radius:3px;
+                    }
+
+                    .phone-home-button-hori{
+                        position:absolute;
+                        right:15px;
+                        top:45%;
+                        width:35px;
+                        height:35px;
+                        border-radius:50%;
+                        background-color:#f2f2f2;
+                    }
+                }
+                h2{
+                    margin-top:105px;
+                }
+
+                .explain{
+                    color:$text-color;
+                }
+
+                &:last-child{
+                    padding-left:50px;
+                }
+            }
+        }
+    }
 }
