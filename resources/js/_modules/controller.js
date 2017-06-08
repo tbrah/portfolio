@@ -50,8 +50,14 @@ export default class Controller extends Module {
         app.controller('footerCtrl', function($scope, $mdDialog){
             $scope.togglePopUp = false;
 
-            $scope.openPopUp = function(){
-                $scope.togglePopUp = true;
+            $scope.popUpControl = function(e){
+
+                if($scope.togglePopUp == false){
+                    $scope.togglePopUp = true;
+                } else {
+                    $scope.togglePopUp = false;
+                }
+
             }
         });
 

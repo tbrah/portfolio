@@ -13930,8 +13930,13 @@ var Controller = function (_Module) {
             app.controller('footerCtrl', function ($scope, $mdDialog) {
                 $scope.togglePopUp = false;
 
-                $scope.openPopUp = function () {
-                    $scope.togglePopUp = true;
+                $scope.popUpControl = function (e) {
+
+                    if ($scope.togglePopUp == false) {
+                        $scope.togglePopUp = true;
+                    } else {
+                        $scope.togglePopUp = false;
+                    }
                 };
             });
         }
@@ -13993,6 +13998,14 @@ var Footer = function (_Module) {
                         var email = 'thomasmessell@gmail.com';
                         document.location = "mailto:" + email;
                     }
+                });
+
+                $('.popup-content').click(function () {
+                    event.stopPropagation();
+                });
+
+                $('.md-button').click(function () {
+                    $(this).blur();
                 });
             });
         }

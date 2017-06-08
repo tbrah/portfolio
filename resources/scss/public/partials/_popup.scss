@@ -1,7 +1,7 @@
 .popupActive{
   display:block!important;
 }
-.popup{
+.popupc{
   display: none;
   position: fixed;
   z-index: 500;
@@ -13,7 +13,7 @@
   background-color: rgba(0,0,0,0.75);
   .popup-content {
     position:relative;
-    margin: 23% auto;
+    margin: 15% auto;
     width: 50%;
     padding:30px;
     -webkit-animation-name: animatetop;
@@ -22,5 +22,34 @@
     animation-duration: 0.4s;
     background-color:#fff;
     border-radius:5px;
+
+    form{
+      input{
+        width:100%;
+        padding:5px 15px 5px 15px;
+        margin-bottom:15px;
+        border-radius:3px;
+        border: 1px solid $text-color;
+      }
+      textarea{
+        width:100%;
+        padding:15px;
+        border-radius:3px;
+        border: 1px solid $text-color;
+        min-height:200px;
+      }
+      .md-button{
+        display:block;
+        margin:0 auto;
+        width:100px;
+        margin-top:20px;
+        color:#fff;
+        background-color:$primary-green;
+
+        &:hover{
+          background-color:lighten($primary-green, 10%);
+        }
+      }
+    }
   }
 }
