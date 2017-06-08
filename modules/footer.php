@@ -1,4 +1,4 @@
-<footer>
+<footer ng-controller="footerCtrl">
 
     <div class="container">
     
@@ -36,7 +36,9 @@
                             
                             </div>
 
-                            <md-button class="md-raised">Launch Mail App</md-button>
+                            <md-button class="md-raised" data-id="1">Launch Mail App</md-button>
+
+                            <md-button class="md-raised browser-form-btn" data-id="0" ng-click="openPopUp()">Launch Browser Form</md-button>
 
                     </div>
 
@@ -70,6 +72,8 @@
 
         </div>
     
-    </div>
+    </div> 
+
+    <?php include_once('modules/popup.php');?>
 
 </footer>

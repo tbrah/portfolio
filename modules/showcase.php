@@ -1,4 +1,4 @@
-<section class="showcase" ng-controller="showcaseCtrl">
+<section class="showcase">
 
     <div class="showcase-intro-bg"></div>
 

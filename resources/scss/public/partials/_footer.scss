@@ -158,12 +158,20 @@ footer{
                         border-radius:3px;
 
                         .md-button{
-                           position:absolute;
-                           left:0;
-                           right:0;
-                           top:195px;
-                           width:160px;
-                           margin:0 auto; 
+                            position:absolute;
+                            left:0;
+                            right:0;
+                            top:195px;
+                            width:160px;
+                            margin:0 auto;
+                            color:#fff;
+                            background-color:#54a8e0;
+                        }
+
+                        .browser-form-btn{
+                            top:245px;
+                            width:200px;
+                            background-color:$primary-green;
                         }
                     }
 

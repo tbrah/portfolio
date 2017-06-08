@@ -12,7 +12,6 @@ export default class Controller extends Module {
             };
         });
 
-
         app.controller('githubCtrl', function($scope, $http){
 
             $scope.gitRepos = [];
@@ -48,8 +47,12 @@ export default class Controller extends Module {
             }
         });
         
-        app.controller('showcaseCtrl', function($scope){
-            
+        app.controller('footerCtrl', function($scope, $mdDialog){
+            $scope.togglePopUp = false;
+
+            $scope.openPopUp = function(){
+                $scope.togglePopUp = true;
+            }
         });
 
 	}

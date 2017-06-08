@@ -13927,7 +13927,13 @@ var Controller = function (_Module) {
                 };
             });
 
-            app.controller('showcaseCtrl', function ($scope) {});
+            app.controller('footerCtrl', function ($scope, $mdDialog) {
+                $scope.togglePopUp = false;
+
+                $scope.openPopUp = function () {
+                    $scope.togglePopUp = true;
+                };
+            });
         }
     }]);
 
@@ -13940,7 +13946,7 @@ exports.default = Controller;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -13959,33 +13965,40 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var $ = jQuery;
 
 var Footer = function (_Module) {
-  _inherits(Footer, _Module);
+    _inherits(Footer, _Module);
 
-  function Footer() {
-    _classCallCheck(this, Footer);
+    function Footer() {
+        _classCallCheck(this, Footer);
 
-    return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).apply(this, arguments));
-  }
-
-  _createClass(Footer, [{
-    key: "ready",
-    value: function ready(app) {
-
-      $(document).ready(function () {
-        console.log('Loaded footer.js');
-
-        $(".phone-screen .md-button").mouseenter(function () {
-          $(".phone-screen .mail").css('bottom', '0px');
-        });
-
-        $(".phone-screen .md-button").mouseleave(function () {
-          $(".phone-screen .mail").css('bottom', '-30px');
-        });
-      });
+        return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).apply(this, arguments));
     }
-  }]);
 
-  return Footer;
+    _createClass(Footer, [{
+        key: "ready",
+        value: function ready(app) {
+
+            $(document).ready(function () {
+                console.log('Loaded footer.js');
+
+                $(".phone-screen .md-button").mouseenter(function () {
+                    $(".phone-screen .mail").css('bottom', '0px');
+                });
+
+                $(".phone-screen .md-button").mouseleave(function () {
+                    $(".phone-screen .mail").css('bottom', '-30px');
+                });
+
+                $('.phone-screen .md-button').click(function (event) {
+                    if ($(this).attr("data-id") == 1) {
+                        var email = 'thomasmessell@gmail.com';
+                        document.location = "mailto:" + email;
+                    }
+                });
+            });
+        }
+    }]);
+
+    return Footer;
 }(_wrapper.Module);
 
 exports.default = Footer;
