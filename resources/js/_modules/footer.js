@@ -24,14 +24,6 @@ export default class Footer extends Module {
                 }
             });
 
-            $('.popup-content').click(function(){
-                event.stopPropagation();
-            });
-
-            $('.md-button').click(function(){
-                $(this).blur();
-            });
-
 		});
 
 	}

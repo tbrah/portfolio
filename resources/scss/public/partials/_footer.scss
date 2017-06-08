@@ -167,12 +167,22 @@ footer{
                             margin:0 auto;
                             color:#fff;
                             background-color:#54a8e0;
+                            transition: all 0.2s ease-in;
+
+                            &:hover{
+                                background-color:lighten(#54a8e0, 10%);
+                                transform:translateY(-1px);
+                            }
                         }
 
                         .browser-form-btn{
                             top:245px;
                             width:200px;
                             background-color:$primary-green;
+
+                            &:hover{
+                                background-color:lighten($primary-green, 10%);
+                            }
                         }
 
                         p{

@@ -1,6 +1,8 @@
-<div class="popupc" ng-class="{popupActive: togglePopUp}" ng-click="popUpControl()">
+<div class="popupc closePopUp" ng-class="{popupActive: togglePopUp}" ng-click="closePopUp($event)" data-state="open">
 
   <div class="popup-content">
+
+    <p class="close-popup closePopUp" ng-click="closePopUp($event)">close</p>
 
     <h2>Write me a message!</h2>
 

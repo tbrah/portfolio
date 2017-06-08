@@ -48,16 +48,19 @@ export default class Controller extends Module {
         });
         
         app.controller('footerCtrl', function($scope, $mdDialog){
+
             $scope.togglePopUp = false;
 
-            $scope.popUpControl = function(e){
+            $scope.openPopUp = function(e){
+                $scope.togglePopUp = true;
+            }
 
-                if($scope.togglePopUp == false){
-                    $scope.togglePopUp = true;
-                } else {
+            //Have to do this if check otherwise bugs out when pressing space in input fields.
+            //Data attributes didn't work ** Re-try a new method of fixing this **
+            $scope.closePopUp = function(e){
+                if(($(e.target).hasClass('closePopUp'))){
                     $scope.togglePopUp = false;
                 }
-
             }
         });
 

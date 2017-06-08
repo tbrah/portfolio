@@ -36,9 +36,9 @@
                             
                             </div>
 
-                            <md-button class="md-raised" data-id="1">Launch Mail App</md-button>
+                            <md-button type="button" class="md-raised" data-id="1">Launch Mail App</md-button>
 
-                            <md-button class="md-raised browser-form-btn" data-id="0" ng-click="popUpControl($event)">Launch Browser Form</md-button>
+                            <md-button type="button" class="md-raised browser-form-btn" data-id="0" ng-click="openPopUp($event)">Launch Browser Form</md-button>
 
                             <p><i>Choose whether you want to write an e-mail via your default e-mail software of choice, or simply use the in-browser e-mail form.</i></p>
 
