@@ -42,3 +42,14 @@ h1, h2, h3, h4, h5, h6{
     padding-left:15px;
     padding-right:15px;
 }
+
+.green-btn{
+    background-color:$primary-green!important;
+    color:#fff!important;
+    transition:all 0.2s ease-in;
+
+    &:hover{
+        background-color:lighten($primary-green, 10%)!important;
+        transform:translateY(-1px);
+    }
+}

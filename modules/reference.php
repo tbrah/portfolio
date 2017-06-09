@@ -8,7 +8,7 @@
 
                 <div class="reference-text-wrapper">
 
-                    <md-button class="md-raised" ng-click="openPopUp('reference')">Read full recomendation letter</md-button>
+                    <md-button class="md-raised green-btn" ng-click="openPopUp('reference')">Read full recomendation letter</md-button>
 
                     <p class="fa fa-quote-left"></p>
                     <p>It’s my pleasure to write this letter of recommendation for Thomas Messell. Thomas has been

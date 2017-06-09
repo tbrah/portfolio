@@ -244,6 +244,37 @@ footer{
                         background-color:#f7f7f7;
                         border:1px solid #f2f2f2;
                         border-radius:3px;
+
+                        .envelope-wrapper{
+                            top:-5px;
+                        }
+
+                        .md-button{
+                            position:absolute;
+                            left:0;
+                            right:0;
+                            top:135px;
+                            width:160px;
+                            margin:0 auto;
+                            color:#fff;
+                            background-color:#54a8e0;
+                            transition: all 0.2s ease-in;
+
+                            &:hover{
+                                background-color:lighten(#54a8e0, 10%);
+                                transform:translateY(-1px);
+                            }
+                        }
+
+                        .browser-form-btn{
+                            top:185px;
+                            width:200px;
+                            background-color:$primary-green;
+
+                            &:hover{
+                                background-color:lighten($primary-green, 10%);
+                            }
+                        }
                     }
 
                     .phone-home-button-hori{

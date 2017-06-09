@@ -66,6 +66,7 @@ export default class Controller extends Module {
             }
         });
 
+        //-- Directives --//
 
         app.directive("referenceLetter", function() {
             return {

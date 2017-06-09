@@ -1,6 +1,6 @@
 <div class="popupc closePopUp" ng-class="{popupActive: togglePopUp}" ng-click="closePopUp($event)" data-state="open">
 
-  <div class="popup-content">
+  <div class="popup-content" ng-class="{referenceActive: currentView == 'reference'}">
 
     <p class="close-popup closePopUp" ng-click="closePopUp($event)">close</p>
 

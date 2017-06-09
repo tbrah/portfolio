@@ -66,7 +66,7 @@
 
             <div class="col-md-6">
 
-                <div class="showcase-single" style="background-image:url('assets/img/intellifinder-printV2.png'); background-position-y:center;">
+                <div class="showcase-single" style="background-image:url('assets/img/intellifinder-printv2.png'); background-position-y:center;">
 
                     <div class="desc-tag">
                         <h3>IntellFinder Print</h3>

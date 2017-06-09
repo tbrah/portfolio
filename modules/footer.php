@@ -64,7 +64,36 @@
 
                         <div class="speaker-hori"></div>
 
-                        <div class="phone-screen-hori"></div>
+                        <div class="phone-screen-hori">
+
+                            <div class="envelope-wrapper">
+
+                                <div class="env-wrapper-body">
+
+                                    <div class="left-side"></div>
+
+                                    <div class="right-side"></div>
+
+                                </div>
+
+                                <div class="mail">
+
+                                    <span class="stamp"></span>
+                                    <span class="heading"></span>
+                                    <b class="paragraf"></b>
+                                    <b class="paragraf"></b>
+                                    <b class="paragraf"></b>
+
+                                </div>
+                            
+                            </div>
+
+                            <md-button type="button" class="md-raised" data-id="1">Launch Mail App</md-button>
+
+                            <md-button type="button" class="md-raised browser-form-btn" data-id="0" ng-click="openPopUp('form')">Launch Browser Form</md-button>
+
+
+                        </div>
 
                         <div class="phone-home-button-hori"></div>
 
