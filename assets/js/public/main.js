@@ -13927,11 +13927,13 @@ var Controller = function (_Module) {
                 };
             });
 
-            app.controller('footerCtrl', function ($scope, $mdDialog) {
+            app.controller('popUpCtrl', function ($scope, $mdDialog) {
 
                 $scope.togglePopUp = false;
+                $scope.currentView = '';
 
-                $scope.openPopUp = function (e) {
+                $scope.openPopUp = function (view) {
+                    $scope.currentView = view;
                     $scope.togglePopUp = true;
                 };
 
@@ -13941,6 +13943,20 @@ var Controller = function (_Module) {
                     if ($(e.target).hasClass('closePopUp')) {
                         $scope.togglePopUp = false;
                     }
+                };
+            });
+
+            app.directive("referenceLetter", function () {
+                return {
+                    restrict: "E",
+                    templateUrl: "views/reference-letter-view.html"
+                };
+            });
+
+            app.directive("mailForm", function () {
+                return {
+                    restrict: "E",
+                    templateUrl: "views/form-view.php"
                 };
             });
         }
