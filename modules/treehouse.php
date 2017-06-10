@@ -39,18 +39,22 @@
                 <ul>
                     <h3>Solo projects:</h3>
                     
-                    <li ng-repeat="item in gitRepos | limitTo:4">
-                    <a href="{{item.html_url}}" target="_blank">
-                    {{item.name}}
-                    <p class="desc">{{item.description}}</p>
-                    <p>{{item.language}}</p>
-                    </li></a>
+                    <a ng-repeat="item in gitRepos | limitTo:4" href="{{item.html_url}}" target="_blank" >
+                        <li>
+                        {{item.name}}
+                        <p class="desc">{{item.description}}</p>
+                        <p>{{item.language}}</p>
+                        </li>
+                    </a>
 
                     <h3>Team Projects:</h3>
-                    <li><a href="https://github.com/selkominator/intellifinder" target="_blank">intellifinder</a>
-                        <p class="desc">Exam project</p>
-                        <p>Javascript</p>
-                    </li>
+                    <a href="https://github.com/selkominator/intellifinder" target="_blank">
+                        <li>
+                            intellifinder
+                            <p class="desc">Exam project</p>
+                            <p>Javascript</p>
+                        </li>
+                    </a>
                 
                 </ul>              
             </div>

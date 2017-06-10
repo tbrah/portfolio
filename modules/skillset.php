@@ -10,6 +10,8 @@
 
             <h2>MY SKILLS</h2>
 
+            <hr class="custom-hr" ng-class="{'red-hr': currentTab == 'code'}">
+
         </div>
 
     </div>
@@ -33,8 +35,10 @@
 
                         <div class="skill-explain">
                             <span ng-repeat="item in levelsCode" ng-class="{'blue-circle': currentTab == 'design'}">
-                                <md-tooltip md-direction="bottom">{{item}}</md-tooltip>
+                                <md-tooltip md-direction="top">{{item}}</md-tooltip>
                             </span>
+                            
+                            <p><i>Hover your mouse over the dots to see what they mean.</i></p>
                         </div>
 
                         <ul>

@@ -1,6 +1,15 @@
 <section class="reference" ng-controller="popUpCtrl">
 
     <div class="container">
+
+        <div class="title-box">
+
+            <h4>WHAT DO PEOPLE HAVE TO SAY ABOUT ME?</h4>
+            <h2>REFERENCE</h2>
+
+            <hr class="custom-hr">
+
+        </div>
     
         <div class="row">
 
@@ -55,7 +64,6 @@ recommendation.</p>
             </div>
 
         </div>
-
     </div>   
 
     <?php include('modules/popup.php');?> 

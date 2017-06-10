@@ -21,6 +21,7 @@ $skillset-height: 1300px;
         background-color:$graytone-background;
         z-index:-10;
         overflow:hidden;
+        box-shadow:$standard-shadow;
 
     }
 
@@ -44,6 +45,7 @@ $skillset-height: 1300px;
                 }
                 p{
                 }
+
             }
         }
 
@@ -56,6 +58,14 @@ $skillset-height: 1300px;
             h4{
                 text-align:center;
                 color:$gray-font;
+            }
+            .custom-hr{
+                width:110px;
+                transition:all 0.2s ease-in;
+            }
+            .red-hr{
+                border-bottom:4px solid $primary;
+                transition:all 0.2s ease-in;
             }
         }
     }
@@ -117,7 +127,8 @@ $skillset-height: 1300px;
                     .skill-explain{
                         display:table;
                         margin:0 auto;
-                        margin-top:25px;
+                        margin-top:35px;
+                        text-align:center;
                         span{
                             display:inline-block;
                             width:35px;
@@ -133,6 +144,10 @@ $skillset-height: 1300px;
                                 box-shadow:$hover-shadow;
                             }
                         }
+                        p{
+                            font-size:11px;
+                            margin-top:15px;
+                        }
                     }
 
                     ul{
@@ -141,7 +156,6 @@ $skillset-height: 1300px;
                         width:340px;
                         display:table;
                         margin:0 auto;
-                        margin-top:20px;
                         li{
                             margin-top:15px;
                             margin-bottom:15px;

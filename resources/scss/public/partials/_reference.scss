@@ -1,12 +1,29 @@
 .reference{
     background-color:$graytone-background;
-    height:520px;
     width:100%;
     background-image:url('../img/dots.svg');
     background-repeat:no-repeat;
-    background-position:85%;
+    background-position-x:85%;
+    background-position-y:330px;
+    background-size:400px;
+    padding-top:160px;
+    box-shadow:$standard-shadow;
 
     .container{
+
+        .title-box{
+            text-align:center;
+            margin-bottom:50px;
+            h4{
+                color:$gray-font;
+            }
+            h2{
+                margin-bottom:20px;
+            }
+            .custom-hr{
+                width:140px;
+            }
+        }
 
         .row{
 
