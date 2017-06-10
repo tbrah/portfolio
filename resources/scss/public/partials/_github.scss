@@ -2,49 +2,6 @@
     margin-bottom:110px;
     position:relative;
 
-        .span-background{
-        height:740px;
-        position:absolute;
-        bottom:260px;
-        z-index:1;
-        width:100%;
-        overflow:hidden;
-        transform:skewY(-9deg);
-        transform-origin:0;
-
-            span{
-                position:absolute;
-                height:33%;
-                width:33%;
-                background:linear-gradient(150deg, #fafafa 25%, $g2-secondary 94%);
-                opacity:0.5;
-
-                &:nth-child(1){
-                    top:0;
-                    right:-5%;
-                }
-                &:nth-child(2){
-                    top:33%;
-                    right:-15%;
-                    background:linear-gradient(150deg, $g2-secondary 100%, #fafafa 30%);
-                }
-                &:nth-child(3){
-                    top:33%;
-                    right:18%;
-                }
-                &:nth-child(4){
-                    top:66%;
-                    right:0;
-                    background:linear-gradient(150deg, $g2-secondary 100%, #fafafa 30%);
-                }
-                &:nth-child(5){
-                    top:66%;
-                    right:33%;
-                    background:linear-gradient(150deg, #fafafa 7%, #514A9D 45%);
-                }
-            }
-        }
-
     .container-fluid{
         position:relative;
         z-index:20;

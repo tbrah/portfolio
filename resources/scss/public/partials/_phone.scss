@@ -1,0 +1,93 @@
+.phone{
+    position:relative;
+    height:553px;
+    width:267px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 38px;
+    background: #fff;
+    box-shadow: inset 0 4px 7px 1px #fff, inset 0 -5px 20px rgba(173,186,204,.25), 0 2px 6px rgba(0,21,64,.14), 0 10px 20px rgba(0,21,64,.05);
+    margin-left:auto;
+
+    .speaker-wrapper{
+        width:300px;
+        height:10px;
+        position:absolute;
+        top:30px;
+        left:0;
+        right:0;
+        margin:0 auto;
+
+        .camera{
+            display:inline-block;
+            height:7px;
+            width:7px;
+            border-radius:7px;
+            background-color:#f2f2f2;
+        }
+
+        .speaker{
+            display:inline-block;
+            margin-left:10px;
+            height:4px;
+            width:50px;
+            border-radius:3px;
+            background-color:#f2f2f2;
+        }
+    }
+
+    .phone-screen{
+        position:relative;
+        width:240px;
+        height:430px;
+        background-color:#f7f7f7;
+        border:2px solid #f2f2f2;
+        border-radius:3px;
+
+        .md-button{
+            position:absolute;
+            left:0;
+            right:0;
+            top:195px;
+            width:160px;
+            margin:0 auto;
+            color:#fff;
+            background-color:#54a8e0;
+            transition: all 0.2s ease-in;
+
+            &:hover{
+                background-color:lighten(#54a8e0, 10%);
+                transform:translateY(-1px);
+            }
+        }
+
+        .browser-form-btn{
+            top:245px;
+            width:200px;
+            background-color:$primary-green;
+
+            &:hover{
+                background-color:lighten($primary-green, 10%);
+            }
+        }
+
+        p{
+            padding:0 20px 0 20px;
+            font-size:12px;
+            text-align:center;
+            color:$text-color;
+            position:absolute;
+            bottom:25px;
+        }
+    }
+
+    .phone-home-button{
+        position:absolute;
+        bottom:15px;
+        width:35px;
+        height:35px;
+        border-radius:50%;
+        background-color:#f2f2f2;
+    }
+}

@@ -2,6 +2,8 @@
 
     <div class="background-color-thing"></div>
 
+    <div class="background-image"></div>
+
     <div class="container">
 
         <!-- Nav-bar -->

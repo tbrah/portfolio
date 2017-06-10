@@ -1,13 +1,5 @@
 <section class="github">
 
-    <div class="span-background">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6 part-treehouse" ng-controller="treehouseCtrl">

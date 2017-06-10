@@ -17,6 +17,9 @@ $title = 'Portfolio';
         <!-- Intro -->
         <?php include_once('modules/intro.php');?>
 
+        <!-- Skillset -->
+        <?php include_once('modules/skillset.php');?>
+
         <!-- Github -->
         <?php include_once('modules/github.php');?>
 

@@ -1,0 +1,158 @@
+//Variables
+$skillset-height: 1300px;
+
+.skillset{
+    height:$skillset-height;
+    position:relative;
+    background-color:rgb(250,250,250);
+    z-index:100;
+    padding-bottom:200px;
+
+    .skillset-background{
+        height:$skillset-height;
+        position:absolute;
+        width:100%;
+        transform:skewY(-9deg);
+        background-color:$graytone-background;
+        z-index:-10;
+        overflow:hidden;
+
+    }
+
+    .container{
+        padding-top:200px;
+
+        .row{
+            .showfirst{
+                z-index:500;   
+            }
+
+            .text-box{
+                padding-top:70px;
+                padding-left:30px;
+                text-align:left;
+                h4{
+                    color:$gray-font;
+                }
+                h2{
+                    margin-bottom:40px;
+                }
+                p{
+                }
+            }
+        }
+
+        .title-box{
+            h2{
+                text-align:center;
+                color:#333;
+            }
+
+            h4{
+                text-align:center;
+                color:$gray-font;
+            }
+        }
+    }
+
+        .row{     
+            .tile-wrapper{
+                position:relative;
+                padding-right:85px;
+                .tile-overlay{
+                    margin-top:120px;
+                    height:700px;
+                    width:100%;
+                    padding-left:120px;
+                    padding-right:60px;
+                    padding-top:60px;
+                    box-shadow:$large-shadow;
+                    position:absolute;
+                    right:80px;
+                    background-color:#fff;
+                    z-index:30;
+
+                    .button-wrapper{
+                        display:table;
+                        margin:0 auto;
+                        .md-button{
+                            width:150px;
+                        }
+                    }
+
+                    .skill-explain{
+                        display:table;
+                        margin:0 auto;
+                        margin-top:25px;
+                        span{
+                            display:inline-block;
+                            width:35px;
+                            height:35px;
+                            border-radius:50%;
+                            background-color:$primary;
+                            margin-right:15px;
+                            box-shadow:$standard-shadow;
+                        }
+                    }
+
+                    ul{
+                        list-style:none;
+                        padding-left:0;
+                        width:340px;
+                        display:table;
+                        margin:0 auto;
+                        margin-top:50px;
+                        li{
+                            margin-top:15px;
+                            margin-bottom:15px;
+
+                            .level-wrapper{
+                                float:right;
+                                position:relative;
+                                width:65px;
+                                span{
+                                    position:relative;
+                                    display:inline-block;
+                                    left:0;
+                                    width:10px;
+                                    height:10px;
+                                    border-radius:50%;
+                                    background-color:$primary;
+                                }
+                            }
+                        }
+                    }
+
+                    .circle-div{
+                        position:absolute;
+                        right:-50px;
+                        top:40%;
+                        width:100px;
+                        height:100px;
+                        border-radius:50%;
+                        background-color:$primary;
+
+                        i{
+                            color:#fff;
+                            position:absolute;
+                            left:31px;
+                            top:31px;
+                            margin:0 auto;
+                            font-size:35px;
+                        }
+                    }
+                } 
+                .tile-gradient{
+                    height:700px;
+                    width:900px;
+                    position:absolute;
+                    right:200px;
+                    margin-top:170px;
+                    box-shadow:$large-shadow;
+                    z-index:20;
+                    background:linear-gradient(150deg, $primary 63%, lighten($primary, 20%) 109%);
+                } 
+            }
+        }
+
+}

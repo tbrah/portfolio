@@ -9,23 +9,28 @@
 
             .col-md-6{
 
-                h2{
-                    margin-bottom:20px;
-                }
+                .text-wrapper{
+                    position:relative;
+                    z-index:999;
+                    
+                    h2{
+                        margin-bottom:20px;
+                    }
 
-                p{
-                    margin-bottom:15px;
-                    a{
-                        color:#6772E5;
+                    p{
+                        margin-bottom:15px;
+                        a{
+                            color:#6772E5;
 
-                        &:hover{
+                            &:hover{
 
-                            text-decoration: none;
-                            color:#32325d;
-                            border:none;
+                                text-decoration: none;
+                                color:#32325d;
+                                border:none;
+                            }
                         }
                     }
-                }
+            }
 
                 img{
                     position:absolute;

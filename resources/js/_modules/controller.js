@@ -66,6 +66,25 @@ export default class Controller extends Module {
             }
         });
 
+        app.controller('skillsetCtrl', function($scope){
+
+            $scope.codingTech = [
+                {name:"HTML", level:5},
+                {name:"CSS", level:5},
+                {name:"jQuery", level:4},
+                {name:"AngularJS", level:3},
+                {name:"Angular2", level:3},
+                {name:"PHP", level:3},
+                {name:"MySQL", level:3},
+                {name:"Gulp", level:3},
+            ];
+
+            $scope.getNumber = function(num) {
+                return new Array(num);   
+            }
+
+        });
+
         //-- Directives --//
 
         app.directive("referenceLetter", function() {
