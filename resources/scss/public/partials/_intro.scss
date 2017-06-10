@@ -20,12 +20,12 @@
                     p{
                         margin-bottom:15px;
                         a{
-                            color:#6772E5;
+                            color:$primary;
 
                             &:hover{
 
                                 text-decoration: none;
-                                color:#32325d;
+                                color:darken($primary, 10%);
                                 border:none;
                             }
                         }

@@ -8,6 +8,11 @@ $skillset-height: 1300px;
     z-index:100;
     padding-bottom:200px;
 
+    .blue-circle{
+        background-color:$secondary-blue!important;
+        transition:all 0.2s ease-in;
+    }
+
     .skillset-background{
         height:$skillset-height;
         position:absolute;
@@ -59,6 +64,9 @@ $skillset-height: 1300px;
             .tile-wrapper{
                 position:relative;
                 padding-right:85px;
+                .tile-overlay-design{
+                    background:linear-gradient(160deg, #fff 23%, #54a8e0 92%)!important;
+                }
                 .tile-overlay{
                     margin-top:120px;
                     height:700px;
@@ -69,7 +77,7 @@ $skillset-height: 1300px;
                     box-shadow:$large-shadow;
                     position:absolute;
                     right:80px;
-                    background-color:#fff;
+                    background:linear-gradient(160deg, #fff 23%, $primary 92%);
                     z-index:30;
 
                     .button-wrapper{
@@ -77,6 +85,32 @@ $skillset-height: 1300px;
                         margin:0 auto;
                         .md-button{
                             width:150px;
+                            &:first-child{
+                                background-color:#fff;
+                                color:$gray-font;
+                                &:hover{
+                                    background-color:lighten($primary, 10%);
+                                    color:#fff;
+                                    box-shadow:$hover-shadow;
+                                }
+                            }
+                            &:last-child{
+                                background-color:#fff;
+                                color:$gray-font;
+                                &:hover{
+                                    background-color:lighten(#54a8e0, 10%);
+                                    color:#fff;
+                                    box-shadow:$hover-shadow;
+                                }
+                            }
+                        }
+                        .blue-btn{
+                            background-color:$secondary-blue!important;
+                            color:#fff!important;
+                        }
+                        .red-btn{
+                            background-color:$primary!important;
+                            color:#fff!important;
                         }
                     }
 
@@ -92,6 +126,12 @@ $skillset-height: 1300px;
                             background-color:$primary;
                             margin-right:15px;
                             box-shadow:$standard-shadow;
+                            transition: all 0.2s ease-in;
+
+                            &:hover{
+                                transform:translateY(-1px);
+                                box-shadow:$hover-shadow;
+                            }
                         }
                     }
 
@@ -101,10 +141,20 @@ $skillset-height: 1300px;
                         width:340px;
                         display:table;
                         margin:0 auto;
-                        margin-top:50px;
+                        margin-top:20px;
                         li{
                             margin-top:15px;
                             margin-bottom:15px;
+                            padding:9px 13px;
+                            box-shadow:$standard-shadow;
+                            border-radius:5px;
+                            background:#fff;
+                            transition:all 0.2s ease-in;
+
+                            &:hover{
+                                transform:translateY(-1px);
+                                box-shadow:$hover-shadow;
+                            }
 
                             .level-wrapper{
                                 float:right;
@@ -131,12 +181,13 @@ $skillset-height: 1300px;
                         height:100px;
                         border-radius:50%;
                         background-color:$primary;
+                        transition:all 0.2s ease-in;
 
                         i{
                             color:#fff;
                             position:absolute;
                             left:31px;
-                            top:31px;
+                            top:34px;
                             margin:0 auto;
                             font-size:35px;
                         }
@@ -151,7 +202,12 @@ $skillset-height: 1300px;
                     box-shadow:$large-shadow;
                     z-index:20;
                     background:linear-gradient(150deg, $primary 63%, lighten($primary, 20%) 109%);
-                } 
+                    transition: all 0.2s ease-in;
+                }
+                .tile-gradient-blue{
+                    background:linear-gradient(150deg, $secondary-blue 63%, lighten($secondary-blue, 20%) 109%);
+                    transition: all 0.2s ease-in;
+                }
             }
         }
 

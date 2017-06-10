@@ -53,3 +53,30 @@ h1, h2, h3, h4, h5, h6{
         transform:translateY(-1px);
     }
 }
+
+.md-button{
+    transition:all 0.2s ease-in;
+    &:hover{
+        transform:translateY(-1px);
+    }
+}
+
+a{
+    color:$primary;
+
+    &:hover{
+
+        text-decoration: none;
+        color:darken($primary, 10%);
+        border:none;
+    }
+}
+
+.blue-link{
+    color:$secondary-blue;
+
+    &:hover{
+
+        color:darken($secondary-blue, 10%);
+    }
+}

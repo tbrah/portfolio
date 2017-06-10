@@ -79,13 +79,55 @@ export default class Controller extends Module {
                 {name:"Gulp", level:3},
             ];
 
-            $scope.getNumber = function(num) {
-                return new Array(num);   
-            }
+            $scope.levelsCode = [
+                "Tried it once",
+                "Used it in a project",
+                "Used it in multiple projects  /  Comfortable using it",
+                "Use it on a regular basis / Very Comfortable using it",
+                "Senpai"
+                ];
+
+            $scope.designTech = [
+                {name:"Photoshop", level:4},
+                {name:"Illustrator", level:4},
+                {name:"After Effects", level:2},
+                {name:"In-Design", level:3},
+            ];
+
+            $scope.levelsDesign = [
+                "Tried it once",
+                "Used it in a project",
+                "Used it in multiple projects  /  Comfortable using it",
+                "Use it on a regular basis / Very Comfortable using it",
+                "Senpai"
+                ];
+
+            $scope.currentTab = "code";
+            
+            $scope.selectTab = function(tab){
+                if(tab == "code"){
+                    $scope.currentTab = "code";
+                } else {
+                    $scope.currentTab = "design";
+                }
+            };
 
         });
 
         //-- Directives --//
+        app.directive("codeList", function() {
+            return {
+                restrict:"E",
+                templateUrl: "views/code-list-view.php"
+            };
+        });
+
+        app.directive("designList", function() {
+            return {
+                restrict:"E",
+                templateUrl: "views/design-list-view.php"
+            };
+        });
 
         app.directive("referenceLetter", function() {
             return {
