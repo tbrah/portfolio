@@ -1,8 +1,6 @@
 <section class="skillset" ng-controller="skillsetCtrl">
 
-    <div class="skillset-background">
-        
-    </div>
+    <div class="skillset-background"></div>
 
     <div class="container">
 

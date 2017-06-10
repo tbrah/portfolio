@@ -20,8 +20,8 @@ $title = 'Portfolio';
         <!-- Skillset -->
         <?php include_once('modules/skillset.php');?>
 
-        <!-- Github -->
-        <?php include_once('modules/github.php');?>
+        <!--Treehouse-->
+        <?php include_once('modules/treehouse.php');?>
 
         <!--Showcase-->
         <?php include_once('modules/showcase.php');?>

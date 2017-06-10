@@ -13894,22 +13894,7 @@ var Controller = function (_Module) {
                 };
             });
 
-            app.controller('githubCtrl', function ($scope, $http) {
-
-                $scope.gitRepos = [];
-
-                //Get all the repositories from GitHub
-                $http({
-                    method: 'GET',
-                    url: 'https://api.github.com/users/tbrah/repos'
-                }).then(function successCallback(response) {
-                    $scope.gitRepos = response.data;
-                }, function errorCallback(response) {
-                    console.log("There was an error " + response);
-                });
-            });
-
-            app.controller('treehouseCtrl', function ($scope, $http) {
+            app.controller('treeGitCtrl', function ($scope, $http) {
 
                 $scope.treehouseBadges = [];
                 $scope.treehouseGeneral = [];
@@ -13925,6 +13910,18 @@ var Controller = function (_Module) {
                 }), function errorCallback(response) {
                     console.log("There was an error " + response);
                 };
+
+                $scope.gitRepos = [];
+
+                //Get all the repositories from GitHub
+                $http({
+                    method: 'GET',
+                    url: 'https://api.github.com/users/tbrah/repos'
+                }).then(function successCallback(response) {
+                    $scope.gitRepos = response.data;
+                }, function errorCallback(response) {
+                    console.log("There was an error " + response);
+                });
             });
 
             app.controller('popUpCtrl', function ($scope, $mdDialog) {

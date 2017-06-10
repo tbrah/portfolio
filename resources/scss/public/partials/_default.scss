@@ -80,3 +80,8 @@ a{
         color:darken($secondary-blue, 10%);
     }
 }
+
+.custom-hr{
+    width:200px;
+    border-bottom:4px solid $secondary-blue;
+}
