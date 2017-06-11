@@ -4,6 +4,11 @@
     padding-top:200px;
     padding-bottom:200px;
 
+    @media only screen and (max-width:991px){
+        padding-bottom:20px;
+        margin-top:440px;
+    }
+
     .container{
 
         .title-box{
@@ -24,6 +29,11 @@
         }
         .row{
             .col-md-6{
+                
+                @media only screen and (max-width:991px){
+                    text-align:center;
+                }
+
                 h2{
                     font-size:18px;
                     margin-bottom:30px;
@@ -35,6 +45,12 @@
 
                 //Treehouse
                 &:first-child{
+
+                    @media only screen and (max-width:991px){
+                        border-bottom:1px solid #eee;
+                        padding-top:40px;
+                        padding-bottom:60px;
+                    }
                    
                     .logo-img-tree{
                         width:60%;
@@ -49,6 +65,12 @@
                     .badge-container{
                         max-width:400px;
 
+                        @media only screen and (max-width:991px){
+                            margin:0 auto;
+                            margin-top:30px;
+                            margin-bottom:30px;
+                        }
+
                         figure{
                             display:inline-block;
 
@@ -57,9 +79,9 @@
                             margin-top:10px;
                             margin-right:10px;
 
-                            &:hover{
-                                transform: translateY(-1px);
-                            }
+                                &:hover{
+                                    transform: translateY(-1px);
+                                }
                             }
                         }
                     }
@@ -71,6 +93,13 @@
                         padding:0;
                         text-align:left;
                         height:140px;
+
+                        @media only screen and (max-width:991px){
+                            width:30%;
+                            margin:0 auto;
+                            margin-top:40px;
+                            margin-bottom:40px;
+                        }
 
                         li{
                             text-transform:uppercase; 
@@ -104,6 +133,14 @@
                 &:last-child{
                     text-align:right;
                      border-left:1px solid #eee;
+
+                     @media only screen and (max-width:991px){
+                         border-left:none;
+                         text-align:center;
+                         padding-top:30px;
+                         padding-bottom:30px;
+                     }
+
                     .logo-img-git{
                         width:60%;
                         margin-top:13px;
@@ -120,6 +157,11 @@
                         text-align:center;
                         padding:0;
                         margin-left:auto;
+
+                        @media only screen and (max-width:991px){
+                            margin:0 auto;
+                            margin-bottom:40px;
+                        }
 
                         a:hover{
                             border:none;

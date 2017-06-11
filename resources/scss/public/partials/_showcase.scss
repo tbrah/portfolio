@@ -35,12 +35,21 @@
                     border-radius:5px;
                     background-color:#fff;
                     margin-left:auto;
+
+                    @media only screen and (max-width:991px){
+                        margin:0 auto;
+                        margin-top:65px;
+                    }
                 }
 
             }
         }
         .showcase-wrapper{
             margin-top:180px;
+
+            @media only screen and (max-width:991px){
+                margin-top:60px;
+            }
 
                 .col-md-6{
 
