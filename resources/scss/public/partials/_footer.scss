@@ -23,6 +23,75 @@ footer{
             .col-md-6{
                 position:relative;
 
+                .form{
+                    position:relative;
+                    width:500px;
+                    height:500px;
+                    box-shadow:$standard-shadow;
+                    background-color:#f2f2f2;
+                    z-index:300;
+                    background-image:url("../img/connection-dots.svg");
+                    background-repeat:no-repeat;
+                    background-size:950px;
+                    background-position-y:-53px;
+                    background-position-x:-249px;
+
+                    form{
+                        padding:9px 13px;
+                        padding-top:70px;
+
+                        label{
+                            position:relative;
+                            width:100%;
+                        }
+                        input{
+                            position:relative;
+                            width:100%;
+                            padding:5px 15px 5px 15px;
+                            margin-bottom:15px;
+                            border-radius:3px;
+                            border: 1px solid #F1F7FB;
+
+                            &:focus ~ .floating-label,
+                            &:not(:focus):valid ~ .floating-label{
+                                top: -18px;
+                                left: 4px;
+                                font-size: 11px;
+                                opacity: 1;
+                            }
+                        }
+                        textarea{
+                            position:relative;
+                            width:100%;
+                            padding:15px;
+                            border-radius:3px;
+                            border: 1px solid #F1F7FB;
+                            min-height:200px;
+                        }
+                        .md-button{
+                            display:block;
+                            margin:0 auto;
+                            width:100px;
+                            margin-top:20px;
+                            color:#fff;
+                            background-color:$primary-green;
+
+                            &:hover{
+                            background-color:lighten($primary-green, 10%);
+                            }
+                        }
+                        
+                        .floating-label {
+                            position: absolute;
+                            pointer-events: none;
+                            left: 15px;
+                            top: 6px;
+                            transition: 0.2s ease all;
+                            color: $gray-font;
+                        }
+                    }
+                }
+
                 .envelope-wrapper{
                     position:absolute;
                     height:120px;
@@ -118,97 +187,11 @@ footer{
                         }
                 }
 
-                .phone{
-                    position:relative;
-                    height:553px;
-                    width:267px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    border-radius: 38px;
-                    background: #fff;
-                    box-shadow: inset 0 4px 7px 1px #fff, inset 0 -5px 20px rgba(173,186,204,.25), 0 2px 6px rgba(0,21,64,.14), 0 10px 20px rgba(0,21,64,.05);
-                    margin-left:auto;
-
-                    .camera{
-                        position:absolute;
-                        top:30px;
-                        left:100px;
-                        height:7px;
-                        width:7px;
-                        border-radius:7px;
-                        background-color:#f2f2f2;
-                    }
-
-                    .speaker{
-                        position:absolute;
-                        top:31px;
-                        left:114px;
-                        height:4px;
-                        width:50px;
-                        border-radius:3px;
-                        background-color:#f2f2f2;
-                    }
-
-                    .phone-screen{
-                        position:relative;
-                        width:240px;
-                        height:430px;
-                        background-color:#f7f7f7;
-                        border:2px solid #f2f2f2;
-                        border-radius:3px;
-
-                        .md-button{
-                            position:absolute;
-                            left:0;
-                            right:0;
-                            top:195px;
-                            width:160px;
-                            margin:0 auto;
-                            color:#fff;
-                            background-color:#54a8e0;
-                            transition: all 0.2s ease-in;
-
-                            &:hover{
-                                background-color:lighten(#54a8e0, 10%);
-                                transform:translateY(-1px);
-                            }
-                        }
-
-                        .browser-form-btn{
-                            top:245px;
-                            width:200px;
-                            background-color:$primary-green;
-
-                            &:hover{
-                                background-color:lighten($primary-green, 10%);
-                            }
-                        }
-
-                        p{
-                            padding:0 20px 0 20px;
-                            font-size:12px;
-                            text-align:center;
-                            color:$text-color;
-                            position:absolute;
-                            bottom:25px;
-                        }
-                    }
-
-                    .phone-home-button{
-                        position:absolute;
-                        bottom:15px;
-                        width:35px;
-                        height:35px;
-                        border-radius:50%;
-                        background-color:#f2f2f2;
-                    }
-                }
 
                 .phone-hori{
                     position:relative;
-                    top:80px;
-                    left:-70px;
+                    top:5px;
+                    left:-160px;
                     width: 553px;
                     height: 267px;
                     display: flex;
@@ -245,15 +228,21 @@ footer{
                         border:1px solid #f2f2f2;
                         border-radius:3px;
 
+                        @media only screen and (max-width:1319px) {
+                            left:-130px;
+                        }
+
+
+
                         .envelope-wrapper{
-                            top:-5px;
+                            top:25px;
                         }
 
                         .md-button{
                             position:absolute;
                             left:0;
                             right:0;
-                            top:135px;
+                            top:165px;
                             width:160px;
                             margin:0 auto;
                             color:#fff;
@@ -287,16 +276,31 @@ footer{
                         background-color:#f2f2f2;
                     }
                 }
-                h2{
-                    margin-top:105px;
-                }
 
-                .explain{
-                    color:$text-color;
-                }
+                .title-box{
+                    margin-left:-70px;
+
+                    @media only screen and (max-width:1450px) {
+                        margin-left:-70px;
+                    }
+
+                    @media only screen and (max-width:1319px) {
+                        margin-left:40px;
+                    }         
+
+                    h2{
+                            margin-top:65px;
+                        }
+
+                        .explain{
+                            color:$text-color;
+                            margin-bottom:45px;
+                        }
+                    }
 
                 &:last-child{
                     padding-left:50px;
+
                 }
             }
         }

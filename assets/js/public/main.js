@@ -14056,7 +14056,7 @@ var Footer = function (_Module) {
                     $(".phone-screen-hori .mail").css('bottom', '-30px');
                 });
 
-                $('.phone-screen .md-button').click(function (event) {
+                $('.phone-screen-hori .md-button').click(function (event) {
                     if ($(this).attr("data-id") == 1) {
                         var email = 'thomasmessell@gmail.com';
                         document.location = "mailto:" + email;

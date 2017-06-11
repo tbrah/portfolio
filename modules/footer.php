@@ -5,58 +5,26 @@
         <div class="row">
 
             <div class="col-md-6">
-            
-                <div class="phone">
 
-                    <div class="camera"></div>
+                <div class="form">
 
-                    <div class="speaker"></div>
-
-                    <div class="phone-screen">
-
-                            <div class="envelope-wrapper">
-
-                                <div class="env-wrapper-body">
-
-                                    <div class="left-side"></div>
-
-                                    <div class="right-side"></div>
-
-                                </div>
-
-                                <div class="mail">
-
-                                    <span class="stamp"></span>
-                                    <span class="heading"></span>
-                                    <b class="paragraf"></b>
-                                    <b class="paragraf"></b>
-                                    <b class="paragraf"></b>
-
-                                </div>
-                            
-                            </div>
-
-                            <md-button type="button" class="md-raised" data-id="1">Launch Mail App</md-button>
-
-                            <md-button type="button" class="md-raised browser-form-btn" data-id="0" ng-click="openPopUp('form')">Launch Browser Form</md-button>
-
-                            <p><i>Choose whether you want to write an e-mail via your default e-mail software of choice, or simply use the in-browser e-mail form.</i></p>
-
-                    </div>
-
-                    <div class="phone-home-button"></div>
+                    <mail-form></mail-form>
 
                 </div>
 
             </div>
         
             <div class="col-md-6">
-            
-                <h2>Ready to get in touch?</h2>
 
-                <p>Feel free to send me a message through the form.</p>
+                <div class="title-box">
 
-                <p class="explain"><i>Click one of the buttons on the phone to show the form.</i></p>
+                    <h2>Ready to get in touch?</h2>
+
+                    <p>Feel free to send me a message through the form.</p>
+
+                    <p class="explain"><i>Rather write through your e-mail app of choice?<br>I've got you covered, launch the Mail App instead below.</i></p>
+
+                </div>
 
                 <div class="phone-hori">
 
@@ -89,9 +57,6 @@
                             </div>
 
                             <md-button type="button" class="md-raised" data-id="1">Launch Mail App</md-button>
-
-                            <md-button type="button" class="md-raised browser-form-btn" data-id="0" ng-click="openPopUp('form')">Launch Browser Form</md-button>
-
 
                         </div>
 

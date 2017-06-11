@@ -1,9 +1,18 @@
-              <h2>Write me a message!</h2>
 
               <form name="contact-form" method="post" action="includes/contact_form.php">
-                  <input placeholder="Name:" name="name" maxlength="50" required>
-                  <input placeholder="Phone:" name="phone" maxlength="50">
-                  <input placeholder="E-mail:" name="email" maxlength="80" required>
-                  <textarea placeholder="Write your message here:" name="message" required></textarea>
+                  <label>
+                  <input name="name" maxlength="50" required>
+                  <span class="floating-label">Name:</span>
+                  </label>
+
+                  <label>
+                  <input name="email" maxlength="80" required>
+                  <span class="floating-label">E-mail:</span>
+                  </label>
+
+                  <label>
+                  <textarea placeholder="Message:" name="message" required></textarea>
+                  </label>
+
                   <md-button class="md-raised" type="submit">Send</md-button>
               </form>
