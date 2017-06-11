@@ -4,17 +4,7 @@
     
         <div class="row">
 
-            <div class="col-md-6">
-
-                <div class="form">
-
-                    <mail-form></mail-form>
-
-                </div>
-
-            </div>
-        
-            <div class="col-md-6">
+            <div class="col-md-6 col-md-push-6">
 
                 <div class="title-box">
 
@@ -61,6 +51,16 @@
                         </div>
 
                         <div class="phone-home-button-hori"></div>
+
+                </div>
+
+            </div>
+        
+            <div class="col-md-6 col-md-pull-6">
+
+                <div class="form">
+
+                    <mail-form></mail-form>
 
                 </div>
 

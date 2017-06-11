@@ -28,6 +28,14 @@
         .row{
 
             .col-md-6{
+
+                &:last-child{
+                    
+                    @media only screen and (max-width:991px) {
+                        display:none;
+                    }  
+                }
+
                 .reference-text-wrapper{
                     padding-top:60px;
                     max-height:520px;
