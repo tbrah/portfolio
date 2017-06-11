@@ -23,7 +23,17 @@ $skillset-height: 1300px;
         overflow:hidden;
         box-shadow:$standard-shadow;
 
+        .connection-dots{
+            transform:skewY(9deg);
+            position:absolute;
+            width:610px;
+            right:-80px;
+            top:-60px;
+            opacity:0.8;
+        }
     }
+
+
 
     .container{
         padding-top:200px;
@@ -42,8 +52,6 @@ $skillset-height: 1300px;
                 }
                 h2{
                     margin-bottom:40px;
-                }
-                p{
                 }
 
             }

@@ -38,7 +38,7 @@
                         position:absolute;
                         bottom:0;
                         background-color:black;
-                        height:180px;
+                        height:370px;
                         width:100%;
                         background: -moz-linear-gradient(to bottom, transparent 0%, rgba(237,242,247,0.5) 16%, #edf2f7 62%);
                         background: -webkit-linear-gradient(to bottom, transparent 0%, rgba(237,242,247,0.5) 16%, #edf2f7 62%);
@@ -47,7 +47,7 @@
 
                     button{
                         position:absolute;
-                        bottom:30px;
+                        bottom:70px;
                         left:0;
                         padding-left:15px;
                         padding-right:15px;
@@ -75,7 +75,7 @@
                     .text-heading{
                         position:absolute;
                         right:0;
-                        bottom:25px;
+                        bottom:60px;
                         
                         p{
                             color:$text-color;
@@ -83,6 +83,7 @@
 
                         p:first-child{
                             font-size:18px;
+                            margin-bottom:0;
                         }
                     }
                 }

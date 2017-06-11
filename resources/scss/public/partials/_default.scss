@@ -58,6 +58,7 @@ h1, h2, h3, h4, h5, h6{
     transition:all 0.2s ease-in;
     &:hover{
         transform:translateY(-1px);
+        box-shadow:$hover-shadow;
     }
 }
 
@@ -67,7 +68,7 @@ a{
     &:hover{
 
         text-decoration: none;
-        color:darken($primary, 10%);
+        color:darken($secondary, 10%);
         border:none;
     }
 }

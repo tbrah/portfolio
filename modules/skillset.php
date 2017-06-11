@@ -1,6 +1,10 @@
 <section class="skillset" ng-controller="skillsetCtrl">
 
-    <div class="skillset-background"></div>
+    <div class="skillset-background">
+
+        <img class="connection-dots" src="assets/img/connection-dots.svg">
+
+    </div>
 
     <div class="container">
 
@@ -69,7 +73,7 @@
 
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut ligula et magna accumsan ultrices. Etiam tempus quam at maximus dignissim. Nulla vitae mauris ipsum. Etiam commodo, augue vitae viverra ullamcorper, metus sem lobortis purus, a tincidunt arcu nulla sit amet purus. Pellentesque vitae lorem eu lacus convallis convallis. Pellentesque at condimentum nunc. Phasellus at dictum augue, sed convallis turpis. In eget consectetur ante. Integer posuere viverra nulla. Nam sed egestas justo. Sed vitae efficitur dolor. Nullam nec sagittis quam. Maecenas viverra quis diam vitae convallis. Nulla ullamcorper varius dui, vitae tempus odio efficitur sit amet. Vivamus vel justo sodales, porttitor ante at, sodales magna.</p>
 
-                    <p><a href="#" ng-class="{'blue-link': currentTab == 'design'}">See what i am currently learning <i class="fa fa-angle-right"></i></a></p>
+                    <p><a href="#" ng-if="currentTab == 'code'">See what i am currently learning <i class="fa fa-angle-right"></i></a></p>
                 
                 </div>
 

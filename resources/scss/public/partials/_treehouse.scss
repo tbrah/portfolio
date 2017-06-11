@@ -64,11 +64,13 @@
                         }
                     }
                     ul{
-                        width:190px;
+                        max-width:100%;
                         margin-top:50px;
                         margin-bottom:50px;
                         list-style:none;
                         padding:0;
+                        text-align:left;
+                        height:140px;
 
                         li{
                             text-transform:uppercase; 
@@ -81,6 +83,8 @@
                             border-radius:5px;
                             margin-bottom:10px;
                             transition:all 0.2s ease-in;
+                            width:210px;
+                            margin-right:10px;
 
                             &:hover{
                                 transform:translateY(-1px);
