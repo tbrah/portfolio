@@ -1,9 +1,7 @@
 .popupActive{
   display:block!important;
 }
-.referenceActive{
-  margin:11% auto!important;
-}
+
 .popupc{
   display: none;
   position: fixed;
@@ -14,10 +12,11 @@
   height: 100%;
   overflow: hidden;
   background-color: rgba(0,0,0,0.75);
+
   .popup-content {
     position:relative;
     margin: 15% auto;
-    width: 50%;
+    width: 800px;
     padding:30px;
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
@@ -61,6 +60,15 @@
           background-color:lighten($primary-green, 10%);
         }
       }
+    }
+  }
+
+    .referenceActive{
+    margin:135px auto;
+
+    @media only screen and (max-width:880px){
+      width:500px;
+      margin-top:25px;
     }
   }
 }

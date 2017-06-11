@@ -16,10 +16,10 @@
     }
     .container{
         .row{
-            .col-md-6{¨
+            .col-md-6{
 
-                &:first-child{
-                    padding-top:65px;
+                i{
+                    color:$primary;
                 }
 
                 h2{
@@ -35,6 +35,8 @@
                     border-radius:5px;
                     background-color:#fff;
                     margin-left:auto;
+                    background-size:cover;
+                    top:55px;
 
                     @media only screen and (max-width:991px){
                         margin:0 auto;

@@ -12,10 +12,12 @@
 
                 <p>Preview some of my work which i have selected to show. <br><br> Here you will be able to see what the project is about and what technologies were used in the process of creating them.</p>
 
+                <p><i>NOTE: This section is still under alot of development and functionality for the time being is heavily restricted. Appearence will most likely change aswell. <br><br> Sorry for the inconvenience.</i></p>
+
             </div>
             <div class="col-md-6">
 
-                <div class="showcase-preview">
+                <div class="showcase-preview" style="background-image:url('assets/img/showcase-preview.png')">
 
                 </div>
 
