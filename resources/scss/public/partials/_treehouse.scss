@@ -4,9 +4,12 @@
     padding-top:200px;
     padding-bottom:200px;
 
+    @media only screen and (max-width:1199px){
+        margin-top:440px;
+    }
+
     @media only screen and (max-width:991px){
         padding-bottom:20px;
-        margin-top:440px;
     }
 
     .container{
@@ -22,6 +25,9 @@
             p{
                 color:$gray-font;
                 font-size:12px;
+            }
+            .fa-cog{
+                color:$gray-font;
             }
             .custom-hr{
                 margin-bottom:120px;
@@ -148,7 +154,13 @@
                     }
 
                     p{
-                        margin-bottom:45px;
+                        &:first-child{
+                            margin-bottom:12px;
+                        }
+
+                        &:last-child{
+                            margin-bottom:45px;
+                        }
                     }
 
                     ul{

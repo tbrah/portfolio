@@ -8,6 +8,7 @@
             <h2>LEARNING & PROJECTS</h2>
             <p><i>this data is automatically updated by provided api's</i></p>
             <hr class="custom-hr">
+            <i class="fa fa-cog fa-spin fa-3x fa-fw"></i>
             <hr>
         
         </div>
@@ -16,8 +17,8 @@
         
             <div class="col-md-6">
                 <img class="logo-img-tree" src="assets/img/treehouse-logo-outlines.png" alt="treehouse logo">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut ligula et magna accumsan ultrices. Etiam tempus quam at maximus dignissim. Maecenas ut ligula et magna accumsan ultrices. Etiam tempus quam at maximus dignissim.</p>
-                   
+                <p>Constantly trying to improve my coding abilties and expanding into different technologies, i use treehouse.com to assist my learning.</p>
+                <p>Below you will be able to see what i have been learning recently and what courses i have completed.</p>  
                     <ul>
                         <li ng-repeat="(key, value) in treehousePoints" ng-if="value > 0">{{key}} <span>{{value}}<span></li>
                     </ul>
@@ -34,7 +35,9 @@
             
             <div class="col-md-6">
                 <img class="logo-img-git" src="assets/img/github.png" alt="github logo">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut ligula et magna accumsan ultrices. Etiam tempus quam at maximus dignissim. Maecenas ut ligula et magna accumsan ultrices. Etiam tempus quam at maximus dignissim.</p>
+                <p>I currently use GitHub to store and manage my projects. I Have had some commericial experience with gitLab aswell.</p>
+                <p>Here is a quick overview of what projects i have been working on:</p>
+                <p><a href="https://github.com/tbrah" target="_blank">Link to my github account</a></p>
                 
                 <ul>
                     <h3>Solo projects:</h3>

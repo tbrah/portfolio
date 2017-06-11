@@ -10,7 +10,7 @@
 
                 <h2>Showcase:</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut ligula et magna accumsan ultrices. Etiam tempus quam at maximus dignissim. Nulla vitae mauris ipsum. Etiam commodo, augue vitae viverra ullamcorper, metus sem lobortis purus, a tincidunt arcu nulla sit amet purus. Pellentesque vitae lorem eu lacus convallis convallis.</p>
+                <p>Preview some of my work which i have selected to show. <br><br> Here you will be able to see what the project is about and what technologies were used in the process of creating them.</p>
 
             </div>
             <div class="col-md-6">

@@ -8,11 +8,23 @@
 
                 <div class="text-wrapper">
 
-                    <h2>About me</h2>
+                    <h4>WHAT DO I HAVE TO SAY ABOUT MYSELF?</h4>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut ligula et magna accumsan ultrices. Etiam tempus quam at maximus dignissim. Nulla vitae mauris ipsum. Etiam commodo, augue vitae viverra ullamcorper, metus sem lobortis purus, a tincidunt arcu nulla sit amet purus. Pellentesque vitae lorem eu lacus convallis convallis. Pellentesque at condimentum nunc. Phasellus at dictum augue, sed convallis turpis. In eget consectetur ante. Integer posuere viverra nulla. Nam sed egestas justo. Sed vitae efficitur dolor. Nullam nec sagittis quam. Maecenas viverra quis diam vitae convallis. Nulla ullamcorper varius dui, vitae tempus odio efficitur sit amet. Vivamus vel justo sodales, porttitor ante at, sodales magna.</p>
+                    <h2>ABOUT ME</h2>
 
-                    <p><a href="#">Already sold on me? Skip to my contact information <i class="fa fa-angle-right"></i></a></p>
+                    <p>I am a young Front End Developer with internship experience at Denmark’s
+largest online dictionary company, Ordbogen.com. Along with my internship
+experience, I also have experience working with clients due to my freelance work.
+I am finishing my Multimedia Design and Communication studies on the 22nd of June, therefore now looking for a full time permanent position as a
+front end developer.</p>
+
+                    <p>I spend most of my time working on projects for either clients or personal projects. Learning and expanding my knowledge about web technologies is also something i spend a lot of time doing.</p>
+
+                    <p>Who am I as a person you may be thinking?
+I am very ambitious and aspire to learn as much from my surroundings as
+possible. I see myself as very friendly and easy to communicate with.</p>
+
+                    <p>Continue exploring the page to learn more about what projects and what technologies i am learning.</p>
 
                 </div>
 

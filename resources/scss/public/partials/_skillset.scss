@@ -23,6 +23,10 @@ $skillset-height: 1300px;
         overflow:hidden;
         box-shadow:$standard-shadow;
 
+        @media only screen and (max-width:1199px){
+            height:1730px;
+        }
+
         .connection-dots{
             transform:skewY(9deg);
             position:absolute;
@@ -48,7 +52,7 @@ $skillset-height: 1300px;
                 padding-left:30px;
                 text-align:left;
 
-                @media only screen and (max-width:991px){
+                @media only screen and (max-width:1199px){
                     margin-top:-550px;
                 }
 
@@ -88,7 +92,7 @@ $skillset-height: 1300px;
                 position:relative;
                 padding-right:85px;
 
-                @media only screen and (max-width:991px){
+                @media only screen and (max-width:1199px){
                     margin-top:340px;
                 }
 

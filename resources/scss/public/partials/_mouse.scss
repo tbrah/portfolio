@@ -1,0 +1,41 @@
+                        .scrollbutton{
+                            height:37px;
+                            width:23px;
+                            border-radius:99999px;
+                            border: 2px solid $gray-font;
+                            position:absolute;
+                            margin:0 auto;
+                            left:0;
+                            right:0;
+                            bottom:-100px;
+                            z-index: 99999999;
+                        }
+                        .scrollbutton .dot{
+                            width:4px;
+                            height:4px;
+                            border-radius:50%;
+                            transform: rotate(8deg);
+                            background: $gray-font;
+                            position:absolute;
+                            top:5px;
+                            left:0;
+                            right:0;
+                            margin:auto;
+                            animation: scroll 2500ms linear infinite;
+                        }
+                        .scroll-text{
+                            position:absolute;
+                            left:0;
+                            right:0;
+                            text-align:center;
+                            bottom:60px;
+                            color:rgba(255, 255, 255, 0.45);
+                            z-index: 999999;
+                            font-size:12px;
+                        }
+                    @-webkit-keyframes scroll{
+                        0%{opacity:0;top:5px;}
+                        15%{opacity:1;top:15px;}
+                        50%{opacity:0;top:15px;}
+                        100%{opacity:0;top:5px;}
+                    }

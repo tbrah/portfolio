@@ -1,7 +1,7 @@
 .intro{
     position:relative;
     margin-top:400px;
-    margin-bottom:300px;
+    margin-bottom:220px;
 
     .container{
 
@@ -12,23 +12,16 @@
                 .text-wrapper{
                     position:relative;
                     z-index:999;
+
+                    h4{
+                        color:$gray-font;
+                    }
                     
                     h2{
-                        margin-bottom:20px;
-                    }
-
-                    p{
-                        margin-bottom:15px;
-                        a{
-                            color:$secondary;
-
-                            &:hover{
-
-                                text-decoration: none;
-                                color:darken($secondary, 10%);
-                                border:none;
-                            }
-                        }
+                        margin-bottom:50px;
+                        display:inline-block;
+                        padding-bottom:15px;
+                        border-bottom:4px solid $secondary-blue;
                     }
             }
 

@@ -71,7 +71,26 @@
 
                     <h2><span ng-if="currentTab == 'code'">CODING</span><span ng-if="currentTab == 'design'">DESIGN</span></h2>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut ligula et magna accumsan ultrices. Etiam tempus quam at maximus dignissim. Nulla vitae mauris ipsum. Etiam commodo, augue vitae viverra ullamcorper, metus sem lobortis purus, a tincidunt arcu nulla sit amet purus. Pellentesque vitae lorem eu lacus convallis convallis. Pellentesque at condimentum nunc. Phasellus at dictum augue, sed convallis turpis. In eget consectetur ante. Integer posuere viverra nulla. Nam sed egestas justo. Sed vitae efficitur dolor. Nullam nec sagittis quam. Maecenas viverra quis diam vitae convallis. Nulla ullamcorper varius dui, vitae tempus odio efficitur sit amet. Vivamus vel justo sodales, porttitor ante at, sodales magna.</p>
+                    <p ng-if="currentTab == 'code'">
+                        My true passions lies with front end development, but my core competences
+                        reach beyond just coding. HTML, CSS, JavaScript frameworks (JQuery, AngularJS,
+                        Angular 2) as well as Bootstrap are skills that not only I excel at, but I still find
+                        exciting to work with. I am familiar with PHP and MySQL and have worked with
+                        them on several occasions. I have briefly worked with Smarty, which is a template
+                        engine that Ordbogen.com used. I understand the logic behind object orientated
+                        code through Angular 2 and can easily translate the same logic to backend
+                        frameworks if needed.
+                        <br><br>
+                        I spend a lot of time learning new coding technologies which you will be able to get a insight aswell.
+                    </p>
+                    
+                    <p ng-if="currentTab == 'design'">I have internship experience working as a digital designer at Ordbogen.com. Designing mockups and various marketing peices is something i feel confident in doing and have experience doing so. The Adobe Package is the software bundle of choice. Currently moving into Adobe Experience Design for designing mockups, although i would prefer working with Sketch.
+                    <br>
+                    <br>
+                    <i>Being able to design aswell as code eleminates the need of a supporting designer. You get more bang for you buck hiring me!</i>
+                    <br><br>
+                     I have designed print marketing peices for PR events aswell as Social Media content. If you are interested in seeing these marketing peices I have designing click <a href="">here</a> to skip to my showcase.
+                     </p>
 
                     <p><a href="#" ng-if="currentTab == 'code'">See what i am currently learning <i class="fa fa-angle-right"></i></a></p>
                 

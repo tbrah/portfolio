@@ -63,9 +63,9 @@ h1, h2, h3, h4, h5, h6{
 }
 
 a{
-    color:$primary;
+    color:$secondary-blue;
 
-    &:hover{
+    &:hover, &:visited, &:active, &:focus{
 
         text-decoration: none;
         color:darken($secondary, 10%);
