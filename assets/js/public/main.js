@@ -13894,11 +13894,29 @@ var Controller = function (_Module) {
                 };
             });
 
+            //activeTech Filter
+            app.filter('activeTech', function () {
+                return function (item) {
+
+                    var newArray = {};
+
+                    angular.forEach(item, function (value, key) {
+                        if (value > 0) {
+                            newArray[key] = value;
+                        }
+                    });
+
+                    return newArray;
+                };
+            });
+
             app.controller('treeGitCtrl', function ($scope, $http) {
 
                 $scope.treehouseBadges = [];
                 $scope.treehouseGeneral = [];
                 $scope.treehousePoints = [];
+                $scope.sortedArray;
+                $scope.courseController = "total";
 
                 $http({
                     method: 'GET',
@@ -13907,8 +13925,30 @@ var Controller = function (_Module) {
                     $scope.treehouseBadges = response.data.badges;
                     $scope.treehouseGeneral = response.data;
                     $scope.treehousePoints = response.data.points;
+                    $scope.sortCourses();
                 }), function errorCallback(response) {
                     console.log("There was an error " + response);
+                };
+
+                $scope.sortedCourse = [];
+
+                //This should maybe be a filter instead.
+                $scope.sortCourses = function () {
+
+                    angular.forEach($scope.treehouseBadges, function (value, key) {
+
+                        //Filter out the array and look for specific techonology courses.
+                        var checkArray = value.courses.filter(function (e) {
+                            return e.title.toLowerCase().includes("c#");
+                        });
+
+                        //If the checkArray contains anything push it to the scope.
+                        if (checkArray.length > 0) {
+                            $scope.sortedCourse.push(value);
+                        }
+                    });
+
+                    console.log($scope.sortedCourse);
                 };
 
                 $scope.gitRepos = [];

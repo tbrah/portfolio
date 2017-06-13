@@ -20,9 +20,9 @@
                 <p>Constantly trying to improve my coding abilties and expanding into different technologies, i use treehouse.com to assist my learning.</p>
                 <p>Below you will be able to see what i have been learning recently and what courses i have completed.</p>  
                     <ul>
-                        <li ng-repeat="(key, value) in treehousePoints" ng-if="value > 0">{{key}} <span>{{value}}<span></li>
+                        <li ng-repeat="(key, value) in treehousePoints | activeTech">{{key}} <span>{{value}}<span></li>
                     </ul>
-
+                    
                     <p class="badge-intro">See what i have been learning recently:</p>
                     <div class="badge-container">
                         <figure ng-repeat="item in treehouseBadges | reverse | limitTo:12">
