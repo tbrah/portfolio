@@ -1,6 +1,6 @@
-<header>
+<header ng-controller="laptopCtrl">
 
-    <div class="background-color-thing"></div>
+    <div class="background-color-thing" ng-style="myStyle"></div>
 
     <div class="background-image"></div>
 

@@ -51,11 +51,32 @@ export default class Controller extends Module {
 
         app.controller('laptopCtrl', function($scope, githubService){
 
+            $scope.portfolio = [];
+
             githubService.async().then(function(data){
+                
+                angular.forEach(data, function(value, key){
+
+                    if(value.name == "portfolio"){
+                        $scope.portfolio.push(value);
+                    }
+
+                });          
                 $scope.data = data;
-                console.log($scope.data);
             });
 
+            $scope.tabState = false;
+
+            $scope.showTab = function(){
+                $scope.tabState = !$scope.tabState;
+            }
+
+            $scope.viewSeleted ="";
+
+            $scope.viewSelector = function(view){
+                $scope.viewSelected = view;
+                console.log($scope.viewSelected);
+            };
             
         });
 
@@ -203,6 +224,13 @@ export default class Controller extends Module {
             return {
                 restrict:"E",
                 templateUrl: "views/form-view.php"
+            };
+        });
+
+        app.directive("colorPicker", function(){
+            return {
+                restrict:"E",
+                templateUrl: "views/color-picker-view.php"
             };
         });
 

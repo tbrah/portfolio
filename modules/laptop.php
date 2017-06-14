@@ -1,4 +1,4 @@
-<div class="laptop" ng-controller="laptopCtrl">
+<div class="laptop">
     <span class="shadow"></span>
     <span class="lid"></span>
     <span class="camera"></span>
@@ -6,14 +6,25 @@
 
         <div class="console-background">
 
-            <i class="fa fa-info" ng-click="getData()"></i>
+            <div class="background-fader" ng-if="viewSelected"></div>
 
-            <div class="right-side-menu"></div>
+            <color-picker ng-show="viewSelected == 'color-picker'" class="ng-hide"></color-picker>
 
-            <p>
+            <i class="fa" ng-click="showTab()" ng-class="{'fa-info': !tabState, 'fa-times': tabState}"></i>
+            <div class="puls"></div>
+
+            <div class="right-side-menu" ng-class="{'tab-active': tabState}">
+                <md-button class="md-raised" ng-click="viewSelector('color-picker')">Color picker</md-button>
+            </div>
+
+            <p >
                 Portfolio System [Version 10.0.14393]
                 <br>
-                (c) 2017 Last updated:
+                (c) 2017 Last updated: {{portfolio[0].updated_at | date:"MM/dd/yyyy 'at' h:mma"}}
+            </p>
+
+            <p>
+                c:\Users\Guest > <input autofocus>
             </p>
 
         </div>

@@ -39,19 +39,70 @@
         border-radius:4px;
         box-shadow:-1px 1px 6px rgba(171,183,204,.2);
         background:#f2f6fa;
+        
+
 
         .console-background{
             width:100%;
             height:100%;
             background-color:#34495e;
 
+            .background-fader{
+                z-index:300;
+                position:absolute;
+                width:100%;
+                height:100%;
+                background-color:#000;
+                opacity:0.3;
+            }
+
+            color-picker{
+                display:block;
+                height:70%;
+                width:50%;
+                left:0;
+                right:0;
+                margin:0 auto;
+                margin-top:55px;
+                position:absolute;
+                background-color:#fff;
+                z-index:1000;
+                text-align:center;
+            }
+
             i{
                 position:absolute;
-                z-index:100;
+                z-index:300;
                 right:15px;
                 top:10px;
                 color:#fff;
                 font-size:18px;
+                outline:none;
+            }
+
+            .puls{
+                position:absolute;
+                width:30px;
+                height:30px;
+                right:4px;
+                top:3px;
+                background-color:#fff;
+                opacity:0.2;
+                z-index:50;
+                border-radius:50%;
+                animation: pulser 3s ease-in-out infinite;
+            }
+
+            @keyframes pulser{
+                0%{
+                    transform:scale(0.1);
+                }
+                50%{
+                    transform:scale(0.9);
+                }
+                100%{
+                    transform:scale(0.1);
+                }
             }
 
             .right-side-menu{
@@ -60,13 +111,38 @@
                 width:0%;
                 height:100%;
                 background-color:lighten(#34495e, 5%);
+                transition:all 0.2s ease-in-out;
+                overflow:hidden;
+                z-index:200;
+                padding-top:40px;
+                text-align:center;
+
+                .md-button{
+                    font-size:12px;
+                    width:70%;
+                }
+            }
+
+            .tab-active{
+                width:30%;
             }
 
             p{
-                position:absolute;
+                position:relative;
                 left:5px;
                 top:5px;
                 color:#fff;
+
+                input{
+                    background:none;
+                    border:none;
+                    color:#fff;
+                    width:70%;
+
+                    &:focus{
+                        outline: none;
+                    }
+                }
             }
         }
     }
