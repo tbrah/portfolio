@@ -39,6 +39,36 @@
         border-radius:4px;
         box-shadow:-1px 1px 6px rgba(171,183,204,.2);
         background:#f2f6fa;
+
+        .console-background{
+            width:100%;
+            height:100%;
+            background-color:#34495e;
+
+            i{
+                position:absolute;
+                z-index:100;
+                right:15px;
+                top:10px;
+                color:#fff;
+                font-size:18px;
+            }
+
+            .right-side-menu{
+                position:absolute;
+                right:0;
+                width:0%;
+                height:100%;
+                background-color:lighten(#34495e, 5%);
+            }
+
+            p{
+                position:absolute;
+                left:5px;
+                top:5px;
+                color:#fff;
+            }
+        }
     }
 
     .chassis{
