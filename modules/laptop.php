@@ -8,12 +8,10 @@
 
             <div class="background-fader" ng-if="viewSelected"></div>
 
-            <div class="color-picker" ng-show="viewSelected == 'color-picker'" class="ng-hide">
+            <color-picker ng-show="viewSelected == 'color-picker'" class="ng-hide">
             
-                <button class="md-button md-raised" ng-click="myStyle={'background': primaryColor}">click me</button><br>
-                <input ng-click="checkDiv($event)" type="color" value="{{color}}" ng-model="color" />
-                {{color}}
-            </div>
+                
+            </color-picker>
 
             <i class="fa" ng-click="showTab()" ng-class="{'fa-info': !tabState, 'fa-times': tabState}"></i>
             <div class="puls"></div>

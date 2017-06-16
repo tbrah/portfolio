@@ -56,7 +56,7 @@
                 opacity:0.3;
             }
 
-            .color-picker{
+            color-picker{
                 display:block;
                 height:70%;
                 width:50%;
@@ -68,7 +68,15 @@
                 background-color:#fff;
                 z-index:1000;
                 text-align:center;
-                padding:30px 15px;
+                padding:40px 15px;
+
+                p{
+                    color:$gray-font;
+                }
+
+                button{
+                    margin-top:20px;
+                }
             }
 
             i{

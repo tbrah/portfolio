@@ -77,13 +77,29 @@ export default class Controller extends Module {
                 $scope.viewSelected = view;
             };
 
-            $scope.color = "#52d24f";
-            $scope.primaryColor = "";
+            //default color
+            $scope.color = "#de6161";
+            $scope.twoColor = "#54a8e0";
 
-            $scope.$watch('color', function(val, color){
-                console.log($scope.primaryColor);
-                $scope.primaryColor = 'linear-gradient(150deg, ' + val + ' 25%, #fff 94%)';
+            $scope.secondaryColor = 'linear-gradient(150deg, ' + $scope.color + ' 25%, ' + $scope.twoColor + ' 94%)';
+
+            $scope.$watch('color', function(val){  
+                $scope.color = val;
+                console.log($scope.color);
             });
+
+            $scope.$watch('twoColor', function(val){
+                $scope.twoColor = val;
+                console.log($scope.twoColor);
+                $scope.secondaryColor = 'linear-gradient(150deg, ' + $scope.color + ' 25%, ' + $scope.twoColor + ' 94%)';
+            });
+
+            $scope.changeColor = function(){
+                console.log($scope.color, $scope.twoColor);
+                $scope.myStyle = {
+                    'background' : 'linear-gradient(150deg, ' + $scope.color + ' 25%, ' + $scope.twoColor + ' 94%)'
+                };
+            };
             
         });
 
