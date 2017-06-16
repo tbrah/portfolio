@@ -35,6 +35,5 @@ $title = 'Portfolio';
         <!--Footer-->
         <?php include_once('modules/footer.php');?>
 
-    
 </body>
 </html>

@@ -37,7 +37,7 @@ export default class Controller extends Module {
                         // $http returns a promise, which has a then function, which also returns a promise
                         promise = $http.get('https://api.github.com/users/tbrah/repos').then(function (response) {
                             // The then function here is an opportunity to modify the response
-                            console.log(response);
+                            //console.log(response);
                             // The return value gets picked up by the then in the controller.
                             return response.data;
                         });
@@ -75,8 +75,15 @@ export default class Controller extends Module {
 
             $scope.viewSelector = function(view){
                 $scope.viewSelected = view;
-                console.log($scope.viewSelected);
             };
+
+            $scope.color = "#52d24f";
+            $scope.primaryColor = "";
+
+            $scope.$watch('color', function(val, color){
+                console.log($scope.primaryColor);
+                $scope.primaryColor = 'linear-gradient(150deg, ' + val + ' 25%, #fff 94%)';
+            });
             
         });
 

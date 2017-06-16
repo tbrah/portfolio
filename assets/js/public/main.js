@@ -13919,7 +13919,7 @@ var Controller = function (_Module) {
                             // $http returns a promise, which has a then function, which also returns a promise
                             promise = $http.get('https://api.github.com/users/tbrah/repos').then(function (response) {
                                 // The then function here is an opportunity to modify the response
-                                console.log(response);
+                                //console.log(response);
                                 // The return value gets picked up by the then in the controller.
                                 return response.data;
                             });
@@ -13956,8 +13956,15 @@ var Controller = function (_Module) {
 
                 $scope.viewSelector = function (view) {
                     $scope.viewSelected = view;
-                    console.log($scope.viewSelected);
                 };
+
+                $scope.color = "#52d24f";
+                $scope.primaryColor = "";
+
+                $scope.$watch('color', function (val, color) {
+                    console.log($scope.primaryColor);
+                    $scope.primaryColor = 'linear-gradient(150deg, ' + val + ' 25%, #fff 94%)';
+                });
             });
 
             app.controller('treeGitCtrl', function ($scope, $http, githubService) {
@@ -14226,6 +14233,56 @@ exports.default = Github;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _wrapper = require("wrapper6");
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Dependencies
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
+var $ = jQuery;
+
+var Laptop = function (_Module) {
+    _inherits(Laptop, _Module);
+
+    function Laptop() {
+        _classCallCheck(this, Laptop);
+
+        return _possibleConstructorReturn(this, (Laptop.__proto__ || Object.getPrototypeOf(Laptop)).apply(this, arguments));
+    }
+
+    _createClass(Laptop, [{
+        key: "ready",
+        value: function ready(app) {
+
+            $(document).ready(function () {
+                console.log('Loaded laptop.js');
+
+                /*$(".color-picker input").click(function(){
+                    console.log("this is working");
+                });*/
+            });
+        }
+    }]);
+
+    return Laptop;
+}(_wrapper.Module);
+
+exports.default = Laptop;
+
+},{"wrapper6":62}],71:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
@@ -14268,7 +14325,7 @@ var Main = function (_Module) {
 
 exports.default = Main;
 
-},{"wrapper6":62}],71:[function(require,module,exports){
+},{"wrapper6":62}],72:[function(require,module,exports){
 "use strict";
 
 var _wrapper = require("wrapper6");
@@ -14288,6 +14345,10 @@ var _controller2 = _interopRequireDefault(_controller);
 var _footer = require("../_modules/footer.js");
 
 var _footer2 = _interopRequireDefault(_footer);
+
+var _laptop = require("../_modules/laptop.js");
+
+var _laptop2 = _interopRequireDefault(_laptop);
 
 var _jquery = require("jquery");
 
@@ -14315,9 +14376,10 @@ app.use(_main2.default);
 app.use(_github2.default);
 app.use(_controller2.default);
 app.use(_footer2.default);
+app.use(_laptop2.default);
 
 window.jQuery = window.$ = _jquery2.default;
 
-},{"../_modules/controller.js":67,"../_modules/footer.js":68,"../_modules/github.js":69,"../_modules/main.js":70,"jquery":59,"wrapper6":62}]},{},[71]);
+},{"../_modules/controller.js":67,"../_modules/footer.js":68,"../_modules/github.js":69,"../_modules/laptop.js":70,"../_modules/main.js":71,"jquery":59,"wrapper6":62}]},{},[72]);
 
 //# sourceMappingURL=main.js.map
