@@ -8,12 +8,9 @@
 
             <div class="background-fader" ng-if="viewSelected"></div>
 
-            <color-picker ng-show="viewSelected == 'color-picker'" class="ng-hide">
-            
-                
-            </color-picker>
+            <color-picker ng-show="viewSelected == 'color-picker'" class="ng-hide"></color-picker>
 
-            <i class="fa" ng-click="showTab()" ng-class="{'fa-info': !tabState, 'fa-times': tabState}"></i>
+            <i class="right-corner fa" ng-click="showTab()" ng-class="{'fa-info': !tabState, 'fa-times': tabState}"></i>
             <div class="puls"></div>
 
             <div class="right-side-menu" ng-class="{'tab-active': tabState}">

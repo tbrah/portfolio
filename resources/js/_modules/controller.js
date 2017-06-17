@@ -85,17 +85,15 @@ export default class Controller extends Module {
 
             $scope.$watch('color', function(val){  
                 $scope.color = val;
-                console.log($scope.color);
+                $scope.secondaryColor = 'linear-gradient(150deg, ' + $scope.color + ' 25%, ' + $scope.twoColor + ' 94%)';
             });
 
             $scope.$watch('twoColor', function(val){
                 $scope.twoColor = val;
-                console.log($scope.twoColor);
                 $scope.secondaryColor = 'linear-gradient(150deg, ' + $scope.color + ' 25%, ' + $scope.twoColor + ' 94%)';
             });
 
             $scope.changeColor = function(){
-                console.log($scope.color, $scope.twoColor);
                 $scope.myStyle = {
                     'background' : 'linear-gradient(150deg, ' + $scope.color + ' 25%, ' + $scope.twoColor + ' 94%)'
                 };
