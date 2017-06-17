@@ -14,14 +14,14 @@
             <div class="puls"></div>
 
             <div class="right-side-menu" ng-class="{'tab-active': tabState}">
-                <button class="md-button md-raised" ng-click="viewSelector('color-picker')">Color picker</button>
+                <button class="md-button md-raised" ng-click="viewSelector('color-picker')"><i class="fa fa-paint-brush"></i> Color picker</button>
                 <button class="md-button md-raised">hello</button>
             </div>
 
             <p >
                 Portfolio System [Version 10.0.14393]
                 <br>
-                (c) 2017 Last updated: {{portfolio[0].updated_at | date:"MM/dd/yyyy 'at' h:mma"}}
+                (c) 2017 Last updated: {{portfolio[0].pushed_at | date:"MM/dd/yyyy 'at' h:mma"}}
             </p>
 
             <p>
