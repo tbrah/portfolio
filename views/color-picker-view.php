@@ -17,6 +17,6 @@
     <input ng-click="checkDiv($event)" type="color" value="{{twoColor}}" ng-model="twoColor" />
     {{twoColor}}
     <br>
-    <button class="md-button md-raised" style="background: {{secondaryColor}}" ng-click="changeColor()">Change colors</button><br>
+    <button class="md-button md-raised" style="background: {{secondaryColor}}" ng-click="changeColor()">Reset colors</button><br>
 
 </div>
