@@ -100,6 +100,8 @@ export default class Controller extends Module {
             });
 
             $scope.changeColor = function(){
+                $scope.color = "#de6161";
+                $scope.twoColor = "#54a8e0";
                 $scope.myStyle = {
                     'background': 'linear-gradient(150deg, #de6161 25%, #54a8e0 94%)'
                 };
