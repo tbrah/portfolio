@@ -24,24 +24,37 @@
 
             <div class="col-lg-6 tile-wrapper">
 
-                <div class="tile-overlay" ng-class="{'tile-overlay-design': currentTab == 'design'}">
+                <div class="tile-overlay" 
+                ng-class="{'tile-overlay-design': currentTab == 'design'}"
+                ng-style="currentTab !== 'design' ? {'background': 'linear-gradient(160deg, #fff 23%, ' + primColor + ' 92%)'} : {'background': 'linear-gradient(160deg, #fff 23%, ' + secColor + ' 92%)'}">
+                
 
-                    <div class="circle-div" ng-class="{'blue-circle': currentTab == 'design'}" ng-click="check()">
+                    <div class="circle-div" 
+                    ng-style="currentTab !== 'design' ? { 'background': primColor } : { 'background': secColor }" 
+                    ng-click="check()">
                         <i class="fa" ng-class="{'fa-code': currentTab == 'code', 'fa-paint-brush': currentTab == 'design'}"></i>
                     </div>
 
-                    {{one}}<br>
-                    {{two}}
-
                         <div class="button-wrapper">
 
-                            <md-button type="button" class="md-raised" ng-click="selectTab('code')" ng-class="{'red-btn': currentTab == 'code'}">Coding Skills</md-button>
-                            <md-button type="button" class="md-raised" ng-click="selectTab('design')" ng-class="{'blue-btn': currentTab == 'design'}">Design Skills</md-button>
+                            <md-button type="button" class="md-raised" 
+                            ng-click="selectTab('code')" 
+                            ng-class="{'red-btn': currentTab == 'code'}"
+                            ng-style="currentTab == 'code' ? { 'background': primColor } : {}" >
+                            Coding Skills
+                            </md-button>
+
+                            <md-button type="button" class="md-raised" 
+                            ng-click="selectTab('design')" 
+                            ng-class="{'blue-btn': currentTab == 'design'}"
+                            ng-style="currentTab == 'design' ? { 'background': secColor } : {}">
+                            Design Skills
+                            </md-button>
 
                         </div>
 
                         <div class="skill-explain">
-                            <span ng-repeat="item in levelsCode" ng-class="{'blue-circle': currentTab == 'design'}">
+                            <span ng-repeat="item in levelsCode" ng-style="currentTab !== 'design' ? { 'background': primColor } : { 'background': secColor }">
                                 <md-tooltip md-direction="top">{{item}}</md-tooltip>
                             </span>
                             
@@ -58,7 +71,9 @@
 
                 </div>
 
-                <div class="tile-gradient" ng-class="{'tile-gradient-blue': currentTab == 'design'}"></div>
+                <div class="tile-gradient" 
+                ng-class="{'tile-gradient-blue': currentTab == 'design'}"
+                ng-style="currentTab !== 'design' ? {'background': 'linear-gradient(160deg, #fff 23%, ' + primColor + ' 92%)'} : {'background': 'linear-gradient(160deg, #fff 23%, ' + secColor + ' 92%)'}"></div>
 
             </div>
         

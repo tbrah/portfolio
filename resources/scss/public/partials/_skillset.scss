@@ -96,10 +96,6 @@ $skillset-height: 1300px;
                     margin-top:340px;
                 }
 
-                .tile-overlay-design{
-                    background:linear-gradient(160deg, #fff 23%, #54a8e0 92%)!important;
-                }
-
                 .tile-overlay{
                     margin-top:120px;
                     height:700px;
@@ -122,8 +118,6 @@ $skillset-height: 1300px;
                                 background-color:#fff;
                                 color:$gray-font;
                                 &:hover{
-                                    background-color:lighten($primary, 10%);
-                                    color:#fff;
                                     box-shadow:$hover-shadow;
                                 }
                             }
@@ -131,18 +125,16 @@ $skillset-height: 1300px;
                                 background-color:#fff;
                                 color:$gray-font;
                                 &:hover{
-                                    background-color:lighten(#54a8e0, 10%);
-                                    color:#fff;
                                     box-shadow:$hover-shadow;
                                 }
                             }
                         }
                         .blue-btn{
-                            background-color:$secondary-blue!important;
+                            background-color:$secondary-blue;
                             color:#fff!important;
                         }
                         .red-btn{
-                            background-color:$primary!important;
+                            background-color:$primary;
                             color:#fff!important;
                         }
                     }

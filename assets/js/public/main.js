@@ -14084,23 +14084,24 @@ var Controller = function (_Module) {
 
             app.controller('skillsetCtrl', function ($scope, colorService) {
 
-                $scope.one = colorService.getData("primColor");
-                $scope.two = colorService.getData("secColor");
+                $scope.primColor = colorService.getData("primColor");
+                $scope.secColor = colorService.getData("secColor");
 
                 $scope.check = function () {
-                    colorService.getData();
+                    console.log($scope.primBgStyle);
+                    console.log($scope.secBgStyle);
                 };
 
                 $scope.$watch(function () {
                     return colorService.primColor;
                 }, function (newVal) {
-                    $scope.one = newVal;
+                    $scope.primColor = newVal;
                 });
 
                 $scope.$watch(function () {
                     return colorService.secColor;
                 }, function (newVal) {
-                    $scope.two = newVal;
+                    $scope.secColor = newVal;
                 });
 
                 $scope.codingTech = [{ name: "HTML", level: 5 }, { name: "CSS", level: 5 }, { name: "jQuery", level: 4 }, { name: "AngularJS", level: 3 }, { name: "Angular2", level: 3 }, { name: "PHP", level: 3 }, { name: "MySQL", level: 3 }, { name: "Gulp", level: 3 }];

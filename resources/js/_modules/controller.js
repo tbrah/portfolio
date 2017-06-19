@@ -209,23 +209,24 @@ export default class Controller extends Module {
 
         app.controller('skillsetCtrl', function($scope, colorService){
 
-            $scope.one = colorService.getData("primColor");
-            $scope.two = colorService.getData("secColor");
-            
+            $scope.primColor = colorService.getData("primColor");
+            $scope.secColor = colorService.getData("secColor");
+
             $scope.check = function(){
-                colorService.getData();
+                console.log($scope.primBgStyle);
+                console.log($scope.secBgStyle);
             };
 
             $scope.$watch(function () {
                 return colorService.primColor;
             }, function (newVal) {
-                $scope.one = newVal;
+                $scope.primColor = newVal;
             });
 
             $scope.$watch(function (){
                 return colorService.secColor;
             }, function(newVal){
-                $scope.two = newVal;
+                $scope.secColor = newVal;
             });
 
             $scope.codingTech = [
