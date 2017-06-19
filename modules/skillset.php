@@ -26,9 +26,12 @@
 
                 <div class="tile-overlay" ng-class="{'tile-overlay-design': currentTab == 'design'}">
 
-                    <div class="circle-div" ng-class="{'blue-circle': currentTab == 'design'}">
+                    <div class="circle-div" ng-class="{'blue-circle': currentTab == 'design'}" ng-click="check()">
                         <i class="fa" ng-class="{'fa-code': currentTab == 'code', 'fa-paint-brush': currentTab == 'design'}"></i>
                     </div>
+
+                    {{one}}<br>
+                    {{two}}
 
                         <div class="button-wrapper">
 

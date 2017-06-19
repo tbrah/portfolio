@@ -28,7 +28,7 @@ export default class Controller extends Module {
            }
         });
 
-        //Factory Attempt
+        //Github Data Service
         app.factory('githubService', function ($http) {
             var promise;
             var myService = {
@@ -49,7 +49,9 @@ export default class Controller extends Module {
             return myService;
         });
 
-        app.controller('laptopCtrl', function($scope, githubService){
+
+
+        app.controller('laptopCtrl', function ($scope, githubService, colorService){
 
             $scope.portfolio = [];
 
@@ -90,6 +92,7 @@ export default class Controller extends Module {
                 $scope.myStyle = {
                     'background': 'linear-gradient(150deg, ' + $scope.color + ' 25%, ' + $scope.twoColor + ' 94%)'
                 };
+                colorService.setData(val, "primColor");
             });
 
             $scope.$watch('twoColor', function(val){
@@ -98,8 +101,10 @@ export default class Controller extends Module {
                 $scope.myStyle = {
                     'background': 'linear-gradient(150deg, ' + $scope.color + ' 25%, ' + $scope.twoColor + ' 94%)'
                 };
+                colorService.setData(val, "secColor");
             });
 
+            // Reseting the colors
             $scope.changeColor = function(){
                 $scope.color = "#de6161";
                 $scope.twoColor = "#54a8e0";
@@ -180,7 +185,48 @@ export default class Controller extends Module {
             }
         });
 
-        app.controller('skillsetCtrl', function($scope){
+        app.service('colorService', function () {
+            this.primColor = "#de6161";
+            this.secColor = "#54a8e0";
+
+            this.getData = function(color){
+                if(color == "primColor"){
+                    return this.primColor;
+                } else if (color == "secColor"){
+                    return this.secColor;
+                }
+            };
+
+            this.setData = function(val, color){
+                console.log(val, color);
+                if(color == "primColor"){
+                    this.primColor = val;
+                } else if (color == "secColor"){
+                    this.secColor = val;
+                }
+            }
+        });
+
+        app.controller('skillsetCtrl', function($scope, colorService){
+
+            $scope.one = colorService.getData("primColor");
+            $scope.two = colorService.getData("secColor");
+            
+            $scope.check = function(){
+                colorService.getData();
+            };
+
+            $scope.$watch(function () {
+                return colorService.primColor;
+            }, function (newVal) {
+                $scope.one = newVal;
+            });
+
+            $scope.$watch(function (){
+                return colorService.secColor;
+            }, function(newVal){
+                $scope.two = newVal;
+            });
 
             $scope.codingTech = [
                 {name:"HTML", level:5},
