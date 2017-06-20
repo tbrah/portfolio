@@ -1,4 +1,4 @@
-<section class="tree-git" ng-controller="treeGitCtrl">
+<section class="tree-git" id="github" ng-controller="treeGitCtrl">
 
     <div class="container">
     

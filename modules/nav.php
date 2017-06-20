@@ -4,10 +4,10 @@
 
     <ul>
     
-        <li><a href="#">Showcase</a></li>
-        <li><a href="#">Reference</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Github</a></li>
+        <li><a href="#showcase">Showcase</a></li>
+        <li><a href="#reference">Reference</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#github">Github</a></li>
 
     </ul>
 

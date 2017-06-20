@@ -1,4 +1,4 @@
-<footer ng-controller="referenceCtrl">
+<footer ng-controller="referenceCtrl" id="contact">
 
     <div class="container">
     

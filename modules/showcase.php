@@ -1,4 +1,4 @@
-<section class="showcase">
+<section class="showcase" id="showcase">
 
     <div class="showcase-intro-bg"></div>
 

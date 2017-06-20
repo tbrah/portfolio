@@ -14441,6 +14441,55 @@ var Main = function (_Module) {
 exports.default = Main;
 
 },{"wrapper6":62}],72:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _wrapper = require('wrapper6');
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var $ = jQuery;
+
+var Scroll = function (_Module) {
+    _inherits(Scroll, _Module);
+
+    function Scroll() {
+        _classCallCheck(this, Scroll);
+
+        return _possibleConstructorReturn(this, (Scroll.__proto__ || Object.getPrototypeOf(Scroll)).apply(this, arguments));
+    }
+
+    _createClass(Scroll, [{
+        key: 'ready',
+        value: function ready(app) {
+
+            $('nav ul li a').click(function () {
+
+                window.thisitem = $(this);
+
+                $('html, body').animate({
+                    scrollTop: $($(thisitem).attr('href')).offset().top
+                }, 1000);
+                return false;
+            });
+        }
+    }]);
+
+    return Scroll;
+}(_wrapper.Module);
+
+exports.default = Scroll;
+
+},{"wrapper6":62}],73:[function(require,module,exports){
 "use strict";
 
 var _wrapper = require("wrapper6");
@@ -14464,6 +14513,10 @@ var _footer2 = _interopRequireDefault(_footer);
 var _laptop = require("../_modules/laptop.js");
 
 var _laptop2 = _interopRequireDefault(_laptop);
+
+var _scroll = require("../_modules/scroll.js");
+
+var _scroll2 = _interopRequireDefault(_scroll);
 
 var _jquery = require("jquery");
 
@@ -14492,9 +14545,10 @@ app.use(_github2.default);
 app.use(_controller2.default);
 app.use(_footer2.default);
 app.use(_laptop2.default);
+app.use(_scroll2.default);
 
 window.jQuery = window.$ = _jquery2.default;
 
-},{"../_modules/controller.js":67,"../_modules/footer.js":68,"../_modules/github.js":69,"../_modules/laptop.js":70,"../_modules/main.js":71,"jquery":59,"wrapper6":62}]},{},[72]);
+},{"../_modules/controller.js":67,"../_modules/footer.js":68,"../_modules/github.js":69,"../_modules/laptop.js":70,"../_modules/main.js":71,"../_modules/scroll.js":72,"jquery":59,"wrapper6":62}]},{},[73]);
 
 //# sourceMappingURL=main.js.map
