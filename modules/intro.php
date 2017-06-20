@@ -10,7 +10,7 @@
 
                     <h4>WHAT DO I HAVE TO SAY ABOUT MYSELF?</h4>
 
-                    <h2>ABOUT ME</h2>
+                    <h2 ng-style="{'border-bottom': '4px solid ' + secColor + ' '}">ABOUT ME</h2>
 
                     <p>I am a young Front End Developer with internship experience at Denmark’s
 largest online dictionary company, Ordbogen.com. Along with my internship

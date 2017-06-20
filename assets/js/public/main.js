@@ -13993,7 +13993,7 @@ var Controller = function (_Module) {
                 };
             });
 
-            app.controller('treeGitCtrl', function ($scope, $http, githubService) {
+            app.controller('treeGitCtrl', function ($scope, $http, githubService, colorService) {
 
                 $scope.treehouseBadges = [];
                 $scope.treehouseGeneral = [];
@@ -14039,13 +14039,11 @@ var Controller = function (_Module) {
                 githubService.async().then(function (data) {
                     $scope.gitRepos = data;
                 });
-            });
 
-            app.controller('introCtrl', function ($scope, colorService) {
+                // Color watch
+
                 $scope.primColor = colorService.getData("primColor");
                 $scope.secColor = colorService.getData("secColor");
-
-                console.log($scope.secColor);
 
                 $scope.$watch(function () {
                     return colorService.primColor;
@@ -14060,23 +14058,21 @@ var Controller = function (_Module) {
                 });
             });
 
-            app.controller('popUpCtrl', function ($scope, $mdDialog) {
+            app.controller('introCtrl', function ($scope, colorService) {
+                $scope.primColor = colorService.getData("primColor");
+                $scope.secColor = colorService.getData("secColor");
 
-                $scope.togglePopUp = false;
-                $scope.currentView = '';
+                $scope.$watch(function () {
+                    return colorService.primColor;
+                }, function (newVal) {
+                    $scope.primColor = newVal;
+                });
 
-                $scope.openPopUp = function (view) {
-                    $scope.currentView = view;
-                    $scope.togglePopUp = true;
-                };
-
-                //Have to do this if check otherwise bugs out when pressing space in input fields.
-                //Data attributes didn't work ** Re-try a new method of fixing this **
-                $scope.closePopUp = function (e) {
-                    if ($(e.target).hasClass('closePopUp')) {
-                        $scope.togglePopUp = false;
-                    }
-                };
+                $scope.$watch(function () {
+                    return colorService.secColor;
+                }, function (newVal) {
+                    $scope.secColor = newVal;
+                });
             });
 
             app.service('colorService', function () {
@@ -14133,6 +14129,43 @@ var Controller = function (_Module) {
                         $scope.currentTab = "code";
                     } else {
                         $scope.currentTab = "design";
+                    }
+                };
+            });
+
+            app.controller('referenceCtrl', function ($scope, colorService, $mdDialog) {
+
+                //Color watch
+                $scope.primColor = colorService.getData("primColor");
+                $scope.secColor = colorService.getData("secColor");
+
+                $scope.$watch(function () {
+                    return colorService.primColor;
+                }, function (newVal) {
+                    $scope.primColor = newVal;
+                });
+
+                $scope.$watch(function () {
+                    return colorService.secColor;
+                }, function (newVal) {
+                    $scope.secColor = newVal;
+                });
+
+                //Pop up
+
+                $scope.togglePopUp = false;
+                $scope.currentView = '';
+
+                $scope.openPopUp = function (view) {
+                    $scope.currentView = view;
+                    $scope.togglePopUp = true;
+                };
+
+                //Have to do this if check otherwise bugs out when pressing space in input fields.
+                //Data attributes didn't work ** Re-try a new method of fixing this **
+                $scope.closePopUp = function (e) {
+                    if ($(e.target).hasClass('closePopUp')) {
+                        $scope.togglePopUp = false;
                     }
                 };
             });

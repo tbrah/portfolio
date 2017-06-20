@@ -7,7 +7,7 @@
             <h4>LEARNING SOMETHING NEW EVERYDAY</h4>
             <h2>LEARNING & PROJECTS</h2>
             <p><i>this data is automatically updated by provided api's</i></p>
-            <hr class="custom-hr">
+            <hr class="custom-hr" ng-style="{'border-bottom': '4px solid ' + secColor + ' '}">
             <i class="fa fa-cog fa-spin fa-3x fa-fw"></i>
             <hr>
         

@@ -115,7 +115,7 @@ export default class Controller extends Module {
             
         });
 
-        app.controller('treeGitCtrl', function ($scope, $http, githubService){
+        app.controller('treeGitCtrl', function ($scope, $http, githubService, colorService){
 
             $scope.treehouseBadges = [];
             $scope.treehouseGeneral = [];
@@ -164,13 +164,28 @@ export default class Controller extends Module {
                 $scope.gitRepos = data;
             });
 
+            // Color watch
+
+            $scope.primColor = colorService.getData("primColor");
+            $scope.secColor = colorService.getData("secColor");
+
+            $scope.$watch(function () {
+                return colorService.primColor;
+            }, function (newVal) {
+                $scope.primColor = newVal;
+            });
+
+            $scope.$watch(function () {
+                return colorService.secColor;
+            }, function (newVal) {
+                $scope.secColor = newVal;
+            });
+
         });
 
         app.controller('introCtrl', function($scope, colorService){
                 $scope.primColor = colorService.getData("primColor");
                 $scope.secColor = colorService.getData("secColor");
-
-                console.log($scope.secColor);
 
                 $scope.$watch(function () {
                     return colorService.primColor;
@@ -183,25 +198,6 @@ export default class Controller extends Module {
                 }, function(newVal){
                     $scope.secColor = newVal;
                 });
-        });
-        
-        app.controller('popUpCtrl', function($scope, $mdDialog){
-
-            $scope.togglePopUp = false;
-            $scope.currentView = '';
-
-            $scope.openPopUp = function(view){
-                $scope.currentView = view;
-                $scope.togglePopUp = true;
-            }
-
-            //Have to do this if check otherwise bugs out when pressing space in input fields.
-            //Data attributes didn't work ** Re-try a new method of fixing this **
-            $scope.closePopUp = function(e){
-                if(($(e.target).hasClass('closePopUp'))){
-                    $scope.togglePopUp = false;
-                }
-            }
         });
 
         app.service('colorService', function () {
@@ -286,6 +282,44 @@ export default class Controller extends Module {
                     $scope.currentTab = "design";
                 }
             };
+
+        });
+
+        app.controller('referenceCtrl', function($scope, colorService, $mdDialog){
+
+            //Color watch
+            $scope.primColor = colorService.getData("primColor");
+            $scope.secColor = colorService.getData("secColor");
+
+            $scope.$watch(function () {
+                return colorService.primColor;
+            }, function (newVal) {
+                $scope.primColor = newVal;
+            });
+
+            $scope.$watch(function () {
+                return colorService.secColor;
+            }, function (newVal) {
+                $scope.secColor = newVal;
+            });
+
+            //Pop up
+
+            $scope.togglePopUp = false;
+            $scope.currentView = '';
+
+            $scope.openPopUp = function (view) {
+                $scope.currentView = view;
+                $scope.togglePopUp = true;
+            }
+
+            //Have to do this if check otherwise bugs out when pressing space in input fields.
+            //Data attributes didn't work ** Re-try a new method of fixing this **
+            $scope.closePopUp = function (e) {
+                if (($(e.target).hasClass('closePopUp'))) {
+                    $scope.togglePopUp = false;
+                }
+            }
 
         });
 

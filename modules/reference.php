@@ -1,4 +1,4 @@
-<section class="reference" ng-controller="popUpCtrl">
+<section class="reference" ng-controller="referenceCtrl">
 
     <div class="container">
 
@@ -7,7 +7,7 @@
             <h4>WHAT DO PEOPLE HAVE TO SAY ABOUT ME?</h4>
             <h2>REFERENCE</h2>
 
-            <hr class="custom-hr">
+            <hr class="custom-hr" ng-style="{'border-bottom' : '4px solid ' + secColor + ''}">
 
         </div>
     

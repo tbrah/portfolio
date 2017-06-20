@@ -14,7 +14,7 @@
 
             <h2>MY SKILLS</h2>
 
-            <hr class="custom-hr" ng-class="{'red-hr': currentTab == 'code'}">
+            <hr class="custom-hr" ng-style="currentTab == 'design' ? {'border-bottom': '4px solid ' + secColor + ' '} : {'border-bottom': '4px solid ' + primColor + ' '}" ng-class="{'red-hr': currentTab == 'code'}">
 
         </div>
 
