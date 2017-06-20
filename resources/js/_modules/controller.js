@@ -323,6 +323,18 @@ export default class Controller extends Module {
 
         });
 
+        app.controller('alertCtrl', function($scope, colorService){
+            $scope.alertActive = false;
+
+            $scope.closeAlert = function(){
+                if($scope.alertActive == false){
+                    $scope.alertActive = true;
+                } else {
+                    $scope.alertActive = false;
+                }
+            };
+        });
+
         //-- Directives --//
         app.directive("codeList", function() {
             return {

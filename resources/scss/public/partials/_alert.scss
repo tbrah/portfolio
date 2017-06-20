@@ -1,0 +1,39 @@
+.alert-wrapper{
+    position:fixed;
+    width:340px;
+    height:100px;
+    background-color:#e67e22;
+    top:30px;
+    right:0px;
+    z-index:9999999;
+    color:#fff;
+    padding-left:60px;
+    padding-top:30px;
+    box-shadow:$standard-shadow;
+    animation: slideIn 0.8s ease-in;
+
+    &::before{
+        content: "\f12a";
+        font-family: "FontAwesome";
+        position:absolute;
+        color:#fff;
+        font-size:50px;
+        left:20px;
+        top:16px;
+    }
+
+    .fa-times{
+        position:absolute;
+        top:10px;
+        right:10px;
+    }
+
+    @keyframes slideIn{
+        0%{
+            right:-340px;
+        }
+        100%{
+            right:0px;
+        }
+    }
+}

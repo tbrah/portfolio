@@ -29,11 +29,11 @@ $title = 'Portfolio';
         <!--Reference-->
         <?php include_once('modules/reference.php');?>
 
-        <!--Contact-->
-        <?php include_once('modules/contact.php');?>
-
         <!--Footer-->
         <?php include_once('modules/footer.php');?>
+
+        <!--Alert toast-->
+        <?php include_once('modules/alert.php');?>
 
 </body>
 </html>
