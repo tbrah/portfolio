@@ -30,8 +30,7 @@
                 
 
                     <div class="circle-div" 
-                    ng-style="currentTab !== 'design' ? { 'background': primColor } : { 'background': secColor }" 
-                    ng-click="check()">
+                    ng-style="currentTab !== 'design' ? { 'background': primColor } : { 'background': secColor }">
                         <i class="fa" ng-class="{'fa-code': currentTab == 'code', 'fa-paint-brush': currentTab == 'design'}"></i>
                     </div>
 

@@ -1,4 +1,4 @@
-<section class="intro">
+<section class="intro" ng-controller="introCtrl">
 
     <div class="container">
 

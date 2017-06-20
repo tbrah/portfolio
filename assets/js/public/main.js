@@ -14041,6 +14041,25 @@ var Controller = function (_Module) {
                 });
             });
 
+            app.controller('introCtrl', function ($scope, colorService) {
+                $scope.primColor = colorService.getData("primColor");
+                $scope.secColor = colorService.getData("secColor");
+
+                console.log($scope.secColor);
+
+                $scope.$watch(function () {
+                    return colorService.primColor;
+                }, function (newVal) {
+                    $scope.primColor = newVal;
+                });
+
+                $scope.$watch(function () {
+                    return colorService.secColor;
+                }, function (newVal) {
+                    $scope.secColor = newVal;
+                });
+            });
+
             app.controller('popUpCtrl', function ($scope, $mdDialog) {
 
                 $scope.togglePopUp = false;
@@ -14086,11 +14105,6 @@ var Controller = function (_Module) {
 
                 $scope.primColor = colorService.getData("primColor");
                 $scope.secColor = colorService.getData("secColor");
-
-                $scope.check = function () {
-                    console.log($scope.primBgStyle);
-                    console.log($scope.secBgStyle);
-                };
 
                 $scope.$watch(function () {
                     return colorService.primColor;
