@@ -14076,6 +14076,9 @@ var Controller = function (_Module) {
             });
 
             app.service('colorService', function () {
+                this.defaultPrim = "#de6161";
+                this.defaultSec = "#54a8e0";
+
                 this.primColor = "#de6161";
                 this.secColor = "#54a8e0";
 
@@ -14173,11 +14176,30 @@ var Controller = function (_Module) {
             app.controller('alertCtrl', function ($scope, colorService) {
                 $scope.alertActive = false;
 
+                $scope.$watch(function () {
+                    return colorService.primColor;
+                }, function (newVal) {
+                    console.log("hello");
+                    if (newVal !== colorService.defaultPrim) {
+                        $scope.alertActive = true;
+                    }
+                });
+
+                $scope.$watch(function () {
+                    return colorService.secColor;
+                }, function (newVal) {
+                    console.log("hello");
+                    if (newVal !== colorService.defaultSec) {
+                        $scope.alertActive = true;
+                    }
+                });
+
                 $scope.closeAlert = function () {
                     if ($scope.alertActive == false) {
                         $scope.alertActive = true;
                     } else {
                         $scope.alertActive = false;
+                        console.log("set to false");
                     }
                 };
             });
