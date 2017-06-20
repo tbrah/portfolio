@@ -1,4 +1,4 @@
-<footer ng-controller="popUpCtrl">
+<footer ng-controller="referenceCtrl">
 
     <div class="container">
     
