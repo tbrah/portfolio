@@ -3,7 +3,7 @@
 
     $id = $_GET['id'];
 
-    $crud = new Crud($objCon, "intelli_news");
+    $crud = new Crud($objCon, "showcase");
 
 	$array = array("id"=>"$id");
 

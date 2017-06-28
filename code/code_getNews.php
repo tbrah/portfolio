@@ -4,7 +4,7 @@ include('incl_db.php');
 
 session_start(); 
 
-$crud = new Crud($objCon, "intelli_news");
+$crud = new Crud($objCon, "showcase");
                 
 $crud->SetArray("*");
 
@@ -16,7 +16,7 @@ $syntax = '[';
  
 while($obj = $res->fetch_object()){
  
-    $syntax .= '{"id":"'.$obj->id.'", "url":"'.$obj->img.'", "des":"'.$obj->des.'"},';
+    $syntax .= '{"id":"'.$obj->id.'", "url":"'.$obj->img.'", "desc":"'.$obj->desc.'", "title": "'.$obj->title.'", "featured": "'.$obj->featured.'"},';
  
 }
  

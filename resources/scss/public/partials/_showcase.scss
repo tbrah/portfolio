@@ -37,6 +37,34 @@
                     margin-left:auto;
                     background-size:cover;
                     top:55px;
+                    transition:all 0.2s ease-in;
+
+                    &:hover{
+                            transform:translateY(-1px);
+                        }
+
+                        &:hover .desc-tag{
+                            display:block;
+                        }
+
+                        .desc-tag{
+                            display:none;
+                            position:absolute;
+                            background-color:rgba(0, 0, 0, 0.66);
+                            width:100%;
+                            height:auto;
+                            bottom:0;
+                            padding-left:15px;
+                            transition: all 0.2s ease-in-out;
+                            
+                            h3{
+                                color:#fff;
+
+                            }
+                            p{
+                                color:#fff;
+                            }
+                        }
 
                     @media only screen and (max-width:991px){
                         margin:0 auto;

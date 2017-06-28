@@ -1,0 +1,58 @@
+#menuBar {
+	width: 335px;
+	height: calc(100vh - 70px);
+	background: #FFF;
+	z-index: 1;
+	padding: 60px;
+	position: fixed;
+	top: 70px;
+
+
+	.addNews {
+		background: $primary-green;
+		border: 1px solid darken($primary-green, 10%);
+		color: #FFF;
+		height: 50px;
+		width: 100%;
+		line-height: 50px;
+		text-decoration: none;
+		float: left;
+		text-align: center;
+		margin-bottom: 40px;
+		font-size: 17px;
+		font-weight: bold;
+		transition: all 0.2s ease-in;
+		border-radius: 3px;
+
+		&:hover {
+			background: lighten($primary-green, 5%);
+
+			cursor: pointer;
+			transform: translateY(-2px);
+		}
+	}
+
+	ul {
+		float: left;
+		width: 100%;
+		li {
+			list-style: none;
+			float: left;
+			width: 100%;
+			a {
+				float: left;
+				text-decoration: none;
+				cursor: pointer;
+				color: $text-color;
+				transition: all 0.2s ease-in;
+
+				&:hover {
+					color: #32325d;
+				}
+			}
+			.menuActive {
+				color: $primary;
+			}
+		}
+	}
+}

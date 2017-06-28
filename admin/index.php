@@ -19,15 +19,15 @@ $site = 'news';
     </head>
 <body class="dashboard">
 
-<!-- TopBar -->
-<?php include_once($prefix.'modules/backend/topbar.php'); ?>
+    <!-- TopBar -->
+    <?php include_once($prefix.'modules/backend/topbar.php'); ?>
 
-<!-- MenuBar -->
-<?php include_once($prefix.'modules/backend/menubar.php'); ?>
+    <!-- MenuBar -->
+    <?php include_once($prefix.'modules/backend/menubar.php'); ?>
 
-<!-- MenuBar -->
-<?php include_once($prefix.'modules/backend/all_news.php'); ?>
-
+    <!-- Showcase -->
+    <?php include_once($prefix.'modules/backend/all_news.php'); ?>
+    
 </body>
 </html>
 

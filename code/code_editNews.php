@@ -6,13 +6,7 @@
 
     $id = $_GET['editId']; 
 
-    // Date
-	date_default_timezone_set('Europe/Copenhagen');
-	$date = date('Y/m/d');
-
-	$_POST['dat'] = $date;
-
-    $crud = new Crud($objCon, "intelli_news");
+    $crud = new Crud($objCon, "showcase");
 
     $crud->SetArray($_POST);
 
@@ -20,6 +14,6 @@
 
     $crud->SendSQL();
 
-    header('Location: ../admin/index.php?edit=1');
+    header('Location: ../admin/index.php'); 
 
 ?>

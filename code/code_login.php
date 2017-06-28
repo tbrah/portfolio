@@ -10,7 +10,7 @@ $username = $_POST['username'];
 
 $password = $_POST['password'];
 
-$crud = new Crud($objCon, "intelli_login");
+$crud = new Crud($objCon, "port_login");
                 
 $crud->SetArray("*");
 

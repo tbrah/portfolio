@@ -11,7 +11,7 @@
 
         $_POST['img'] = $collected;
 		
-		move_uploaded_file($_FILES['img']['tmp_name'], "../assets/img/uploaded/news/".$md5.".".$extension);
+		move_uploaded_file($_FILES['img']['tmp_name'], "../assets/img/uploaded/".$md5.".".$extension);
 
 	} else {
 
@@ -21,21 +21,15 @@
 
 	}
 
-	// Date
-	date_default_timezone_set('Europe/Copenhagen');
-	$date = date('Y/m/d');
-
-	$_POST['dat'] = $date;
-
     include ("incl_db.php");
 
-    $crud = new Crud($objCon, "intelli_news");
+    $crud = new Crud($objCon, "showcase");
 
-	echo $crud->SetArray($_POST);
+	$crud->SetArray($_POST);
 
-    echo $cruds = $crud->Create();
+    $cruds = $crud->Create();
 
-    //$crud->SendSQL();
+    $crud->SendSQL();
     
-    //header("location: ../admin/index.php?news=created");          
+    header("location: ../admin/index.php?news=created");
 ?> 

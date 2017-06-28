@@ -1,3 +1,6 @@
+.alert-wrapper-animation{
+    animation: slideIn 0.8s ease-in;
+}
 .alert-wrapper{
     position:fixed;
     width:340px;
@@ -10,7 +13,6 @@
     padding-left:60px;
     padding-top:30px;
     box-shadow:$standard-shadow;
-    animation: slideIn 0.8s ease-in;
 
     &::before{
         content: "\f12a";

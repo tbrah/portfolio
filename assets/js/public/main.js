@@ -14091,7 +14091,6 @@ var Controller = function (_Module) {
                 };
 
                 this.setData = function (val, color) {
-                    console.log(val, color);
                     if (color == "primColor") {
                         this.primColor = val;
                     } else if (color == "secColor") {
@@ -14133,6 +14132,33 @@ var Controller = function (_Module) {
                     } else {
                         $scope.currentTab = "design";
                     }
+                };
+            });
+
+            app.controller('showcaseCtrl', function ($scope, $http) {
+
+                $scope.showcase = [];
+                $scope.featuredShowcase = [];
+
+                $http({
+                    method: 'GET',
+                    url: 'code/code_getNews.php'
+                }).then(function (response) {
+                    $scope.showcase = response.data;
+                    $scope.sortShowcase();
+                    console.log($scope.showcase);
+                }), function errorCallback(response) {
+                    console.log("There was an error " + response);
+                };
+
+                $scope.sortShowcase = function () {
+
+                    angular.forEach($scope.showcase, function (item) {
+
+                        if (item.featured == 1) {
+                            $scope.featuredShowcase.push(item);
+                        }
+                    });
                 };
             });
 
@@ -14179,7 +14205,6 @@ var Controller = function (_Module) {
                 $scope.$watch(function () {
                     return colorService.primColor;
                 }, function (newVal) {
-                    console.log("hello");
                     if (newVal !== colorService.defaultPrim) {
                         $scope.alertActive = true;
                     }
@@ -14188,7 +14213,6 @@ var Controller = function (_Module) {
                 $scope.$watch(function () {
                     return colorService.secColor;
                 }, function (newVal) {
-                    console.log("hello");
                     if (newVal !== colorService.defaultSec) {
                         $scope.alertActive = true;
                     }
@@ -14199,7 +14223,7 @@ var Controller = function (_Module) {
                         $scope.alertActive = true;
                     } else {
                         $scope.alertActive = false;
-                        console.log("set to false");
+                        console.log($scope.alertActive);
                     }
                 };
             });

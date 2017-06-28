@@ -2,7 +2,7 @@
 
 date_default_timezone_set("Europe/Copenhagen"); 
 
-$objCon = new mysqli('localhost', 'root', 'root', 'intellifinder');
+$objCon = new mysqli('localhost', 'root', 'root', 'portfolio');
 
 $objCon->set_charset('utf8');
 

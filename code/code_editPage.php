@@ -6,7 +6,7 @@
 
     $id = $_GET['editId']; 
 
-    $crud = new Crud($objCon, "intelli_page");
+    $crud = new Crud($objCon, "showcase");
 
     $crud->SetArray($_POST);
 
