@@ -17,6 +17,9 @@ $title = 'Portfolio';
         <!-- Intro -->
         <?php include_once('modules/intro.php');?>
 
+        <!-- Showcase-focus-->
+        <?php include_once('views/showcase-focus.php');?>
+
         <!-- Skillset -->
         <?php include_once('modules/skillset.php');?>
 
