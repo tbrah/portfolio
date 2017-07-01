@@ -13919,7 +13919,7 @@ var Controller = function (_Module) {
                             // $http returns a promise, which has a then function, which also returns a promise
                             promise = $http.get('https://api.github.com/users/tbrah/repos').then(function (response) {
                                 // The then function here is an opportunity to modify the response
-                                console.log(response);
+                                //console.log(response);
                                 // The return value gets picked up by the then in the controller.
                                 return response.data;
                             });
@@ -13941,7 +13941,7 @@ var Controller = function (_Module) {
 
                         if (value.name == "portfolio") {
                             $scope.portfolio.push(value);
-                            console.log($scope.portfolio);
+                            //console.log($scope.portfolio);
                         }
                     });
                     $scope.data = data;
@@ -14146,7 +14146,7 @@ var Controller = function (_Module) {
                 }).then(function (response) {
                     $scope.showcase = response.data;
                     $scope.sortShowcase();
-                    console.log($scope.showcase);
+                    // console.log($scope.showcase);
                 }), function errorCallback(response) {
                     console.log("There was an error " + response);
                 };
@@ -14550,6 +14550,83 @@ exports.default = Scroll;
 },{"wrapper6":62}],73:[function(require,module,exports){
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _wrapper = require("wrapper6");
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var $ = jQuery;
+
+var Showcase = function (_Module) {
+    _inherits(Showcase, _Module);
+
+    function Showcase() {
+        _classCallCheck(this, Showcase);
+
+        return _possibleConstructorReturn(this, (Showcase.__proto__ || Object.getPrototypeOf(Showcase)).apply(this, arguments));
+    }
+
+    _createClass(Showcase, [{
+        key: "ready",
+        value: function ready(app) {
+
+            var windowHeight;
+
+            $(window).on('resize', function (event) {
+
+                windowHeight = $(window).height();
+                console.log(windowHeight);
+
+                if (windowHeight <= 895) {
+                    $(".next-view").hide();
+                    $(".more-image-view").hide();
+                    $(".description-view").css({
+                        'position': 'relative',
+                        'left': '875px',
+                        'top': '0'
+                    });
+                    $(".technology-view").css({
+                        'position': 'relative',
+                        'right': '-875px',
+                        'margin-bottom': '20px',
+                        'flex': '1'
+                    });
+                } else {
+                    $(".next-view").show();
+                    $(".more-image-view").show();
+                    $(".description-view").css({
+                        'position': 'absolute',
+                        'right': '0',
+                        'top': '160px'
+                    });
+                    $(".technology-view").css({
+                        'position': 'absolute',
+                        'right': '0',
+                        'margin-bottom': '0',
+                        'flex': '0'
+                    });
+                }
+            });
+        }
+    }]);
+
+    return Showcase;
+}(_wrapper.Module);
+
+exports.default = Showcase;
+
+},{"wrapper6":62}],74:[function(require,module,exports){
+"use strict";
+
 var _wrapper = require("wrapper6");
 
 var _main = require("../_modules/main.js");
@@ -14575,6 +14652,10 @@ var _laptop2 = _interopRequireDefault(_laptop);
 var _scroll = require("../_modules/scroll.js");
 
 var _scroll2 = _interopRequireDefault(_scroll);
+
+var _showcase = require("../_modules/showcase.js");
+
+var _showcase2 = _interopRequireDefault(_showcase);
 
 var _jquery = require("jquery");
 
@@ -14604,9 +14685,10 @@ app.use(_controller2.default);
 app.use(_footer2.default);
 app.use(_laptop2.default);
 app.use(_scroll2.default);
+app.use(_showcase2.default);
 
 window.jQuery = window.$ = _jquery2.default;
 
-},{"../_modules/controller.js":67,"../_modules/footer.js":68,"../_modules/github.js":69,"../_modules/laptop.js":70,"../_modules/main.js":71,"../_modules/scroll.js":72,"jquery":59,"wrapper6":62}]},{},[73]);
+},{"../_modules/controller.js":67,"../_modules/footer.js":68,"../_modules/github.js":69,"../_modules/laptop.js":70,"../_modules/main.js":71,"../_modules/scroll.js":72,"../_modules/showcase.js":73,"jquery":59,"wrapper6":62}]},{},[74]);
 
 //# sourceMappingURL=main.js.map

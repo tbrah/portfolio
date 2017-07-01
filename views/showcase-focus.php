@@ -4,7 +4,7 @@
 
         <div class="image-view">
             
-            <img ng-src="assets/img/uploaded/{{showcase[0].url}}">
+            <img ng-src="assets/img/uploaded/{{showcase[2].url}}">
 
         </div>
 
@@ -24,7 +24,7 @@
 
             </div>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla placerat elit sit amet libero consequat dignissim. Suspendisse bibendum sem ut odio aliquet semper. Quisque ligula eros, suscipit nec porttitor vitae, hendrerit non ipsum. Integer eleifend, nibh sed mollis malesuada, velit dolor scelerisque nisl, sed luctus justo nisi non velit. Integer molestie tellus magna, id tincidunt massa tempor eu. Fusce sed ultricies nisi. Ut ornare purus lacus. Fusce vel nibh finibus nulla cursus vehicula.</p>
+            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla placerat elit sit amet libero consequat dignissim. Suspendisse bibendum sem ut odio aliquet semper. Quisque ligula eros, suscipit nec porttitor vitae, hendrerit non ipsum. Integer eleifend, nibh sed mollis malesuada, velit dolor scelerisque nisl, sed luctus justo nisi non velit. Integer molestie tellus magna, id tincidunt massa tempor eu. Fusce sed ultricies nisi. Ut ornare purus lacus. Fusce vel nibh finibus nulla cursus vehicula.</p>
 
         </div>
 
@@ -38,7 +38,11 @@
         
         </div>
 
-        <div class="more-image-view"></div>
+        <div class="more-image-view">
+        
+            <div class="no-image"><h3>No additional images</h3></div>
+
+        </div>
 
     </div>
   </div>

@@ -37,7 +37,7 @@ export default class Controller extends Module {
                         // $http returns a promise, which has a then function, which also returns a promise
                         promise = $http.get('https://api.github.com/users/tbrah/repos').then(function (response) {
                             // The then function here is an opportunity to modify the response
-                            console.log(response);
+                            //console.log(response);
                             // The return value gets picked up by the then in the controller.
                             return response.data;
                         });
@@ -61,7 +61,7 @@ export default class Controller extends Module {
 
                     if(value.name == "portfolio"){
                         $scope.portfolio.push(value);
-                        console.log($scope.portfolio);
+                        //console.log($scope.portfolio);
                     }
 
                 });          
@@ -298,7 +298,7 @@ export default class Controller extends Module {
             }).then(function (response) {
                 $scope.showcase = response.data;
                 $scope.sortShowcase();
-                console.log($scope.showcase);
+               // console.log($scope.showcase);
             }), function errorCallback(response) {
                 console.log("There was an error " + response);
             }

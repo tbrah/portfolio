@@ -18,6 +18,7 @@ import Controller from "../_modules/controller.js";
 import Footer from "../_modules/footer.js";
 import Laptop from "../_modules/laptop.js";
 import Scroll from "../_modules/scroll.js";
+import Showcase from "../_modules/showcase.js";
 /* Register modules
  ----------------------------------------------------------*/
 app.use(Main);
@@ -26,6 +27,7 @@ app.use(Controller);
 app.use(Footer);
 app.use(Laptop);
 app.use(Scroll);
+app.use(Showcase);
 
 import $ from "jquery";
 window.jQuery = window.$ = $;
