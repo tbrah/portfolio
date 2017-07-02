@@ -1,14 +1,16 @@
-<div class="outer" ng-controller="showcaseCtrl">
+<div class="outer" ng-show="toggleFocus == true" ng-click="closeFocus($event)">
   <div class="middle">
     <div class="inner-wrapper">
 
         <div class="image-view">
             
-            <img ng-src="assets/img/uploaded/{{showcase[2].url}}">
+            <img ng-src="assets/img/uploaded/{{selectedItem.url}}">
 
         </div>
 
         <div class="technology-view">
+            
+            <i class="fa fa-times" ng-click="closeFocus($event)"></i>
 
             <h2>TECHNOLOGIES USED:</h2>
 
@@ -18,13 +20,13 @@
 
             <div class="slant">
 
-                <h2>Ordbogen careers website</h2>
+                <h2>{{selectedItem.title}}</h2>
 
-                <p><i>Ordbogen.com careers website front end development. Some backend implementation was created aswell.</i></p>
+                <p><i>{{selectedItem.desc}}</i></p>
 
             </div>
 
-            <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla placerat elit sit amet libero consequat dignissim. Suspendisse bibendum sem ut odio aliquet semper. Quisque ligula eros, suscipit nec porttitor vitae, hendrerit non ipsum. Integer eleifend, nibh sed mollis malesuada, velit dolor scelerisque nisl, sed luctus justo nisi non velit. Integer molestie tellus magna, id tincidunt massa tempor eu. Fusce sed ultricies nisi. Ut ornare purus lacus. Fusce vel nibh finibus nulla cursus vehicula.</p>
+            <p class="desc">{{selectedItem.text}}</p>
 
         </div>
 

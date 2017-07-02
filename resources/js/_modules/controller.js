@@ -291,6 +291,8 @@ export default class Controller extends Module {
 
             $scope.showcase = [];
             $scope.featuredShowcase = [];
+            $scope.selectedItem = [];
+            $scope.toggleFocus = false;
 
             $http({
                 method: 'GET',
@@ -313,6 +315,20 @@ export default class Controller extends Module {
 
                 });
 
+            }
+
+            $scope.focusShowcase = function(item){
+                $scope.selectedItem = item;
+                $scope.toggleFocus = true;
+            }
+
+            $scope.closeFocus = function(e){
+                console.log(e);
+                if (($(e.target).hasClass('middle'))) {
+                    $scope.toggleFocus = false;
+                } else if (($(e.target).hasClass('fa-times'))){
+                    $scope.toggleFocus = false;
+                }
             }
 
         });

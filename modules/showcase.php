@@ -32,7 +32,7 @@
 
         <div class="row showcase-wrapper">
 
-            <div class="col-md-6" ng-repeat="item in showcase | filter: { featured : 0}">
+            <div class="col-md-6" ng-repeat="item in showcase | filter: { featured : 0}" ng-click="focusShowcase(item)">
 
                 <div class="showcase-single" style="background-image:url('assets/img/uploaded/{{item.url}}')">
 
@@ -48,5 +48,7 @@
         </div>
 
     </div>
+
+    <?php include_once('views/showcase-focus.php');?>
 
 </section>

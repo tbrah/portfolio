@@ -14139,6 +14139,8 @@ var Controller = function (_Module) {
 
                 $scope.showcase = [];
                 $scope.featuredShowcase = [];
+                $scope.selectedItem = [];
+                $scope.toggleFocus = false;
 
                 $http({
                     method: 'GET',
@@ -14159,6 +14161,20 @@ var Controller = function (_Module) {
                             $scope.featuredShowcase.push(item);
                         }
                     });
+                };
+
+                $scope.focusShowcase = function (item) {
+                    $scope.selectedItem = item;
+                    $scope.toggleFocus = true;
+                };
+
+                $scope.closeFocus = function (e) {
+                    console.log(e);
+                    if ($(e.target).hasClass('middle')) {
+                        $scope.toggleFocus = false;
+                    } else if ($(e.target).hasClass('fa-times')) {
+                        $scope.toggleFocus = false;
+                    }
                 };
             });
 
@@ -14579,7 +14595,41 @@ var Showcase = function (_Module) {
         key: "ready",
         value: function ready(app) {
 
-            var windowHeight;
+            var windowHeight = $(window).height();
+
+            console.log(windowHeight);
+
+            if (windowHeight <= 895) {
+                $(".next-view").hide();
+                $(".more-image-view").hide();
+                $(".description-view").css({
+                    'position': 'relative',
+                    'left': '875px',
+                    'top': '0'
+                });
+                $(".image-view").css('height', '100%');
+                $(".technology-view").css({
+                    'position': 'relative',
+                    'right': '-875px',
+                    'margin-bottom': '20px',
+                    'flex': '1'
+                });
+            } else {
+                $(".next-view").show();
+                $(".more-image-view").show();
+                $(".image-view").css('height', '82%');
+                $(".description-view").css({
+                    'position': 'absolute',
+                    'right': '0',
+                    'top': '160px'
+                });
+                $(".technology-view").css({
+                    'position': 'absolute',
+                    'right': '0',
+                    'margin-bottom': '0',
+                    'flex': '0'
+                });
+            }
 
             $(window).on('resize', function (event) {
 
@@ -14594,6 +14644,7 @@ var Showcase = function (_Module) {
                         'left': '875px',
                         'top': '0'
                     });
+                    $(".image-view").css('height', '100%');
                     $(".technology-view").css({
                         'position': 'relative',
                         'right': '-875px',
@@ -14603,6 +14654,7 @@ var Showcase = function (_Module) {
                 } else {
                     $(".next-view").show();
                     $(".more-image-view").show();
+                    $(".image-view").css('height', '82%');
                     $(".description-view").css({
                         'position': 'absolute',
                         'right': '0',
