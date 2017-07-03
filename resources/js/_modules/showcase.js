@@ -15,7 +15,7 @@ export default class Showcase extends Module {
                 'left': '875px',
                 'top': '0',
             });
-            $(".image-view").css('height', '100%');
+            $(".image-view").css('max-height', '100%');
             $(".technology-view").css({
                 'position': 'relative',
                 'right': '-875px',
@@ -25,7 +25,7 @@ export default class Showcase extends Module {
         } else {
             $(".next-view").show();
             $(".more-image-view").show();
-            $(".image-view").css('height', '82%');
+            $(".image-view").css('max-height', '82%');
             $(".description-view").css({
                 'position': 'absolute',
                 'right': '0',
@@ -52,7 +52,7 @@ export default class Showcase extends Module {
                     'left':'875px',
                     'top':'0',
                 });
-                $(".image-view").css('height', '100%');
+                $(".image-view").css('max-height', '100%');
                 $(".technology-view").css({
                     'position':'relative',
                     'right':'-875px',
@@ -62,7 +62,7 @@ export default class Showcase extends Module {
             } else {
                 $(".next-view").show();
                 $(".more-image-view").show();
-                $(".image-view").css('height', '82%');
+                $(".image-view").css('max-height', '82%');
                 $(".description-view").css({
                     'position':'absolute',
                     'right':'0',

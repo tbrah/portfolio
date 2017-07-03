@@ -1,4 +1,4 @@
-<div class="outer" ng-show="toggleFocus == true" ng-click="closeFocus($event)">
+<div class="outer" ng-if="toggleFocus == true" ng-click="closeFocus($event)">
   <div class="middle">
     <div class="inner-wrapper">
 
@@ -26,7 +26,7 @@
 
             </div>
 
-            <p class="desc">{{selectedItem.text}}</p>
+            <p class="desc" ng-bind-html="selectedItem.text"></p>
 
         </div>
 

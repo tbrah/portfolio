@@ -13885,7 +13885,7 @@ var Controller = function (_Module) {
         key: 'ready',
         value: function ready(app) {
 
-            var app = angular.module('portApp', ['ngMaterial', 'ngAnimate']);
+            var app = angular.module('portApp', ['ngMaterial', 'ngAnimate', 'ngSanitize']);
 
             //Reverse Filter
             app.filter('reverse', function () {
@@ -14169,7 +14169,6 @@ var Controller = function (_Module) {
                 };
 
                 $scope.closeFocus = function (e) {
-                    console.log(e);
                     if ($(e.target).hasClass('middle')) {
                         $scope.toggleFocus = false;
                     } else if ($(e.target).hasClass('fa-times')) {
@@ -14607,7 +14606,7 @@ var Showcase = function (_Module) {
                     'left': '875px',
                     'top': '0'
                 });
-                $(".image-view").css('height', '100%');
+                $(".image-view").css('max-height', '100%');
                 $(".technology-view").css({
                     'position': 'relative',
                     'right': '-875px',
@@ -14617,7 +14616,7 @@ var Showcase = function (_Module) {
             } else {
                 $(".next-view").show();
                 $(".more-image-view").show();
-                $(".image-view").css('height', '82%');
+                $(".image-view").css('max-height', '82%');
                 $(".description-view").css({
                     'position': 'absolute',
                     'right': '0',
@@ -14644,7 +14643,7 @@ var Showcase = function (_Module) {
                         'left': '875px',
                         'top': '0'
                     });
-                    $(".image-view").css('height', '100%');
+                    $(".image-view").css('max-height', '100%');
                     $(".technology-view").css({
                         'position': 'relative',
                         'right': '-875px',
@@ -14654,7 +14653,7 @@ var Showcase = function (_Module) {
                 } else {
                     $(".next-view").show();
                     $(".more-image-view").show();
-                    $(".image-view").css('height', '82%');
+                    $(".image-view").css('max-height', '82%');
                     $(".description-view").css({
                         'position': 'absolute',
                         'right': '0',

@@ -27,9 +27,9 @@
 
             .image-view{
                 position:absolute;
-                float:left;
+                display:inline-block;
                 width:858px;
-                height:82%;
+                max-height:82%;
                 background-color:#fff;
                 overflow-y:scroll;
                 flex:1;

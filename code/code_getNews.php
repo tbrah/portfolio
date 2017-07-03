@@ -16,7 +16,7 @@ $syntax = '[';
  
 while($obj = $res->fetch_object()){
  
-    $syntax .= '{"id":"'.$obj->id.'", "url":"'.$obj->img.'", "desc":"'.$obj->desc.'", "title": "'.$obj->title.'", "featured": "'.$obj->featured.'"},';
+    $syntax .= '{"id":"'.$obj->id.'", "url":"'.$obj->img.'", "desc":"'.$obj->desc.'", "title": "'.$obj->title.'", "featured": "'.$obj->featured.'", "text": "'.$obj->text.'"},';
  
 }
  

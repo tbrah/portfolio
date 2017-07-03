@@ -3,7 +3,7 @@ var $ = jQuery;
 export default class Controller extends Module {
 	ready(app) {
 
-        var app = angular.module('portApp', ['ngMaterial', 'ngAnimate']);
+        var app = angular.module('portApp', ['ngMaterial', 'ngAnimate', 'ngSanitize']);
 
         //Reverse Filter
         app.filter('reverse', function() {
@@ -323,7 +323,6 @@ export default class Controller extends Module {
             }
 
             $scope.closeFocus = function(e){
-                console.log(e);
                 if (($(e.target).hasClass('middle'))) {
                     $scope.toggleFocus = false;
                 } else if (($(e.target).hasClass('fa-times'))){
