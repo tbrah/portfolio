@@ -26,7 +26,29 @@
 
 		&:hover {
 			background: lighten($primary-green, 5%);
+			cursor: pointer;
+			transform: translateY(-2px);
+		}
+	}
 
+	.addTech{
+		background: $secondary-blue;
+		border: 1px solid darken($secondary-blue, 10%);
+		color: #FFF;
+		height: 50px;
+		width: 100%;
+		line-height: 50px;
+		text-decoration: none;
+		float: left;
+		text-align: center;
+		margin-bottom: 40px;
+		font-size: 17px;
+		font-weight: bold;
+		transition: all 0.2s ease-in;
+		border-radius: 3px;
+
+		&:hover {
+			background: lighten($secondary-blue, 5%);
 			cursor: pointer;
 			transform: translateY(-2px);
 		}
