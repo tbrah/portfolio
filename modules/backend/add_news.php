@@ -16,6 +16,14 @@
 
 	}
 
+		$tech_crud = new Crud($objCon, "tech_table");
+
+		$tech_crud->SetArray("*");
+
+		$tech_crud->Select('ORDER BY id DESC');
+
+		$tech_res = $tech_crud->SendSQL();
+
 ?>
 
 <div class="wrapper">
@@ -69,13 +77,24 @@
 			<label>
 				<span>Featured:</span>
 				
-				<input type="checkboxHidden" type="hidden" name="featured" value=0 style="opacity:0">
+				<input type="checkboxHidden" type="hidden" name="featured" value=0 style="display:none;">
 				<input type="checkbox" name="featured" value=1 <?php if(isset($_GET['editId']) && $obj5->featured == 1){ echo "checked";}?>>
 			</label>
 
 			<label>
 				<input type="text" name="desc" value="<?php if(isset($_GET['editId'])){ echo $obj5->desc; } ?>" required>
 				<span class="floating-label">Description</span>
+			</label>
+
+			<label>
+				<?php 		
+					while($tech_obj = $tech_res->fetch_object()){
+						echo $tech_obj->title;
+				?>
+					<input class="tech-checkbox" type="checkbox" name="techarray[]" value=<?php echo $tech_obj->id ?> >
+				<?php
+					}//While loop end.
+				?>
 			</label>
 
 			<label>
