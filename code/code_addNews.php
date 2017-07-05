@@ -23,36 +23,45 @@
 	
 	$array = $_POST["techarray"];
 	$newArray = [];
-	$showcase_id = 2;
+
+	//Exclude the techarray from the showcaseArray.
+
+	$showcaseArray = [];
+
+	foreach($_POST as $key => $value){
+		if($key != "techarray"){
+			$showcaseArray[$key] = $value;
+		}
+	}
 	
 	include ("incl_db.php");
 
-	$test = new Crud($objCon, "showcase_tech");
+	$crud = new Crud($objCon, "showcase");
+
+	$crud->SetArray($showcaseArray);
+
+    $cruds = $crud->Create();
+	
+    //$cruds = INSERT INTO showcase (`title`, `featured`, `desc`, `text`, `img`) VALUES('asdasdasd', '0', 'asdasd', ......
+
+	mysqli_query($conn, $cruds);
+
+	//Grabbing the last unique id from table.
+
+	$showcase_id = mysqli_insert_id($conn);
+    
+    //header("location: ../admin/index.php?news=created");
+
+	$showcase_tech = new Crud($objCon, "showcase_tech");
 
 	foreach($array as $item){
 		$newArray["showcase_id"] = $showcase_id;
 		$newArray["tech_id"] = $item;
 
-		$test->SetArray($newArray);
+		$showcase_tech->SetArray($newArray);
 
-		$tests = $test->Create();
+		$showcase_techs = $showcase_tech->Create();
 
-		print_r($tests);
-
-		echo "<br>";
+		$showcase_tech->SendSQL();
 	}
-
-    $crud = new Crud($objCon, "showcase");
-
-	$crud->SetArray($_POST);
-
-    $cruds = $crud->Create();
-
-	//print_r($cruds);
-
-	//var_dump($_POST);
-
-    //$crud->SendSQL();
-    
-    //header("location: ../admin/index.php?news=created");
 ?> 

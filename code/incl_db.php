@@ -2,7 +2,14 @@
 
 date_default_timezone_set("Europe/Copenhagen"); 
 
-$objCon = new mysqli('localhost', 'root', 'root', 'portfolio');
+$servername = "localhost";
+$username = "root";
+$password = "root";
+$dbname = "portfolio";
+
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+$objCon = new mysqli($servername, $username, $password, $dbname);
 
 $objCon->set_charset('utf8');
 
