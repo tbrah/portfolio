@@ -49,8 +49,6 @@
 	//Grabbing the last unique id from table.
 
 	$showcase_id = mysqli_insert_id($conn);
-    
-    //header("location: ../admin/index.php?news=created");
 
 	$showcase_tech = new Crud($objCon, "showcase_tech");
 
@@ -64,4 +62,6 @@
 
 		$showcase_tech->SendSQL();
 	}
+
+	header("location: ../admin/index.php?news=created");
 ?> 

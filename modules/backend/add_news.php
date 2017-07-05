@@ -2,7 +2,10 @@
 
 	if(isset($_GET['editId'])){
 
+		//Selecting for showcase if edit is enabled.
+
 		$editId = $_GET['editId'];
+
 
 		$crud5 = new Crud($objCon, "showcase");
 
@@ -14,7 +17,27 @@
 
 		$obj5 = $res5->fetch_object();
 
+		//Selecting showcase_tech if edit is enabled.
+
+		$showcase_tech = new CRUD($objCon, "showcase_tech");
+
+		$showcase_tech->SetArray("*");
+
+		$showcase_tech->Select('WHERE showcase_id = '.$editId);
+
+		$showcase_tech_res = $showcase_tech->SendSQL();
+
+		$showcase_tech_array = [];
+
+		while($showcase_tech_obj = $showcase_tech_res->fetch_object()){
+			array_push($showcase_tech_array, $showcase_tech_obj->tech_id);
+		}
+
+		print_r($showcase_tech_array);
+
 	}
+
+		//Selecting for tech_table
 
 		$tech_crud = new Crud($objCon, "tech_table");
 
@@ -91,7 +114,13 @@
 					while($tech_obj = $tech_res->fetch_object()){
 						echo $tech_obj->title;
 				?>
-					<input class="tech-checkbox" type="checkbox" name="techarray[]" value=<?php echo $tech_obj->id ?> >
+					<input class="tech-checkbox" type="checkbox" name="techarray[]" value=<?php echo $tech_obj->id; ?> 
+						<?php
+							if(isset($_GET['editId'])){ 
+								if(in_array($tech_obj->id, $showcase_tech_array)){ echo "checked";}
+							}
+						?>
+					>
 				<?php
 					}//While loop end.
 				?>
