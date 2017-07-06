@@ -36,7 +36,7 @@
             </div>
 
             <p class="desc" ng-bind-html="selectedItem.text"></p>
-<md-tooltip md-direction="bottom">hello</md-tooltip>
+            
         </div>
 
         <div class="next-view" style="background-image:url('assets/img/uploaded/{{showcase[2].url}}');">
