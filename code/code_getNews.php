@@ -69,8 +69,6 @@ while($obj = $res->fetch_object()){
         }
         
     }
-
-    echo '$finalString = '.$finalString . '<br><hr>';
  
     $syntax .= '{
         "id":"'.$obj->id.'", 
