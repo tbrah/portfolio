@@ -14,6 +14,15 @@
 
             <h2>TECHNOLOGIES USED:</h2>
 
+                <div class="icon-wrapper">
+
+                    <figure ng-repeat="item in selectedItem.techarray">
+                        <img ng-src="assets/img/uploaded/tech/{{item.img}}" alt="{{item.title}}">
+                        <md-tooltip class="showme" md-direction="bottom">{{item.title}}</md-tooltip>
+                    </figure>
+                    
+                </div>
+
         </div>
 
         <div class="description-view">
@@ -27,7 +36,7 @@
             </div>
 
             <p class="desc" ng-bind-html="selectedItem.text"></p>
-
+<md-tooltip md-direction="bottom">hello</md-tooltip>
         </div>
 
         <div class="next-view" style="background-image:url('assets/img/uploaded/{{showcase[2].url}}');">

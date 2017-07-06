@@ -69,6 +69,8 @@ while($obj = $res->fetch_object()){
         }
         
     }
+
+    $finalString = rtrim($finalString, ',');
  
     $syntax .= '{
         "id":"'.$obj->id.'", 
@@ -77,9 +79,7 @@ while($obj = $res->fetch_object()){
         "title": "'.$obj->title.'", 
         "featured": "'.$obj->featured.'", 
         "text": "'.$obj->text.'",
-        "techarray": [
-            '.$finalString.'
-        ] 
+        "techarray": ['.$finalString.'] 
         },';
  
 }
