@@ -1,4 +1,4 @@
-<div class="outer" ng-if="toggleFocus == true" ng-click="closeFocus($event)">
+<div class="outer ng-hide" ng-show="toggleFocus == true" ng-click="closeFocus($event)">
   <div class="middle">
     <div class="inner-wrapper">
 

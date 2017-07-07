@@ -70,12 +70,17 @@
                     figure{
                         display:inline-block;
 
-
+                        &:hover img{
+                            margin-top:5px;
+                        }
                         img{
                             width:30px;
                             margin-left:5px;
                             margin-right:5px;
                             margin-top:10px;
+                            transition:all 0.1s ease-in;
+
+
                         }
                     }
                 }
