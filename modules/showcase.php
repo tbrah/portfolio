@@ -17,7 +17,7 @@
             </div>
             <div class="col-md-6">
 
-                <div class="showcase-preview" style="background-image:url('assets/img/uploaded/{{featuredShowcase[0].url}}')">
+                <div class="showcase-preview" style="background-image:url('assets/img/uploaded/{{featuredShowcase[0].url}}')" ng-click="focusShowcase('featured')">
 
                     <div class="desc-tag">
                         <h3>{{featuredShowcase[0].title}}</h3>

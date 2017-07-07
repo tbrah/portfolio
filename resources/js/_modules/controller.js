@@ -318,8 +318,13 @@ export default class Controller extends Module {
             }
 
             $scope.focusShowcase = function(item){
-                $scope.selectedItem = item;
-                $scope.toggleFocus = true;
+                if(item == "featured"){
+                    $scope.selectedItem = $scope.featuredShowcase[0];
+                    $scope.toggleFocus = true;
+                } else {
+                    $scope.selectedItem = item;
+                    $scope.toggleFocus = true;
+                }
             }
 
             $scope.closeFocus = function(e){
