@@ -39,9 +39,9 @@
             
         </div>
 
-        <div class="next-view" style="background-image:url('assets/img/uploaded/{{showcase[2].url}}');">
+        <div class="next-view" style="background-image:url('assets/img/uploaded/{{nextKey.url}}');">
         
-            <div class="next-view-overlay">
+            <div class="next-view-overlay" ng-click="switchShowcase()">
 
                 <a href="#">Next <i class="fa fa-angle-right"></i></a>
 

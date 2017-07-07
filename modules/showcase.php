@@ -17,12 +17,17 @@
             </div>
             <div class="col-md-6">
 
+                <i class="sparkles"></i>
+                <i class="sparklestwo"></i>
+                <i class="sparklesfour"></i>
+                <i class="sparklesfive"></i>
+            
                 <div class="showcase-preview" style="background-image:url('assets/img/uploaded/{{featuredShowcase[0].url}}')" ng-click="focusShowcase('featured')">
 
                     <div class="desc-tag">
                         <h3>{{featuredShowcase[0].title}}</h3>
                         <p>{{featuredShowcase[0].desc}}</p>
-                    </div>
+                    </div> 
                     
                 </div>
 

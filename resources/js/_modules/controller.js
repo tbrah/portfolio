@@ -317,7 +317,45 @@ export default class Controller extends Module {
 
             }
 
+            $scope.switchShowcase = function(){
+                $scope.selectedItem = $scope.nextKey;
+                $scope.nextShowcase($scope.selectedItem);
+            }
+
+            $scope.nextShowcase = function(item){
+                
+                var arrayLength = $scope.showcase.length-1;//4
+                $scope.nextKey;
+
+                if(item == "featured"){
+
+                    angular.forEach($scope.showcase, function (value, key){
+                        if(value.featured == true){
+                            $scope.nextKey = $scope.showcase[key + 1];
+                            if (key == arrayLength){
+                                $scope.nextKey = $scope.showcase[0];
+                            }
+                        }
+                    });
+
+                } else {
+
+                    angular.forEach($scope.showcase, function (value, key) {
+
+                        if (value.id == item.id) {
+                            $scope.nextKey = $scope.showcase[key + 1];
+                            if (key == arrayLength) {
+                                $scope.nextKey = $scope.showcase[0];
+                            }
+                        }
+                    });
+
+                }
+
+            }
+
             $scope.focusShowcase = function(item){
+                $scope.nextShowcase(item);
                 if(item == "featured"){
                     $scope.selectedItem = $scope.featuredShowcase[0];
                     $scope.toggleFocus = true;
