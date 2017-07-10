@@ -287,12 +287,12 @@ export default class Controller extends Module {
 
         });
 
-        app.controller('showcaseCtrl', function($scope, $http){
+        app.controller('showcaseCtrl', function($scope, $http, $rootScope){
 
             $scope.showcase = [];
             $scope.featuredShowcase = [];
             $scope.selectedItem = [];
-            $scope.toggleFocus = false;
+            $rootScope.toggleFocus = false;
 
             $http({
                 method: 'GET',
@@ -358,18 +358,18 @@ export default class Controller extends Module {
                 $scope.nextShowcase(item);
                 if(item == "featured"){
                     $scope.selectedItem = $scope.featuredShowcase[0];
-                    $scope.toggleFocus = true;
+                    $rootScope.toggleFocus = true;
                 } else {
                     $scope.selectedItem = item;
-                    $scope.toggleFocus = true;
+                    $rootScope.toggleFocus = true;
                 }
             }
 
             $scope.closeFocus = function(e){
                 if (($(e.target).hasClass('middle'))) {
-                    $scope.toggleFocus = false;
+                    $rootScope.toggleFocus = false;
                 } else if (($(e.target).hasClass('fa-times'))){
-                    $scope.toggleFocus = false;
+                    $rootScope.toggleFocus = false;
                 }
             }
 

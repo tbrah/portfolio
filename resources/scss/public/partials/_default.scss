@@ -87,3 +87,8 @@ a{
     width:200px;
     border-bottom:4px solid $secondary-blue;
 }
+
+.scroll-lock{
+    height:100%;
+    overflow-y:hidden;
+}

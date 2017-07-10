@@ -9,7 +9,7 @@ $title = 'Portfolio';
     <head>
         <?php include_once('includes/header.php'); ?>
     </head>
-<body ng-app="portApp">
+<body ng-app="portApp" ng-class="{'scroll-lock': toggleFocus}">
 
         <!--Header / Includes Laptop.php, Nav.php -->
         <?php include_once('modules/header.php');?>
