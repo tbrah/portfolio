@@ -1,5 +1,5 @@
 <div class="outer ng-hide" ng-show="toggleFocus == true" ng-click="closeFocus($event)">
-    <div class="center-div">
+    <div class="center-div" ng-click="closeFocus($event)">
 
         <div class="left-side">
 
@@ -8,7 +8,7 @@
             </div>
 
         </div>
-        <div class="right-side">
+        <div class="right-side" ng-click="closeFocus($event)">
 
             <div class="tech-view">
 

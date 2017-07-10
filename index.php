@@ -22,7 +22,7 @@ $title = 'Portfolio';
 
         <!--Treehouse-->
         <?php include_once('modules/treehouse.php');?>
-
+        
         <!--Showcase-->
         <?php include_once('modules/showcase.php');?>
 

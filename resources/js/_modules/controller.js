@@ -366,14 +366,15 @@ export default class Controller extends Module {
             }
 
             $scope.closeFocus = function(e){
-                if (($(e.target).hasClass('middle'))) {
+                if (($(e.target).hasClass('outer'))) {
+                    $rootScope.toggleFocus = false;
+                } else if (($(e.target).hasClass('image-preview'))){
                     $rootScope.toggleFocus = false;
                 } else if (($(e.target).hasClass('fa-times'))){
                     $rootScope.toggleFocus = false;
                 }
-            }
 
-        });
+        };
 
         app.controller('referenceCtrl', function($scope, colorService, $mdDialog){
 
