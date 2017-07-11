@@ -27,6 +27,10 @@ $skillset-height: 1300px;
             height:1730px;
         }
 
+        @media only screen and (max-width:400px){
+            height:1790px;
+        }
+
         .connection-dots{
             transform:skewY(9deg);
             position:absolute;
@@ -109,9 +113,21 @@ $skillset-height: 1300px;
                     background:linear-gradient(160deg, #fff 23%, $primary 92%);
                     z-index:30;
 
+                    @media only screen and (max-width:400px){
+                        margin-top:260px;
+                        right:40px;
+                        padding-right:40px;
+                        padding-left:90px;
+                        height:750px;
+                    }
+
                     .button-wrapper{
                         display:table;
                         margin:0 auto;
+
+                        @media only screen and (max-width:400px){
+                            text-align:center;
+                        }
                         .md-button{
                             width:150px;
                             &:first-child{
@@ -171,6 +187,10 @@ $skillset-height: 1300px;
                         width:340px;
                         display:table;
                         margin:0 auto;
+
+                        @media only screen and (max-width:400px){
+                            width:100%;
+                        }
                         li{
                             margin-top:15px;
                             margin-bottom:15px;
@@ -212,6 +232,11 @@ $skillset-height: 1300px;
                         background-color:$primary;
                         transition:all 0.2s ease-in;
 
+                        @media only screen and (max-width:400px){
+                            right:-24px;
+                            top:-3%;
+                        }
+
                         i{
                             color:#fff;
                             position:absolute;
@@ -232,6 +257,11 @@ $skillset-height: 1300px;
                     z-index:20;
                     background:linear-gradient(150deg, $primary 63%, lighten($primary, 20%) 109%);
                     transition: all 0.2s ease-in;
+
+                    @media only screen and (max-width:400px){
+                        margin-top:300px;
+                        height:750px;
+                    }
                 }
                 .tile-gradient-blue{
                     background:linear-gradient(150deg, $secondary-blue 63%, lighten($secondary-blue, 20%) 109%);
