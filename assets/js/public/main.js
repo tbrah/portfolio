@@ -14626,7 +14626,7 @@ exports.default = Scroll;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-        value: true
+                value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -14642,50 +14642,70 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var $ = jQuery;
 
 var Showcase = function (_Module) {
-        _inherits(Showcase, _Module);
+                _inherits(Showcase, _Module);
 
-        function Showcase() {
-                _classCallCheck(this, Showcase);
+                function Showcase() {
+                                _classCallCheck(this, Showcase);
 
-                return _possibleConstructorReturn(this, (Showcase.__proto__ || Object.getPrototypeOf(Showcase)).apply(this, arguments));
-        }
-
-        _createClass(Showcase, [{
-                key: "ready",
-                value: function ready(app) {
-
-                        var windowHeight = $(window).height();
-
-                        $(window).on('resize', function (event) {
-
-                                windowHeight = $(window).height();
-                        });
-
-                        //Check if the right-menu has been expanded
-                        var expandCheck = false;
-
-                        $(".expander").click(function () {
-
-                                if (expandCheck == false) {
-
-                                        $(".right-side").animate({ right: 0 });
-                                        $(".expander").animate({ right: "420px" });
-                                        $(".expander i").addClass("fa-angle-right");
-
-                                        expandCheck = true;
-                                } else {
-
-                                        $(".right-side").animate({ right: '-420px' });
-                                        $(".expander").animate({ right: '0' });
-                                        $(".expander i").removeClass("fa-angle-right");
-
-                                        expandCheck = false;
-                                }
-                        });
+                                return _possibleConstructorReturn(this, (Showcase.__proto__ || Object.getPrototypeOf(Showcase)).apply(this, arguments));
                 }
-        }]);
 
-        return Showcase;
+                _createClass(Showcase, [{
+                                key: "ready",
+                                value: function ready(app) {
+
+                                                var windowWidth = $(window).width();
+
+                                                $(window).on('resize', function (event) {
+
+                                                                windowWidth = $(window).width();
+
+                                                                console.log(windowWidth);
+                                                });
+
+                                                //Check if the right-menu has been expanded
+                                                var expandCheck = false;
+
+                                                $(".expander").click(function () {
+
+                                                                //For mobile devices
+                                                                if (expandCheck == false && windowWidth < 400) {
+
+                                                                                $(".right-side").animate({ right: 0 });
+                                                                                $(".expander").animate({ right: "310px" });
+                                                                                $(".expander i").addClass("fa-angle-right");
+
+                                                                                expandCheck = true;
+                                                                } else {
+
+                                                                                $(".right-side").animate({ right: '-420px' });
+                                                                                $(".expander").animate({ right: '0' });
+                                                                                $(".expander i").removeClass("fa-angle-right");
+
+                                                                                expandCheck = false;
+                                                                }
+
+                                                                //For desktop
+                                                                if (expandCheck == false && windowWidth > 400) {
+
+                                                                                $(".right-side").animate({ right: 0 });
+                                                                                $(".expander").animate({ right: "420px" });
+                                                                                $(".expander i").addClass("fa-angle-right");
+
+                                                                                expandCheck = true;
+                                                                } else if (expandCheck == true && windowWidth > 400) {
+
+                                                                                $(".right-side").animate({ right: '-420px' });
+                                                                                $(".expander").animate({ right: '0' });
+                                                                                $(".expander i").removeClass("fa-angle-right");
+
+                                                                                expandCheck = false;
+                                                                }
+                                                });
+                                }
+                }]);
+
+                return Showcase;
 }(_wrapper.Module);
 
 exports.default = Showcase;

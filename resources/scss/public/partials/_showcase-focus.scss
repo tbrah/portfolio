@@ -98,6 +98,10 @@
                 width:420px;                
             }
 
+            @media only screen and (max-width:400px){
+                width:320px;
+            }
+
             .tech-view{
                 position:relative;
                 width:100%;
@@ -149,6 +153,11 @@
                 overflow:hidden;
                 box-shadow:$standard-shadow;
                 flex-grow:1;
+
+                @media only screen and (max-width:400px){
+                    overflow-y:scroll;
+                    min-height:350px;
+                }
 
                 .slant{
                     position:absolute;

@@ -3,6 +3,11 @@
     margin-top:400px;
     margin-bottom:220px;
 
+    @media only screen and (max-width:400px){
+        margin-bottom:110px;
+        margin-top:260px;
+    }
+
     .container{
 
         .row{
@@ -12,6 +17,10 @@
                 .text-wrapper{
                     position:relative;
                     z-index:999;
+
+                    @media only screen and (max-width:400px){
+                        text-align:center;
+                    }
 
                     h4{
                         color:$gray-font;

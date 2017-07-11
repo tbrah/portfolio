@@ -46,6 +46,11 @@ $skillset-height: 1300px;
     .container{
         padding-top:200px;
 
+        @media only screen and (max-width:400px){
+            padding-top:120px;
+            margin-bottom:50px;
+        }
+
         .row{
             .showfirst{
                 z-index:500;   

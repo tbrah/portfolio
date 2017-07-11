@@ -50,7 +50,11 @@ footer{
                     
                     @media only screen and (max-width:991px) {
                         margin:0 auto;
-                    }  
+                    }
+                    
+                    @media only screen and (max-width:400px){
+                        width:90%;
+                    }
 
                     form{
                         padding:9px 13px;
@@ -117,6 +121,10 @@ footer{
                     right:0;
                     top:50px;
                     margin:0 auto;
+
+                    @media only screen and (max-width:400px){
+                        margin-left:160px;
+                    }
 
                 
                     .env-wrapper-body{
@@ -272,6 +280,10 @@ footer{
                             color:#fff;
                             background-color:#54a8e0;
                             transition: all 0.2s ease-in;
+
+                            @media only screen and (max-width:400px){
+                                margin-left:120px;
+                            }
 
                             &:hover{
                                 background-color:lighten(#54a8e0, 10%);

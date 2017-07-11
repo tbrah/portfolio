@@ -3,11 +3,13 @@ var $ = jQuery;
 export default class Showcase extends Module {
     ready(app) {
 
-        var windowHeight = $(window).height();
+        var windowWidth = $(window).width();
 
         $(window).on('resize', function (event) {
 
-            windowHeight = $(window).height();
+            windowWidth = $(window).width();
+
+            console.log(windowWidth);
 
         });
 
@@ -16,7 +18,29 @@ export default class Showcase extends Module {
 
         $(".expander").click(function(){
 
-            if(expandCheck == false){
+
+            //For mobile devices
+            if(expandCheck == false && windowWidth < 400){
+
+                $(".right-side").animate({ right: 0 });
+                $(".expander").animate({ right: "310px" });
+                $(".expander i").addClass("fa-angle-right");
+
+                expandCheck = true;
+
+            } else{
+
+                $(".right-side").animate({ right: '-420px' });
+                $(".expander").animate({ right: '0' });
+                $(".expander i").removeClass("fa-angle-right");
+
+                expandCheck = false;
+
+
+            }
+
+            //For desktop
+            if(expandCheck == false && windowWidth > 400){
 
                 $(".right-side").animate({right: 0});
                 $(".expander").animate({right: "420px"});
@@ -24,13 +48,15 @@ export default class Showcase extends Module {
 
                 expandCheck = true;
 
-            } else {
+
+            } else if(expandCheck == true && windowWidth > 400) {
 
                 $(".right-side").animate({right: '-420px'});
                 $(".expander").animate({right: '0'});
                 $(".expander i").removeClass("fa-angle-right");
 
                 expandCheck = false;
+
 
             }
 

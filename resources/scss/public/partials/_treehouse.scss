@@ -31,6 +31,10 @@
             }
             .custom-hr{
                 margin-bottom:120px;
+
+                @media only screen and (max-width:400px){
+                    margin-bottom:50px;
+                }
             }
         }
         .row{
@@ -56,6 +60,11 @@
                         border-bottom:1px solid #eee;
                         padding-top:40px;
                         padding-bottom:60px;
+                    }
+
+                    @media only screen and (max-width:400px){
+                        padding-top:10px;
+                        padding-bottom:30px;
                     }
                    
                     .logo-img-tree{
@@ -107,6 +116,10 @@
                             margin-bottom:40px;
                         }
 
+                        @media only screen and (max-width:400px){
+                            width:60%;
+                        }
+
                         li{
                             text-transform:uppercase; 
                             position:relative;
@@ -148,6 +161,10 @@
                          padding-bottom:30px;
                      }
 
+                     @media only screen and (max-width:400px){
+                         padding-bottom:0;
+                     }
+
                     .logo-img-git{
                         width:60%;
                         margin-top:13px;
@@ -176,6 +193,11 @@
                             margin-bottom:40px;
                         }
 
+                        @media only screen and (max-width:400px){
+                            margin-top:35px;
+                            width:100%;
+                        }
+
                         a:hover{
                             border:none;
                         }
@@ -194,6 +216,10 @@
                             overflow:hidden;
                             color:#333;
                             transition:all 0.2s ease-in;
+
+                            @media only screen and (max-width:400px){
+                                width:90%;
+                            }
 
                             &:hover{
                                 transform:translateY(-1px);
