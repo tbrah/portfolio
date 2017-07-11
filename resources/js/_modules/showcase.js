@@ -5,12 +5,35 @@ export default class Showcase extends Module {
 
         var windowHeight = $(window).height();
 
-        console.log(windowHeight);
-
         $(window).on('resize', function (event) {
 
             windowHeight = $(window).height();
-            console.log(windowHeight);
+
+        });
+
+        //Check if the right-menu has been expanded
+        var expandCheck = false;
+
+        $(".expander").click(function(){
+
+            if(expandCheck == false){
+
+                $(".right-side").animate({right: 0});
+                $(".expander").animate({right: "420px"});
+                $(".expander i").addClass("fa-angle-right");
+
+                expandCheck = true;
+
+            } else {
+
+                $(".right-side").animate({right: '-420px'});
+                $(".expander").animate({right: '0'});
+                $(".expander i").removeClass("fa-angle-right");
+
+                expandCheck = false;
+
+            }
+
 
         });
 

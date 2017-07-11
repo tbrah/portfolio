@@ -7,7 +7,6 @@ export default class Footer extends Module {
 	ready(app) {
 		
 		$(document).ready(function(){
-			console.log('Loaded footer.js');
 
             //Vertical Phone
             $(".phone-screen .md-button").mouseenter(function(){

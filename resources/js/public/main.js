@@ -19,6 +19,7 @@ import Footer from "../_modules/footer.js";
 import Laptop from "../_modules/laptop.js";
 import Scroll from "../_modules/scroll.js";
 import Showcase from "../_modules/showcase.js";
+import Header from "../_modules/header.js";
 /* Register modules
  ----------------------------------------------------------*/
 app.use(Main);
@@ -28,6 +29,7 @@ app.use(Footer);
 app.use(Laptop);
 app.use(Scroll);
 app.use(Showcase);
+app.use(Header);
 
 import $ from "jquery";
 window.jQuery = window.$ = $;

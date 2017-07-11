@@ -14211,9 +14211,9 @@ var Controller = function (_Module) {
                 $scope.closeFocus = function (e) {
                     if ($(e.target).hasClass('outer')) {
                         $rootScope.toggleFocus = false;
-                    } else if ($(e.target).hasClass('fa-times')) {
-                        $rootScope.toggleFocus = false;
                     } else if ($(e.target).hasClass('image-preview')) {
+                        $rootScope.toggleFocus = false;
+                    } else if ($(e.target).hasClass('fa-times')) {
                         $rootScope.toggleFocus = false;
                     }
                 };
@@ -14364,7 +14364,6 @@ var Footer = function (_Module) {
         value: function ready(app) {
 
             $(document).ready(function () {
-                console.log('Loaded footer.js');
 
                 //Vertical Phone
                 $(".phone-screen .md-button").mouseenter(function () {
@@ -14403,7 +14402,7 @@ exports.default = Footer;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+	value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -14419,47 +14418,74 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var $ = jQuery;
 
 var Github = function (_Module) {
-    _inherits(Github, _Module);
+	_inherits(Github, _Module);
 
-    function Github() {
-        _classCallCheck(this, Github);
+	function Github() {
+		_classCallCheck(this, Github);
 
-        return _possibleConstructorReturn(this, (Github.__proto__ || Object.getPrototypeOf(Github)).apply(this, arguments));
-    }
+		return _possibleConstructorReturn(this, (Github.__proto__ || Object.getPrototypeOf(Github)).apply(this, arguments));
+	}
 
-    _createClass(Github, [{
-        key: "ready",
-        value: function ready(app) {
+	_createClass(Github, [{
+		key: "ready",
+		value: function ready(app) {
 
-            $(document).ready(function () {
-                console.log('Loaded github.js');
+			$(document).ready(function () {});
+		}
+	}]);
 
-                /*$('.part-github').mouseenter(function(){
-                    $(this).css('width', '55%');
-                    $('.part-treehouse').css('width', '45%');
-                });
-                  $('.part-github').mouseleave(function(){
-                    $(this).css('width', '50%');
-                    $('.part-treehouse').css('width', '50%');
-                });
-                  $('.part-treehouse').mouseenter(function(){
-                    $(this).css('width', '55%');
-                    $('.part-github').css('width', '45%');
-                });
-                  $('.part-treehouse').mouseleave(function(){
-                    $(this).css('width', '50%');
-                    $('.part-github').css('width', '50%');
-                });*/
-            });
-        }
-    }]);
-
-    return Github;
+	return Github;
 }(_wrapper.Module);
 
 exports.default = Github;
 
 },{"wrapper6":62}],70:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _wrapper = require("wrapper6");
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var $ = jQuery;
+
+var Header = function (_Module) {
+    _inherits(Header, _Module);
+
+    function Header() {
+        _classCallCheck(this, Header);
+
+        return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));
+    }
+
+    _createClass(Header, [{
+        key: "ready",
+        value: function ready(app) {
+
+            $(document).ready(function () {
+
+                setTimeout(function () {
+                    $(".title-box h3").css('opacity', 1);
+                }, 1200);
+            });
+        }
+    }]);
+
+    return Header;
+}(_wrapper.Module);
+
+exports.default = Header;
+
+},{"wrapper6":62}],71:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -14494,13 +14520,7 @@ var Laptop = function (_Module) {
         key: "ready",
         value: function ready(app) {
 
-            $(document).ready(function () {
-                console.log('Loaded laptop.js');
-
-                /*$(".color-picker input").click(function(){
-                    console.log("this is working");
-                });*/
-            });
+            $(document).ready(function () {});
         }
     }]);
 
@@ -14509,7 +14529,7 @@ var Laptop = function (_Module) {
 
 exports.default = Laptop;
 
-},{"wrapper6":62}],71:[function(require,module,exports){
+},{"wrapper6":62}],72:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -14544,9 +14564,7 @@ var Main = function (_Module) {
 		key: "ready",
 		value: function ready(app) {
 
-			$(document).ready(function () {
-				console.log('Loaded main.js');
-			});
+			$(document).ready(function () {});
 		}
 	}]);
 
@@ -14555,7 +14573,7 @@ var Main = function (_Module) {
 
 exports.default = Main;
 
-},{"wrapper6":62}],72:[function(require,module,exports){
+},{"wrapper6":62}],73:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14604,7 +14622,7 @@ var Scroll = function (_Module) {
 
 exports.default = Scroll;
 
-},{"wrapper6":62}],73:[function(require,module,exports){
+},{"wrapper6":62}],74:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -14638,12 +14656,31 @@ var Showcase = function (_Module) {
 
                         var windowHeight = $(window).height();
 
-                        console.log(windowHeight);
-
                         $(window).on('resize', function (event) {
 
                                 windowHeight = $(window).height();
-                                console.log(windowHeight);
+                        });
+
+                        //Check if the right-menu has been expanded
+                        var expandCheck = false;
+
+                        $(".expander").click(function () {
+
+                                if (expandCheck == false) {
+
+                                        $(".right-side").animate({ right: 0 });
+                                        $(".expander").animate({ right: "420px" });
+                                        $(".expander i").addClass("fa-angle-right");
+
+                                        expandCheck = true;
+                                } else {
+
+                                        $(".right-side").animate({ right: '-420px' });
+                                        $(".expander").animate({ right: '0' });
+                                        $(".expander i").removeClass("fa-angle-right");
+
+                                        expandCheck = false;
+                                }
                         });
                 }
         }]);
@@ -14653,7 +14690,7 @@ var Showcase = function (_Module) {
 
 exports.default = Showcase;
 
-},{"wrapper6":62}],74:[function(require,module,exports){
+},{"wrapper6":62}],75:[function(require,module,exports){
 "use strict";
 
 var _wrapper = require("wrapper6");
@@ -14686,6 +14723,10 @@ var _showcase = require("../_modules/showcase.js");
 
 var _showcase2 = _interopRequireDefault(_showcase);
 
+var _header = require("../_modules/header.js");
+
+var _header2 = _interopRequireDefault(_header);
+
 var _jquery = require("jquery");
 
 var _jquery2 = _interopRequireDefault(_jquery);
@@ -14715,9 +14756,10 @@ app.use(_footer2.default);
 app.use(_laptop2.default);
 app.use(_scroll2.default);
 app.use(_showcase2.default);
+app.use(_header2.default);
 
 window.jQuery = window.$ = _jquery2.default;
 
-},{"../_modules/controller.js":67,"../_modules/footer.js":68,"../_modules/github.js":69,"../_modules/laptop.js":70,"../_modules/main.js":71,"../_modules/scroll.js":72,"../_modules/showcase.js":73,"jquery":59,"wrapper6":62}]},{},[74]);
+},{"../_modules/controller.js":67,"../_modules/footer.js":68,"../_modules/github.js":69,"../_modules/header.js":70,"../_modules/laptop.js":71,"../_modules/main.js":72,"../_modules/scroll.js":73,"../_modules/showcase.js":74,"jquery":59,"wrapper6":62}]},{},[75]);
 
 //# sourceMappingURL=main.js.map

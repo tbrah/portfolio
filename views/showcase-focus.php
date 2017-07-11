@@ -8,6 +8,9 @@
             </div>
 
         </div>
+
+        <div class="expander"><i class="fa fa-angle-left"></i></div>
+
         <div class="right-side" ng-click="closeFocus($event)">
 
             <div class="tech-view">

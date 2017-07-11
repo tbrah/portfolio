@@ -373,8 +373,8 @@ export default class Controller extends Module {
                 } else if (($(e.target).hasClass('fa-times'))){
                     $rootScope.toggleFocus = false;
                 }
-
-        };
+            }
+        });
 
         app.controller('referenceCtrl', function($scope, colorService, $mdDialog){
 

@@ -48,9 +48,9 @@
                         background-color:black;
                         height:370px;
                         width:100%;
-                        background: -moz-linear-gradient(to bottom, transparent 0%, rgba(237,242,247,0.5) 16%, #edf2f7 62%);
-                        background: -webkit-linear-gradient(to bottom, transparent 0%, rgba(237,242,247,0.5) 16%, #edf2f7 62%);
-                        background: linear-gradient(to bottom, transparent 0%, rgba(237,242,247,0.5) 16%, #edf2f7 62%);
+                        background: -moz-linear-gradient(to bottom, transparent 0%, rgba(237,242,247,0.5) 16%, $graytone-background 62%);
+                        background: -webkit-linear-gradient(to bottom, transparent 0%, rgba(237,242,247,0.5) 16%, $graytone-background 62%);
+                        background: linear-gradient(to bottom, transparent 0%, rgba(237,242,247,0.5) 16%, $graytone-background 62%);
                     }
 
                     button{

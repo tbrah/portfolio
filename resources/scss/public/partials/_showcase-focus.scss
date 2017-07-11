@@ -19,12 +19,24 @@
         height:90%;
         margin:auto;
 
+        @media only screen and (max-width:1320px){
+            width:90%;
+            overflow:hidden;
+        }
+
         .left-side{
             position:relative;
             display:flex;
             float:left;
             height:100%;
             width:65%;
+
+            @media only screen and (max-width:1320px){
+                width:100%;
+                margin-left:auto;
+                margin-right:auto;
+                float:none;
+            }
 
             .image-preview{
                 position:absolute;
@@ -51,12 +63,40 @@
                 }
             }
         }
+
+        .expander{
+            position:absolute;
+            right:0;
+            top:0;
+            height:100%;
+            width:50px;
+            background-color:rgba(0,0,0,0.20);
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+
+            i{
+                color:#fff;
+                font-size:30px;
+                display:inline-block;
+                margin-left:auto;
+                margin-right:auto;
+            }
+        }
+
         .right-side{
             float:right;
             width:33%;
             height:100%;
             display:flex;
             flex-direction:column;
+
+            @media only screen and (max-width:1320px){
+                position:absolute;
+                top:0;
+                right:-420px;
+                width:420px;                
+            }
 
             .tech-view{
                 position:relative;

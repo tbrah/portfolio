@@ -7,7 +7,6 @@ export default class Main extends Module {
 	ready(app) {
 		
 		$(document).ready(function(){
-			console.log('Loaded main.js');
 		});
 
 	}
